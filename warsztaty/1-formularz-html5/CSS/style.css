@@ -1,0 +1,10 @@
+form {
+    width: 600px;
+    color: #ffffff;
+    padding: 20px;
+    background-color: #213b50;
+}
+
+form input, form select {
+    margin-bottom: 10px;
+}
