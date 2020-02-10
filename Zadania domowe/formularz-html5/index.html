@@ -7,35 +7,39 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="https://formspree.io/xqkqgeow" method="POST" >
+    <form action="https://formspree.io/xqkqgeow" method="POST">
         <label for="imie">Imię</label><br>
         <input type="text" name="imie" id="imie"><br>
         <label for="nazwisko">Nazwisko</label><br>
         <input type="text" name="nazwisko" id="nazwisko"><br>
         <label for="e-mail">e-mail</label><br>
         <input type="email" name="e-mail" id="e-mail"><br>
+        <label for="tel">Telefon</label><br>
+        <input type="tel" name="tel" id="tel"><br>
         <br>
         <br>
-        <label for="city">Wybierz miejscowość</label><br>
-        <select name="select">
+        <label for="miasto">Wybierz miasto</label><br>
+        <select name="miasto" id="miasto">
             <option value="gdansk">Gdańsk</option>
             <option value="krakow">Kraków</option>
             <option value="warszawa">Warszawa</option>
         </select><br>
         <br>
         <br>
-        <label for="gender">Wybierz płeć</label><br>
-        <input type="radio" name="gender">Męzczyzna
-        <input type="radio" name="gender">Kobieta
+        <p>Wybierz płeć</p>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">Męzczyzna</label><br> 
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female" >Kobieta</label><br>   
         <br>
         <br>
         <br>
-        <label for="zgoda">Zgoda na przetwarzanie danych osobowych</label><br>
-        <input type="checkbox" name="zgoda"><br>
+        <label for="zgoda">Wyrażam zgodę na przetwarzanie danych osobowych</label><br>
+        <input type="checkbox" id="zgoda" name="zgoda"><br>
         <br>
-        <label for="message">Wiadomość</label><br>
-        <textarea maxlength="1000" name="message"></textarea><br>
-        <input type="submit" name="wyslij">
+        <label for="message">Wiadomość:</label><br>
+        <textarea maxlength="1000" id="message" name="message">Treść wiadomości</textarea><br>
+        <input type="submit" value="Wyślij">
 
 
     </form>
