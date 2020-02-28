@@ -8,6 +8,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px;
     color: #fff;
+    height: 100vh;
 }
 
 /* .container {
@@ -22,7 +23,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    height: 80em;
+    /* height: 80em; */
 
 }
 
@@ -45,17 +46,19 @@ h2 {
     .container {
         width: 100%;
         margin: auto;
+        height: 100vh;
     }
 }
 
 @media (min-width: 993px) and (max-width: 1170px) {
     .container {
         width: 100%;
-        height: 70%;
+        /* height: 100vh; */
         background-image: url(../img/man-2.jpg);
-        background-size: cover;
+        background-size: 70vh contain;
         background-position: center;
         background-repeat: no-repeat;
+        position: relative;
     }
     h1 {font-size: 1.5em;
     }
@@ -71,9 +74,10 @@ h2 {
 @media (max-width: 992px) {
     .container {
         width: 100%;
-        height: 50%;
+        height: 50vh;
     }
     .sometext {
+        height: 50vh;
         text-align: center;
         transform: translateY(30em);
         color: black;
