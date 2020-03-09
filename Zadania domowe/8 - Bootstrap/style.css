@@ -22,3 +22,6 @@ hr {
 .par-title {
     color: orange;
 }
+.par-title:hover {
+    color: grey;
+}
