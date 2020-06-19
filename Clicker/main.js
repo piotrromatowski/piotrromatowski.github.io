@@ -34,7 +34,7 @@ const dogClick = () => {
     }
 
     meal.addEventListener('mousedown', openMouth)
-
+    meal.addEventListener('touchstart', openMouth)
     // DODAĆ TOUCH EVENT
 
 
