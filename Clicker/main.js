@@ -19,18 +19,33 @@ let bonusCountDog = 1;
 
 
 
+
 const dogClick = () => {
     let actualPoints = countDog += bonusCountDog;
 
     counter.textContent = actualPoints;
-
-    snack.classList.toggle('snack');
-    document.querySelector('.mouth img').style.top = '20%';
-    if (snack.classList == 'snack') {
+    document.querySelector('.mouth img').style.top = '20%'
+    const openMouth = () => {
         document.querySelector('.mouth img').style.top = '22%';
-    };
+
+        if (document.querySelector('.snackDiv img').classList == 'snack') {
+            document.querySelector('.snackDiv img').classList.remove('snack')
+        }
+    }
+
+    meal.addEventListener('mousedown', openMouth)
+
+    // DODAĆ TOUCH EVENT
+
+
+    if (document.querySelector('.snackDiv img').classList == !'snack') {
+        document.querySelector('.snackDiv img').classList.add('snack')
+    }
+
+
     bonusGame()
     upgradeBtn.addEventListener('click', upgradePoints)
+
 
 
     return actualPoints
@@ -40,6 +55,8 @@ const dogClick = () => {
 
 
 const bonusGame = () => {
+
+
 
     if (countDog >= 25 || countDog >= 250) {
         catBonus.classList.add('catActive')
@@ -62,12 +79,12 @@ xPoints.style.display = 'none'
 const upgradePoints = () => {
 
     console.log('działa');
-    xPoints.style.color = 'slateblue'
-    xPoints.style.fontSize = '4em'
-    xPoints.style.top = '15%'
+    // xPoints.style.color = 'slateblue'
+    // xPoints.style.fontSize = '4em'
+    // xPoints.style.top = '10%'
     xPoints.style.display = 'block'
-    xPoints.style.fontFamily = `'Permanent Marker', cursive, sans-serif`;
-    upgradeBtn.style.fontFamily = `'Permanent Marker', cursive, sans-serif`;
+    // xPoints.style.fontFamily = `'Permanent Marker', cursive, sans-serif`;
+    upgradeBtn.style.fontFamily = `'Rancho', cursive, sans-serif`;
 
 
     upgradeInstructions()
