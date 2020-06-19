@@ -14,7 +14,7 @@ const imagesArray = ['url(./img/city-2.png)', 'url(./img/city-3.png)', 'url(./im
 
 
 let image = 0;
-let countDog = 9999;
+let countDog = 0;
 let bonusCountDog = 1;
 
 
