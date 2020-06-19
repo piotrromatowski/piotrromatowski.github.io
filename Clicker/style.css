@@ -412,19 +412,16 @@ img {
 
 
 .cat img {
-    position: relative;
-    height: 25em;
+    height: 60%;
     left: 35%;
-    /* top: 25em; */
-    top: 150em;
+    top: 180%;
     transition: linear .8s;
 }
 
 .catActive img {
-    position: relative;
-    height: 25em;
+    height: 60%;
     left: 35%;
-    top: 15em;
+    top: 55%;
     transition: linear .8s;
 }
 
@@ -495,7 +492,7 @@ button:hover {
 
 
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) and (orientation : landscape) {
     .images {
         width: 80%;
         height: 70%;
@@ -525,7 +522,7 @@ button:hover {
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation : landscape) {
     .images {
         width: 80%;
         height: 70%;
@@ -548,7 +545,7 @@ button:hover {
 
 }
 
-@media (max-width: 640px) {
+@media (max-width: 640px) and (orientation : landscape) {
     .images {
         width: 60%;
         height: 50%;
@@ -566,7 +563,7 @@ button:hover {
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 460px) and (orientation : landscape) {
 
     .counter,
     .counter span {
@@ -582,5 +579,288 @@ button:hover {
     button {
         font-size: .7em;
         top: 15%;
+    }
+} */
+
+@media (orientation: portrait) {
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .wrap {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .images {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .dog img {
+
+        top: 50%;
+        left: 50%;
+        height: 50%;
+    }
+
+    .mouth img {
+        top: 50%;
+        left: 50%;
+        height: 50%;
+    }
+
+    .mouth img:hover {
+        top: 52%;
+    }
+
+    .meal img {
+        left: 20%;
+    }
+
+    .snack {
+        height: 5%;
+        animation: snackThrow .5s linear 1 normal none;
+        transform: rotate(0);
+        /* z-index: 1; */
+    }
+
+    @keyframes snackThrow {
+        0% {
+            top: 25%;
+            left: 35%;
+            opacity: 1;
+            transform: rotate(-180deg);
+        }
+
+        10% {
+            top: 15%;
+            left: 40%;
+            transform: rotate(-360deg);
+        }
+
+        20% {
+            top: 7%;
+            left: 50%;
+            transform: rotate(-540deg);
+        }
+
+        30% {
+            top: 5%;
+            left: 55%;
+            transform: rotate(-720deg);
+        }
+
+        40% {
+            top: 10%;
+            left: 60%;
+            transform: rotate(-540deg);
+        }
+
+        50% {
+            top: 10%;
+            left: 70%;
+            transform: rotate(-360deg);
+        }
+
+        60% {
+            top: 20%;
+            left: 60%;
+            transform: rotate(-180deg);
+        }
+
+        70% {
+            top: 30%;
+            left: 50%;
+            transform: rotate(0deg);
+        }
+
+        80% {
+            top: 40%;
+            left: 60%;
+            transform: rotate(180deg);
+        }
+
+        90% {
+            top: 50%;
+            left: 50%;
+            transform: rotate(360deg);
+            opacity: 1;
+        }
+
+        100% {
+            top: 60%;
+            left: 60%;
+            opacity: 1;
+            transform: rotate(540deg);
+            opacity: 0;
+        }
+
+
+    }
+
+
+    .x-number {
+        /* top: 20%; */
+        left: 18%;
+        top: 5%;
+        font-size: 4em;
+    }
+
+
+    .laser-dog img {
+        position: absolute;
+        height: 35%;
+        left: -10%;
+        top: 180%;
+        transition: linear .5s;
+        transform: rotate(-20deg);
+
+    }
+
+    .onActive img {
+        height: 45%;
+        left: 5%;
+        top: 65%;
+        transform: rotate(-20deg);
+        transition: linear .5s;
+
+    }
+
+    .one {
+        transform: rotate(-60deg);
+        left: 34%;
+        top: 80%;
+        /* width: 4px;
+        height: 4px;
+        background-color: lime; */
+    }
+
+    .two {
+        transform: rotate(-60deg);
+        left: 38%;
+        top: 78%;
+        /* width: 400px;
+        height: 4px;
+        background-color: lime; */
+    }
+
+
+    @keyframes laserShotOne {
+        0% {
+            top: 80%;
+            left: 34%;
+            width: .1em;
+            opacity: 1;
+
+        }
+
+        20% {
+            top: 75%;
+            left: 39%;
+            width: 3em;
+        }
+
+        50% {
+            top: 70%;
+            left: 44%;
+            width: 6em;
+        }
+
+        70% {
+            top: 70%;
+            left: 44%;
+            width: 12em;
+        }
+
+        99% {
+            top: 70%;
+            left: 44%;
+            width: 6em;
+        }
+
+        100% {
+            top: 80%;
+            left: 34%;
+            width: .1em;
+        }
+    }
+
+    @keyframes laserShotTwo {
+        0% {
+            top: 78%;
+            left: 38%;
+            width: .1em;
+            opacity: 1;
+        }
+
+        20% {
+            top: 69%;
+            left: 43%;
+            width: 3em;
+        }
+
+        50% {
+            top: 64%;
+            left: 48%;
+            width: 6em;
+        }
+
+        70% {
+            top: 64%;
+            left: 48%;
+            width: 12em;
+        }
+
+        99% {
+            top: 64%;
+            left: 48%;
+            width: 6em;
+        }
+
+        100% {
+            top: 74%;
+            left: 36%;
+            width: .1em;
+        }
+    }
+
+    .cat img {
+
+        height: 40%;
+        left: 160%;
+        top: 15%;
+        transform: rotate(-45deg);
+
+
+    }
+
+    .catActive img {
+
+        height: 40%;
+        left: 60%;
+        top: 10%;
+        transform: rotate(-45deg);
+
+    }
+
+
+
+    .counter,
+    .counter span {
+        top: 92%;
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
+
+    button {
+        top: 2%;
     }
 }

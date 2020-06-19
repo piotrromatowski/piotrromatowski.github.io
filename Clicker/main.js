@@ -14,7 +14,7 @@ const imagesArray = ['url(./img/city-2.png)', 'url(./img/city-3.png)', 'url(./im
 
 
 let image = 0;
-let countDog = 1;
+let countDog = 9999;
 let bonusCountDog = 1;
 
 
@@ -24,16 +24,25 @@ const dogClick = () => {
     let actualPoints = countDog += bonusCountDog;
 
     counter.textContent = actualPoints;
-    document.querySelector('.mouth img').style.top = '20%'
+
+    if (window.innerHeight > window.innerWidth) {
+        document.querySelector('.mouth img').style.top = '50%'
+    } else(document.querySelector('.mouth img').style.top = '20%')
+
+
+
     const openMouth = () => {
-        document.querySelector('.mouth img').style.top = '22%';
+        if (window.innerHeight > window.innerWidth) {
+            document.querySelector('.mouth img').style.top = '51%';
+        } else(
+            document.querySelector('.mouth img').style.top = '22%');
 
         if (document.querySelector('.snackDiv img').classList == 'snack') {
             document.querySelector('.snackDiv img').classList.remove('snack')
         }
     }
 
-    meal.addEventListener('mousedown', openMouth)
+    meal.addEventListener('mousedown', openMouth);
     meal.addEventListener('touchstart', openMouth)
     // DODAĆ TOUCH EVENT
 
@@ -763,10 +772,20 @@ const endRound = () => {
     mouth.style.display = 'none';
     const dog = document.querySelector('.dog img');
     dog.src = 'img/dog-full.png';
-    dog.style.height = '150%';
-    dog.style.top = '-5%';
+
+    // dog.style.top = '-5%';
     dog.style.transform = 'rotate(-35deg)'
-    dog.style.left = '-80%';
+    // dog.style.left = '-80%';
+
+    if (window.innerHeight > window.innerWidth) {
+        dog.style.height = '75%',
+            dog.style.top = '40%',
+            dog.style.left = '30%'
+    } else(dog.style.height = '150%',
+        dog.style.top = '-5%',
+        dog.style.left = '-80%'
+    )
+
 
     dog.style.transition = 'linear 4s'
     const poop = document.createElement('img');
@@ -780,6 +799,12 @@ const endRound = () => {
     poop.style.top = '70%';
     poop.style.cursor = 'pointer';
 
+    if (window.innerHeight > window.innerWidth) {
+        poop.style.left = '25%',
+            poop.style.top = '85%'
+    } else(poop.style.left = '85%',
+        poop.style.top = '70%')
+
 
 
     newRound = () => {
@@ -788,10 +813,20 @@ const endRound = () => {
         meal.addEventListener('click', dogClick);
         mouth.style.display = 'block';
         dog.src = 'img/mela.png';
-        dog.style.height = '100%';
-        dog.style.width = 'auto';
-        dog.style.left = '65%';
-        dog.style.top = '20%';
+
+        if (window.innerHeight > window.innerWidth) {
+            dog.style.height = '50%',
+                dog.style.width = 'auto',
+                dog.style.left = '50%',
+                dog.style.top = '50%'
+        } else(
+            dog.style.height = '100%',
+            dog.style.width = 'auto',
+            dog.style.left = '65%',
+            dog.style.top = '20%'
+        )
+
+
         dog.style.transform = 'rotate(0deg)';
         dog.style.transition = 'none';
         // upgradeBtn.textContent = 'upgrade for 50k snacks';
