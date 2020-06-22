@@ -291,7 +291,7 @@ img {
 
 
 .green {
-    position: relative;
+    position: absolute;
 
 }
 
@@ -450,7 +450,7 @@ img {
     line-height: 2em;
     padding: .5em;
     /* background-color: white; */
-    top: 15%;
+    top: 12%;
     left: 50%;
     transform: translateX(-50%);
     width: 16em;
@@ -862,5 +862,101 @@ button:hover {
 
     button {
         top: 2%;
+    }
+}
+
+
+/* DO OGARNIĘCIA LANDSAPE 1200,992 i small lcd */
+
+@media (orientation: landscape) and (max-width: 1200px) {
+    .wrap {
+        height: 100vh;
+    }
+
+    .images {
+        width: 50%;
+        height: 70%;
+        min-width: 700px;
+        min-height: 500px;
+    }
+
+    h1 {
+        display: block;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 992px) {
+
+
+    h1 {
+        display: none;
+    }
+
+    .counter {
+        top: 0;
+        font-size: 1.5em;
+        left: 20%;
+        position: absolute;
+
+    }
+
+    .counter span {
+        position: relative;
+        font-size: 1.2em;
+        left: 0;
+        top: 0;
+    }
+
+    button {
+        top: 3%;
+        left: 80%;
+    }
+}
+
+
+/* OK iphone x 812x375 lanscape */
+@media only screen and (max-width: 992px)and (orientation: landscape) {
+    h1 {
+        display: none;
+    }
+
+    .images {
+        width: 100vw;
+    }
+
+    .x-number {
+        top: 15%;
+        font-size: 3em;
+    }
+
+    .counter {
+        font-size: 1em;
+        left: 12%;
+        top: 10%
+    }
+
+    .counter span {
+        font-size: 1em;
+        top: 12%;
+        padding: 20px;
+    }
+
+    button {
+        left: 12%;
+        top: 4%;
+        font-size: 1em;
+        padding: 5px;
+        width: fit-content;
+    }
+}
+
+/* Moto G4 640x360 ok*/
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+    h1 {
+        display: none;
+    }
+
+    button {
+        font-size: .7em;
     }
 }

@@ -14,7 +14,7 @@ const imagesArray = ['url(./img/city-2.png)', 'url(./img/city-3.png)', 'url(./im
 
 
 let image = 0;
-let countDog = 0;
+let countDog = 10000000000000;
 let bonusCountDog = 1;
 
 
@@ -52,7 +52,8 @@ const dogClick = () => {
     }
 
 
-    bonusGame()
+    // bonusGame()
+
     upgradeBtn.addEventListener('click', upgradePoints)
 
 
@@ -63,26 +64,58 @@ const dogClick = () => {
 
 
 
+
 const bonusGame = () => {
 
+    console.log('bonus działa')
 
 
-    if (countDog >= 25 || countDog >= 250) {
-        catBonus.classList.add('catActive')
-        if (countDog >= 30) {
-            bonus.classList.add('onActive');
-        }
 
+
+    // if (countDog >= 25) {
+    //     catBonus.classList.add('catActive')
+    //     if (countDog >= 30) {
+    //         bonus.classList.add('onActive');
+    //     }
+
+    // }
+    // if (countDog >= 35) {
+    //     catBonus.classList.remove('catActive')
+    //     if (countDog >= 40) {
+    //         bonus.classList.remove('onActive');
+    //     }
+    // }
+
+    // if (countDog >= 145) {
+    //     catBonus.classList.add('catActive')
+    //     if (countDog >= 150) {
+    //         bonus.classList.add('onActive');
+    //     }
+
+    // }
+    // if (countDog >= 155) {
+    //     catBonus.classList.remove('catActive')
+    //     if (countDog >= 160) {
+    //         bonus.classList.remove('onActive');
+    //     }
+    // }
+
+    const bonusActive = () => {
+        catBonus.classList.add('catActive');
+        bonus.classList.add('onActive');
     }
-    if (countDog >= 65 || countDog >= 650) {
-        catBonus.classList.remove('catActive')
-        if (countDog >= 75) {
-            bonus.classList.remove('onActive');
-        }
+
+    setTimeout(bonusActive, 1000);
+
+    const bonusInActive = () => {
+        catBonus.classList.remove('catActive');
+        bonus.classList.remove('onActive')
     }
 
+    setTimeout(bonusInActive, 20000);
 
 }
+setInterval(bonusGame, 65000)
 xPoints.style.display = 'none'
 
 const upgradePoints = () => {
@@ -106,138 +139,7 @@ const upgradeInstructions = () => {
     console.log('bonusy')
 
 
-    // switch (bonusCountDog) {
-    //     case 1:
-    //         if (countDog >= 100) {
-    //             countDog -= 100;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'upgrade for 200 snacks';
-    //             bonusCountDog = 20;
-    //             xPoints.textContent = 'x20';
-    //             console.log('1 bonus')
-    //         }
-    //         break;
-    //     case 20:
-    //         if (countDog >= 200) {
-    //             countDog -= 200;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'upgrade for 300 snacks';
-    //             bonusCountDog = 40;
-    //             xPoints.textContent = 'x40';
-    //             console.log('2 bonus')
-    //         }
-    //         break;
-    //     case 40:
-    //         if (countDog >= 300) {
-    //             countDog -= 300;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'upgrade for 400 snacks';
-    //             bonusCountDog = 100;
-    //             xPoints.textContent = 'x100';
-    //             console.log('3 bonus')
-    //         }
-    //         break;
-    //     case 100:
-    //         if (countDog >= 400) {
-    //             countDog -= 400;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'upgrade for 5000 snacks';
-    //             bonusCountDog = 200;
-    //             xPoints.textContent = 'x200';
-    //             console.log('4 bonus')
-    //         }
-    //         break;
-    //     case 200:
-    //         if (countDog >= 5000) {
-    //             countDog -= 5000;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'Round 2 for 10000 snacks';
-    //             bonusCountDog = 500;
-    //             xPoints.textContent = 'x500';
-    //             console.log('5 bonus')
-    //         }
-    //         break;
-    //     case 500:
-    //         if (countDog >= 10000) {
-    //             console.log('koniec');
-    //             alert('Click and clean the poop :) ');
-    //             endRound();
-    //             countDog -= 10000;
-    //             counter.textContent = countDog;
 
-    //             bonusCountDog = 700;
-    //             xPoints.textContent = 'x700';
-    //             console.log('6 bonus')
-
-    //             upgradeBtn.textContent = 'upgrade for 100K snacks';
-    //         };
-    //         break;
-    //     case 700:
-    //         if (countDog >= 100000) {
-    //             countDog -= 100000;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'upgrade for 250K snacks';
-    //             bonusCountDog = 1000;
-    //             xPoints.textContent = 'x1K';
-    //             console.log('7 bonus')
-    //         }
-    //         break;
-    //     case 1000:
-    //         if (countDog >= 250000) {
-    //             countDog -= 250000;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'upgrade for 500K snacks';
-    //             bonusCountDog = 2500;
-    //             xPoints.textContent = 'x2.5K';
-    //             console.log('8 bonus')
-    //         }
-    //         break;
-    //     case 2500:
-    //         if (countDog >= 500000) {
-    //             countDog -= 500000;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'upgrade for 1M snacks';
-    //             bonusCountDog = 5000;
-    //             xPoints.textContent = 'x5K';
-    //             console.log('8 bonus')
-    //         }
-    //         break;
-    //     case 5000:
-    //         if (countDog >= 1000000) {
-    //             countDog -= 1000000;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'upgrade for 2M snacks';
-    //             bonusCountDog = 10000;
-    //             xPoints.textContent = 'x10K';
-    //             console.log('9 bonus')
-    //         }
-    //         break;
-    //     case 10000:
-    //         if (countDog >= 2000000) {
-    //             countDog -= 2000000;
-    //             counter.textContent = countDog;
-    //             upgradeBtn.textContent = 'Round 3 for 3M snacks';
-    //             bonusCountDog = 15000;
-    //             xPoints.textContent = 'x15K';
-    //             console.log('10 bonus')
-    //         }
-    //         break;
-    //     case 15000:
-    //         if (countDog >= 3000000) {
-    //             console.log('koniec');
-    //             alert('Click and clean the poop :)');
-    //             endRound();
-    //             countDog -= 3000000;
-    //             counter.textContent = countDog;
-
-    //             bonusCountDog = 25000;
-    //             xPoints.textContent = 'x25K';
-    //             console.log('11 bonus');
-
-    //             upgradeBtn.textContent = 'upgrade for 5M snacks';
-
-    //         };
-    //         break;
     switch (bonusCountDog) {
         case 1:
             if (countDog >= 100) {
