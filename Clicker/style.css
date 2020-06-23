@@ -224,7 +224,7 @@ img {
     position: relative;
     text-align: center;
     /* font-family: 'Permanent Marker', cursive, sans-serif; */
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 900;
     color: red;
     /* text-shadow: 6px 6px 7px black; */
@@ -456,7 +456,8 @@ img {
     width: 16em;
     max-width: 18em;
     height: auto;
-    text-shadow: 2px 2px 7px #914BF2;
+    text-shadow: 2px 2px 7px #F2CB05;
+    ;
     margin-bottom: 10%;
 
 }
@@ -920,6 +921,8 @@ button:hover {
         display: none;
     }
 
+    body,
+    .wrap,
     .images {
         width: 100vw;
     }
@@ -932,21 +935,23 @@ button:hover {
     .counter {
         font-size: 1em;
         left: 12%;
-        top: 10%
+        top: 0;
+        margin-left: 3%;
     }
 
     .counter span {
         font-size: 1em;
-        top: 12%;
+        top: 0;
         padding: 20px;
     }
 
     button {
         left: 12%;
-        top: 4%;
+        top: 12%;
         font-size: 1em;
         padding: 5px;
         width: fit-content;
+        margin-left: 0;
     }
 }
 

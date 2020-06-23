@@ -14,7 +14,7 @@ const imagesArray = ['url(./img/city-2.png)', 'url(./img/city-3.png)', 'url(./im
 
 
 let image = 0;
-let countDog = 10000000000000;
+let countDog = 0;
 let bonusCountDog = 1;
 
 
@@ -55,6 +55,11 @@ const dogClick = () => {
     // bonusGame()
 
     upgradeBtn.addEventListener('click', upgradePoints)
+
+    if (countDog >= 100000000000) {
+        images.style.backgroundColor = `rgb(0, 11, 58)`;
+        images.style.transition = '4s'
+    }
 
 
 
@@ -578,6 +583,7 @@ const upgradeInstructions = () => {
             break;
         case 1250000000:
             if (countDog >= 80000000000) {
+
                 console.log('koniec');
                 alert('Click and clean the poop :)');
                 endRound();
@@ -610,6 +616,7 @@ const upgradeInstructions = () => {
             break;
         case 1750000000:
             if (countDog >= 150000000000) {
+
                 console.log('koniec');
                 alert('Click and clean the poop :)');
                 endRound();
@@ -626,6 +633,7 @@ const upgradeInstructions = () => {
             break;
         case 2000000000:
             if (countDog >= 200000000000) {
+
                 console.log('koniec');
                 alert('Click and clean the poop :)');
                 endRound();
@@ -642,6 +650,7 @@ const upgradeInstructions = () => {
             break;
         case 2500000000:
             if (countDog >= 500000000000) {
+
                 console.log('koniec');
                 alert('Now the space dog is very fat and full of snakcs, go home and let him rest :)  ');
                 endRound();
@@ -697,14 +706,14 @@ const endRound = () => {
     poop.style.width = 'auto';
     poop.style.height = 'auto';
     poop.src = 'img/poop.png';
-    poop.style.left = '85%';
-    poop.style.top = '70%';
+    // poop.style.left = '85%';
+    // poop.style.top = '70%';
     poop.style.cursor = 'pointer';
 
     if (window.innerHeight > window.innerWidth) {
         poop.style.left = '25%',
             poop.style.top = '85%'
-    } else(poop.style.left = '85%',
+    } else(poop.style.left = '65%',
         poop.style.top = '70%')
 
 
