@@ -585,11 +585,13 @@ button:hover {
 
 @media (orientation: portrait) {
     body {
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
 
         overflow-y: hidden;
         position: relative;
+        margin: 0;
+        padding: 0;
 
     }
 
