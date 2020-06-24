@@ -113,7 +113,7 @@ const bonusGame = () => {
     const bonusActive = () => {
         catBonus.classList.add('catActive');
         bonus.classList.add('onActive');
-        // laserSound()
+        laserSound()
 
     }
 
