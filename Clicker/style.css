@@ -586,8 +586,8 @@ button:hover {
 
 @media (orientation: portrait) {
     body {
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         /* 
         overflow-y: hidden;
         position: relative; */
@@ -597,8 +597,8 @@ button:hover {
     }
 
     .wrap {
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
     }
 
     h1 {
@@ -606,8 +606,8 @@ button:hover {
     }
 
     .images {
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
     }
 
     .dog img {
@@ -861,7 +861,8 @@ button:hover {
 
     .counter,
     .counter span {
-        top: 92%;
+
+        top: 90%;
         font-size: 1em;
         padding: 0;
         margin: 0;
