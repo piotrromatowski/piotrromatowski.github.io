@@ -68,7 +68,12 @@ const dogClick = () => {
 }
 
 
+let bleep = new Audio();
+bleep.src = 'sound/danger.wav';
 
+function laserSound() {
+    bleep.play()
+}
 
 const bonusGame = () => {
 
@@ -108,6 +113,8 @@ const bonusGame = () => {
     const bonusActive = () => {
         catBonus.classList.add('catActive');
         bonus.classList.add('onActive');
+        // laserSound()
+
     }
 
     setTimeout(bonusActive, 1000);
@@ -115,12 +122,17 @@ const bonusGame = () => {
     const bonusInActive = () => {
         catBonus.classList.remove('catActive');
         bonus.classList.remove('onActive')
+
     }
 
-    setTimeout(bonusInActive, 20000);
+    setTimeout(bonusInActive, 5000);
 
 }
 setInterval(bonusGame, 65000)
+
+
+
+
 xPoints.style.display = 'none'
 
 const upgradePoints = () => {

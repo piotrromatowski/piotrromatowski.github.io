@@ -587,6 +587,10 @@ button:hover {
     body {
         height: 100vh;
         width: 100vw;
+
+        overflow-x: hidden;
+        position: relative;
+
     }
 
     .wrap {
@@ -870,6 +874,8 @@ button:hover {
 /* DO OGARNIĘCIA LANDSAPE 1200,992 i small lcd */
 
 @media (orientation: landscape) and (max-width: 1200px) {
+
+
     .wrap {
         height: 100vh;
     }
