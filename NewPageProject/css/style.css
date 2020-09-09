@@ -581,21 +581,20 @@ nav ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10%;
-}
-
-.about .about-photo p {
-  text-align: center;
-  font-family: 'Rock Salt', cursive;
-  font-size: 3em;
-  padding: 2em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+.about .about-photo p {
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  font-size: 2em;
+  padding: 1em;
+}
+
 .about .about-photo img {
-  width: 30%;
+  width: 40%;
   height: auto;
   max-height: 70vh;
   -o-object-fit: cover;
