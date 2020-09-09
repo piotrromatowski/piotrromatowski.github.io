@@ -22,6 +22,11 @@
   margin: auto;
 }
 
+* body section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 * body::-webkit-scrollbar {
   display: none;
 }
@@ -592,6 +597,7 @@ nav ul li a:hover {
 .about .about-photo img {
   width: 30%;
   height: auto;
+  max-height: 90vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
