@@ -880,10 +880,16 @@ h2 {
   color: magenta;
 }
 
-.contact .location iframe {
-  margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+.contact .location .map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .location .map iframe {
   border: 7px solid magenta;
 }
 
