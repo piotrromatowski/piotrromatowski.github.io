@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/piotrromatowski/piotrromatowski.github.io/Weather/static/css/main.c63ab8eb.chunk.css",
+    "main.js": "/piotrromatowski/piotrromatowski.github.io/Weather/static/js/main.e4010791.chunk.js",
+    "main.js.map": "/piotrromatowski/piotrromatowski.github.io/Weather/static/js/main.e4010791.chunk.js.map",
+    "runtime-main.js": "/piotrromatowski/piotrromatowski.github.io/Weather/static/js/runtime-main.3f6acb47.js",
+    "runtime-main.js.map": "/piotrromatowski/piotrromatowski.github.io/Weather/static/js/runtime-main.3f6acb47.js.map",
+    "static/js/2.af236d90.chunk.js": "/piotrromatowski/piotrromatowski.github.io/Weather/static/js/2.af236d90.chunk.js",
+    "static/js/2.af236d90.chunk.js.map": "/piotrromatowski/piotrromatowski.github.io/Weather/static/js/2.af236d90.chunk.js.map",
+    "index.html": "/piotrromatowski/piotrromatowski.github.io/Weather/index.html",
+    "static/css/main.c63ab8eb.chunk.css.map": "/piotrromatowski/piotrromatowski.github.io/Weather/static/css/main.c63ab8eb.chunk.css.map",
+    "static/js/2.af236d90.chunk.js.LICENSE.txt": "/piotrromatowski/piotrromatowski.github.io/Weather/static/js/2.af236d90.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f6acb47.js",
+    "static/js/2.af236d90.chunk.js",
+    "static/css/main.c63ab8eb.chunk.css",
+    "static/js/main.e4010791.chunk.js"
+  ]
+}
