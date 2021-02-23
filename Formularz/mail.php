@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 // $to      = 'piotr.romatowski@gmail.com';
 // $name =$_POST['name'];
 // $email =$_POST['email'];
@@ -28,4 +28,4 @@ mail($to,$email_subject,$email_body,$headers);
 
 header('Location: index.html')
 
-?>
+?> -->
