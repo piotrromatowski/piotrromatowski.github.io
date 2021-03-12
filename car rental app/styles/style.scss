@@ -127,6 +127,7 @@ body {
         margin-left: -35px;
         border: none;
         transition: ease 0.5s;
+        border-radius: 1rem;
 
         &:active {
           margin: 0;
@@ -163,7 +164,7 @@ body {
       }
 
       .burger-active ~ .nav-list {
-        transform: translateX(100%);
+        transform: translateX(500%);
         transition: 1s ease;
       }
       .burger-active ~ .nav {
@@ -177,6 +178,8 @@ body {
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.7);
         transition: 1s ease;
+        transform: translateY(40%);
+        border-radius: 1rem;
         .logo {
           display: none;
         }

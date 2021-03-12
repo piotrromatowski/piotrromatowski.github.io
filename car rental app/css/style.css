@@ -149,6 +149,7 @@ body {
     border: none;
     -webkit-transition: ease 0.5s;
     transition: ease 0.5s;
+    border-radius: 1rem;
   }
   .page .nav .burger:active {
     margin: 0;
@@ -182,8 +183,8 @@ body {
             transform: rotate(540deg);
   }
   .page .nav .burger-active ~ .nav-list {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%);
     -webkit-transition: 1s ease;
     transition: 1s ease;
   }
@@ -206,6 +207,9 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     -webkit-transition: 1s ease;
     transition: 1s ease;
+    -webkit-transform: translateY(40%);
+            transform: translateY(40%);
+    border-radius: 1rem;
   }
   .page .nav .nav-list .logo {
     display: none;
