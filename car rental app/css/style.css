@@ -233,6 +233,7 @@ body {
 .carousel-with-pictures {
   background-image: url("https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   height: 90vh;
+  width: 100vw;
   background-position: center;
   background-size: cover;
 }
@@ -353,6 +354,35 @@ body {
   padding: 0.5rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+  .promoted-cars .carousel-with-pictures .promoted-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .promoted-cars .carousel-with-pictures .promoted-text .car-category {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .promoted-cars .carousel-with-pictures .promoted-text .car-name {
+    font-size: 4rem;
+    text-align: left;
+  }
+  .promoted-cars .carousel-with-pictures .promoted-text .car-price {
+    font-size: 1.5rem;
+  }
 }
 
 .about {
@@ -779,6 +809,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .newest-cars ul li {
@@ -918,6 +950,14 @@ body {
   text-decoration: none;
   color: black;
   padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+@media (max-width: 440px) {
+  .our-cars .newest-cars ul li {
+    font-size: 1rem;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+  }
 }
 
 .rates-opinions {
@@ -1252,7 +1292,7 @@ footer div {
 
 footer div h4 {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
