@@ -1,0 +1,118 @@
+.our-services {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .best-cars {
+    width: 100%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    height: 80%;
+    background-image: url("https://images.pexels.com/photos/1005162/pexels-photo-1005162.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .offer {
+    max-width: 80%;
+    height: 70%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+    .offer-title {
+      width: 30%;
+      min-width: 20vh;
+      font-size: 2.5rem;
+      padding: 2rem 2rem;
+      color: black;
+      background-color: #fff;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-grow: 1;
+  
+      span {
+        color: red;
+        font-size: 2rem;
+        word-wrap: break-word;
+      }
+    }
+  
+    .offer-more {
+      width: 70%;
+      padding: 5rem 2rem;
+      background-color: rgb(218, 216, 216);
+      font-size: 1.5rem;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-grow: 2;
+    }
+  
+    .best-cars-carousel {
+      background-image: url("https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex-grow: 3;
+  
+      div {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 2rem;
+  
+        p {
+          color: #fff;
+          font-size: 1.5rem;
+        }
+  
+        button {
+          margin-top: 2rem;
+          padding: 1rem 2rem 1rem 2rem;
+          background-color: rgba(255, 255, 255, 0.5);
+          border: none;
+          border-top: 3px solid red;
+          transition: 0.5s ease;
+          cursor: pointer;
+          font-size: 1.5rem;
+  
+          &:hover {
+            background-color: rgba(255, 0, 0, 0.9);
+            border: none;
+            border-top: 3px solid white;
+            transition: 0.5s ease;
+  
+            a {
+              color: #fff;
+              transition: 0.5s ease;
+            }
+          }
+  
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            letter-spacing: 1px;
+            transition: 0.5s ease;
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }

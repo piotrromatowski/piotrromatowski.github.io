@@ -1,0 +1,165 @@
+.our-cars {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .newest-cars {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      text-align: center;
+      margin-top: 8rem;
+      margin-bottom: 3rem;
+      font-size: 3rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: black;
+  
+      span {
+        display: block;
+        border-bottom: 3px solid red;
+        width: 12rem;
+        margin-left: 50%;
+        margin-top: 1rem;
+        transform: translateX(-50%);
+      }
+    }
+  
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  
+      li {
+        padding: 1rem;
+        color: rgb(97, 97, 97);
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.5s ease;
+        letter-spacing: 2px;
+  
+        &:hover {
+          color: red;
+          transition: 0.5s ease;
+        }
+      }
+      span {
+        color: rgb(97, 97, 97);
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    }
+  
+    .newest-cars-list {
+      width: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-self: center;
+  
+      .single-new-car {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem;
+        padding: 2rem;
+        border: 1px solid rgb(223, 223, 223);
+        border-radius: 1rem;
+  
+        img {
+          width: 28rem;
+          height: 18rem;
+          object-fit: fill;
+          // margin-left: 5rem;
+        }
+  
+        p {
+          padding-top: 1rem;
+          color: black;
+          font-size: 2rem;
+          font-weight: 700;
+          align-self: flex-start;
+  
+          margin-left: 5rem;
+        }
+  
+        ul {
+          margin-top: 1rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+          gap: 0px 70px;
+  
+          li {
+            font-size: 1rem;
+            cursor: auto;
+            letter-spacing: 1px;
+            padding-left: 3rem;
+  
+            span {
+              color: red;
+              font-size: 2rem;
+              font-weight: 700;
+            }
+          }
+  
+          button {
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            background-color: rgb(223, 223, 223);
+            transition: 0.5s ease;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 2px;
+            color: black;
+  
+            &:hover {
+              background-color: rgba(255, 0, 0, 0.9);
+              transition: 0.5s ease;
+              color: #fff;
+  
+              a {
+                color: #fff;
+                transition: 0.5s ease;
+              }
+            }
+  
+            a {
+              transition: 0.5s ease;
+              text-decoration: none;
+              color: black;
+              padding: 0.5rem 1rem 0.5rem 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 440px) {
+    .our-cars {
+      .newest-cars {
+        ul {
+          li {
+            font-size: 1rem;
+            padding: 0.5rem;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }

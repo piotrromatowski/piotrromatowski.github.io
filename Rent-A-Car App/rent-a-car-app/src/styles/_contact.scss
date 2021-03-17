@@ -1,0 +1,76 @@
+.contact-us {
+    background-image: url("https://images.pexels.com/photos/205316/pexels-photo-205316.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  
+  .newsletter {
+    margin-top: 14rem;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      background-color: rgba(180, 196, 209, 0.4);
+      flex-wrap: wrap;
+  
+      p {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        align-self: center;
+        margin: 0rem 1rem;
+        text-align: center;
+        height: 4rem;
+        padding-top: 0.5rem;
+        margin-top: 2rem;
+      }
+      input {
+        height: 4rem;
+        width: 30rem;
+        padding-left: 1rem;
+        border: none;
+        align-self: center;
+        margin: 0rem 2rem;
+        background-color: rgba(180, 196, 209, 0);
+        border-bottom: 1px solid black;
+        outline: none;
+        margin-top: 2rem;
+  
+        &::placeholder {
+          color: black;
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
+  
+        &:focus {
+          color: black;
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
+      }
+      button {
+        height: 4rem;
+        width: 10rem;
+        align-self: center;
+        margin: 0rem 1rem;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.5rem;
+        background-color: red;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        margin-top: 2rem;
+      }
+    }
+  }
