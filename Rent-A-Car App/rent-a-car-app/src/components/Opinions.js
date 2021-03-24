@@ -3,7 +3,7 @@ import React from "react";
 function Opinions() {
   return (
     <>
-      <section className="rates-opinions">
+      <section id="rates" className="rates-opinions">
         <div className="opinions">
           <h2>
             WHAT DID OUR CLIENTS SAY<span></span>

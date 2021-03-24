@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import ModalForm from "./ModalForm";
 
 function Services() {
+  const [buttonModal, setButtonModal] = useState(false);
   return (
     <>
-      <section className="our-services">
+      <section id="services" className="our-services">
         <div className="best-cars">
           <div className="offer">
             <p className="offer-title">
@@ -21,14 +23,15 @@ function Services() {
             <div className="best-cars-carousel">
               <div>
                 <p>starting from $299 per day</p>
-                <button>
-                  <a href="/rent">rent a car</a>
+                <button onClick={() => setButtonModal(true)}>
+                  {/* <a href="/rent">rent a car</a> */}rent a car
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <ModalForm trigger={buttonModal} setTrigger={setButtonModal} />
     </>
   );
 }

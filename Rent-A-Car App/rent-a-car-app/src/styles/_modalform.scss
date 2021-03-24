@@ -1,0 +1,188 @@
+.modal-form{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1rem);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    
+    
+    .close{
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        border-radius: 50%;
+        left: 49%;
+        bottom: 31%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(0);
+        transition: 1.2s ease;
+        cursor: pointer;
+      
+
+        &:hover{
+            transform: rotate(180deg);
+            transition: 1.2s ease;
+            color: red;
+        }
+        
+       .fa-times-circle{
+           font-size: 3rem;
+           text-align: center;
+           
+       }
+    }
+
+    .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    background-color: rgba(180, 196, 209, 0.5);
+    backdrop-filter: blur(1rem);
+    width: 50%;
+    height: 70%;
+    z-index: 1;
+    border-radius: 1rem;
+    font-size: 2rem;
+    
+    }
+    label{
+        font-size: 2rem;
+        padding: 1rem 0rem;
+        i{
+            font-size: 2rem;
+            padding: 0rem 1rem;
+        }
+    }
+    input{
+        padding: 1rem 1rem;
+        border-radius: .5rem;
+        width: 60%;
+        outline: 0;
+        border: none;
+        align-self: center;
+        margin: 0rem 2rem;
+        background-color: rgba(180, 196, 209, 0);
+        border-bottom: 1px solid black;
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        &::placeholder {
+            color: black;
+            font-weight: 700;
+            font-size: 1.5rem;
+            background-color: rgba(180, 196, 209, 0)
+          }
+    
+          &:focus {
+            color: black;
+            font-weight: 700;
+            font-size: 1.5rem;
+          }
+    }
+    textarea{
+        padding: 1rem 1rem;
+        border-radius: .5rem;
+        width: 60%;
+        height: 30%;
+        outline: 0;
+        border: none;
+        align-self: center;
+        margin: 0rem 2rem;
+        background-color: rgba(180, 196, 209, 0);
+        border-bottom: 1px solid black;
+        resize: none;
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        &::placeholder {
+            color: black;
+            font-weight: 700;
+            font-size: 1.5rem;
+          }
+    
+          &:focus {
+            color: black;
+            font-weight: 700;
+            font-size: 1.5rem;
+          }
+        
+    }
+
+    button{
+        height: 4rem;
+        width: 10rem;
+        align-self: center;
+        margin: 0rem 1rem;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.5rem;
+        background-color: red;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        margin-top: 2rem;
+        transition: .5s ease;
+
+        &:hover{
+            color: red;
+            background-color: #fff;
+            transition: .5s ease;
+        }
+    }
+}
+
+@media(max-width: 640px){
+    .modal-form{
+        flex-direction: column;
+
+        margin-left: 0;
+        .close{
+
+            bottom: -2%;
+            left: 0%;
+        }
+        .form{
+            width: 70%;
+            font-size: 1rem;
+
+            label{
+                font-size: 1.5rem;
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+
+            input{
+                width: 100%;
+                font-size: 1rem;
+                &::placeholder{
+                    font-size: 1rem;
+                }
+                &:focus{
+                    font-size: 1rem;
+                }
+            }
+            textarea{
+                width: 100%;
+                font-size: 1rem;
+                &::placeholder{
+                    font-size: 1rem;
+                }
+                &:focus{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

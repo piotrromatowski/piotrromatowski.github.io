@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <>
-      <section className="about">
+      <section id="about" className="about">
         <h2 className="title">
           Welcome to carrental inc<span></span>
         </h2>

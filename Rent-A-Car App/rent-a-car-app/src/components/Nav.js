@@ -11,7 +11,6 @@ function Nav() {
   return (
     <>
       <nav className="nav">
-        ;
         <button
           id="burger"
           onClick={burgerHandler}
@@ -28,22 +27,22 @@ function Nav() {
             <a href="/home">Home</a>
           </li>
           <li className="about-us">
-            <a href="/about">About Us</a>
+            <a href="/#about">About Us</a>
           </li>
           <li className="rates">
-            <a href="/rates">Service Rates</a>
+            <a href="/#rates">Service Rates</a>
           </li>
           <li className="services">
-            <a href="/services">Our Services</a>
+            <a href="/#services">Our Services</a>
           </li>
           <li className="cars">
-            <a href="/cars">Our Cars</a>
+            <a href="/#cars-prices">Our Cars</a>
           </li>
           <li className="blog">
             <a href="/blog">Blog</a>
           </li>
           <li className="contact">
-            <a href="/contact">Contact Us</a>
+            <a href="/#contact">Contact Us</a>
           </li>
           <li className="search">
             <a href="/search">

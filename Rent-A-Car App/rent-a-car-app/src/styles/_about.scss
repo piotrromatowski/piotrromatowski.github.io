@@ -1,0 +1,90 @@
+.about {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 8rem;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: black;
+
+  span {
+    display: block;
+    border-bottom: 3px solid red;
+    width: 12rem;
+    margin-left: 50%;
+    margin-top: 1rem;
+    transform: translateX(-50%);
+  }
+}
+
+.title-text {
+  display: flex;
+  align-self: center;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  width: 60%;
+  color: rgb(97, 97, 97);
+}
+
+.text {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  .advertisment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    align-self: center;
+
+    .advert-text {
+      width: 30%;
+      min-width: 50vh;
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 2rem;
+      border: 1px solid rgb(97, 97, 97);
+      margin: 1.5rem;
+
+      h3 {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        color: black;
+        text-align: center;
+        padding-bottom: 2rem;
+
+        i {
+          color: red;
+          font-size: 3rem;
+          padding: 2rem;
+        }
+      }
+
+      p {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        color: rgb(97, 97, 97);
+      }
+    }
+  }
+}

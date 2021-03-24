@@ -1,4 +1,5 @@
 import "./styles/App.scss";
+import React, { useState } from "react";
 import Nav from "./components/Nav";
 import PromotedCars from "./components/PromotedCars";
 import About from "./components/About";

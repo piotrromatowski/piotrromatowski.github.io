@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
 
 const mainCarData = [
@@ -26,15 +26,35 @@ const mainCarData = [
 ];
 
 function PromotedCars() {
+  const itemsPerPage = 1;
+  const items = [1, 2, 3];
+  const carouselRef = useRef(null);
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  let resetTimeout;
+
   return (
     <>
       <section className="promoted-cars">
         <Carousel
           pagination={false}
           showArrows={false}
-          transitionMs={500}
+          transitionMs={3000}
           enableAutoPlay={true}
-          autoPlaySpeed={2000}
+          autoPlaySpeed={6000}
+          ref={carouselRef}
+          onNextEnd={({ index }) => {
+            clearTimeout(resetTimeout);
+            if (index + 1 === totalPages) {
+              resetTimeout = setTimeout(() => {
+                carouselRef.current.goTo(1);
+
+                setTimeout(() => {
+                  carouselRef.current.goTo(0);
+                }, 6000);
+              }, 6000);
+            }
+          }}
+          itemsToShow={itemsPerPage}
         >
           {mainCarData.map((data) => {
             return (
@@ -51,7 +71,7 @@ function PromotedCars() {
                       starting from ${data.price} per day
                     </h2>
                     <button className="prices">
-                      <a href="/prices"> Show Prices</a>
+                      <a href="/#cars-prices"> Show Prices</a>
                     </button>
                   </div>
                 </div>

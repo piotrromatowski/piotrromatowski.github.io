@@ -1,247 +1,155 @@
 .promoted-cars {
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-items: center;
-    flex-direction: column;
-  
-     .rec-slider-container {
-      margin: 0 ;
-      padding: 0 ;
-      width: 100vw ;
-     }
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  flex-direction: column;
 
-    
-  }
-
-  .carousel-with-pictures {
-    // background-image: url("https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    height: 90vh;
-    width: 100vw;
-    background-position: center;
-    background-size: cover;
+  .rec-slider-container {
     margin: 0;
     padding: 0;
-  
-    .promoted-text {
-      width: 50%;
-      height: 10%;
-      // background-color: rgba(255, 255, 255, 0.7);
-      position: relative;
-      top: 60%;
-      left: 10%;
-  
-      .car-category {
-        background-color: red;
-        color: #fff;
-        display: inline;
-        font-size: 2rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-      }
-  
-      .car-name {
-        font-size: 5rem;
-        font-weight: 900;
-        margin-top: 2rem;
-        color: #fff;
-      }
-  
-      .car-price {
-        color: #fff;
-        font-size: 2rem;
-      }
-  
-      .prices {
-        margin-top: 2rem;
-        padding: 1rem;
-        background-color: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+  }
+}
+
+.carousel-with-pictures {
+  // background-image: url("https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 90vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+
+  .promoted-text {
+    width: 50%;
+    height: 10%;
+    // background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    top: 60%;
+    left: 10%;
+
+    .car-category {
+      background-color: red;
+      color: #fff;
+      display: inline;
+      font-size: 2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    .car-name {
+      font-size: 5rem;
+      font-weight: 900;
+      margin-top: 2rem;
+      color: #fff;
+    }
+
+    .car-price {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .prices {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-top: 3px solid red;
+      transition: 0.5s ease;
+      // width: 15%;
+      // height: 40%;
+
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.9);
         border: none;
-        border-top: 3px solid red;
+        border-top: 3px solid white;
         transition: 0.5s ease;
-        // width: 15%;
-        // height: 40%;
-  
-        &:hover {
-          background-color: rgba(255, 0, 0, 0.9);
-          border: none;
-          border-top: 3px solid white;
-          transition: 0.5s ease;
-        }
-  
-        a {
-          font-size: 1.5rem;
-          text-decoration: none;
-          color: black;
-          text-transform: uppercase;
-          font-weight: 800;
-        }
+      }
+
+      a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 800;
       }
     }
   }
-  
-  .popular-cars {
-    width: 100%;
-    height: 100%;
+}
+
+.popular-cars {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(226, 226, 226);
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+  .popular-car {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgb(226, 226, 226);
-    padding-left: 3rem;
-    padding-right: 3rem;
-  
-    .popular-car {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-direction: column;
-      padding: 2rem 2rem;
-  
-      img {
-        height: 14rem;
-        width: auto;
-        margin-bottom: 2rem;
-      }
-  
-      h3 {
-        font-size: 2rem;
-        font-weight: 900;
-        letter-spacing: 2px;
-      }
-  
-      h4 {
-        background-color: red;
-        color: #fff;
-        display: inline;
-        font-size: 1rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        margin-top: 1rem;
-      }
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .promoted-cars {
-      .carousel-with-pictures {
-        .promoted-text {
-          display: flex;
-          justify-items: center;
-          align-content: center;
-          flex-direction: column;
-  
-          .car-category {
-            padding: 0.5rem;
-            font-size: 1.5rem;
-            align-self: center;
-          }
-          .car-name {
-            font-size: 4rem;
-            text-align: left;
-          }
-          .car-price {
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
-  }
-  
-  //about
-  .about {
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
-  }
-  
-  .title {
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 8rem;
-    font-size: 3rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: black;
-  
-    span {
-      display: block;
-      border-bottom: 3px solid red;
-      width: 12rem;
-      margin-left: 50%;
+    padding: 2rem 2rem;
+
+    img {
+      height: 14rem;
+      width: auto;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    h4 {
+      background-color: red;
+      color: #fff;
+      display: inline;
+      font-size: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
       margin-top: 1rem;
-      transform: translateX(-50%);
     }
   }
-  
-  .title-text {
-    display: flex;
-    align-self: center;
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    font-size: 1.5rem;
-    width: 60%;
-    color: rgb(97, 97, 97);
-  }
-  
-  .text {
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  
-    .advertisment {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-      align-self: center;
-  
-      .advert-text {
-        width: 30%;
-        min-width: 50vh;
-        min-height: 40vh;
+}
+
+@media (max-width: 500px) {
+  .promoted-cars {
+    .carousel-with-pictures {
+      .promoted-text {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-items: center;
+        align-content: center;
         flex-direction: column;
-        flex-wrap: wrap;
-        padding: 2rem;
-        border: 1px solid rgb(97, 97, 97);
-        margin: 1.5rem;
-  
-        h3 {
-          font-size: 1.4rem;
-          letter-spacing: 2px;
-          color: black;
+        top: 40%;
+
+        .car-category {
+          padding: 0.5rem;
+          font-size: 1.5rem;
+          align-self: center;
           text-align: center;
-          padding-bottom: 2rem;
-  
-          i {
-            color: red;
-            font-size: 3rem;
-            padding: 2rem;
-          }
         }
-  
-        p {
-          font-size: 1.4rem;
-          letter-spacing: 1px;
-          color: rgb(97, 97, 97);
+        .car-name {
+          font-size: 4rem;
+          text-align: left;
+        }
+        .car-price {
+          font-size: 1.5rem;
         }
       }
     }
   }
+}
