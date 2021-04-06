@@ -1,5 +1,16 @@
 import React, { useState } from "react";
 import logo from "../img/1300231.png";
+import { Link } from "react-router-dom";
+
+import PromotedCars from "./PromotedCars";
+import About from "./About";
+import Awards from "./Awards";
+import Services from "./Services";
+import OurCars from "./OurCars";
+import Opinions from "./Opinions";
+import Contact from "./Contact";
+import Footer from "./Footer";
+// import Blog from "./Blog";
 
 function Nav() {
   const [isActive, setActive] = useState("false");
@@ -24,7 +35,7 @@ function Nav() {
             <img src={logo} alt="logo" />
           </ol>
           <li className="home">
-            <a href="/home">Home</a>
+            <a href="/#home">Home</a>
           </li>
           <li className="about-us">
             <a href="/#about">About Us</a>
@@ -38,19 +49,31 @@ function Nav() {
           <li className="cars">
             <a href="/#cars-prices">Our Cars</a>
           </li>
+
           <li className="blog">
-            <a href="/blog">Blog</a>
+            <Link to="/blog">
+              <a href="#blog">Blog</a>
+            </Link>
           </li>
+
           <li className="contact">
             <a href="/#contact">Contact Us</a>
           </li>
           <li className="search">
-            <a href="/search">
+            <a href="/">
               <i className="fas fa-search"></i>
             </a>
           </li>
         </ul>
       </nav>
+      <PromotedCars />
+      <About />
+      <Awards />
+      <Services />
+      <OurCars />
+      <Opinions />
+      <Contact />
+      <Footer />
     </>
   );
 }

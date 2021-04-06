@@ -34,7 +34,7 @@ function PromotedCars() {
 
   return (
     <>
-      <section className="promoted-cars">
+      <section id="home" className="promoted-cars">
         <Carousel
           pagination={false}
           showArrows={false}
@@ -60,11 +60,10 @@ function PromotedCars() {
             return (
               <>
                 <div
-                  key={data.id}
                   className="carousel-with-pictures"
                   style={{ backgroundImage: `url(${data.linkCar})` }}
                 >
-                  <div className="promoted-text">
+                  <div key={data.id} className="promoted-text">
                     <p className="car-category">Luxury Car Rental</p>
                     <h1 className="car-name">{data.carName}</h1>
                     <h2 className="car-price">

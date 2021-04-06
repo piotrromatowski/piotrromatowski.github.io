@@ -5,6 +5,33 @@ import ModalForm from "./ModalForm";
 
 const singleCarData = [
   {
+    id: 3,
+    photos: [
+      {
+        photo:
+          "https://images.pexels.com/photos/3874330/pexels-photo-3874330.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      },
+      {
+        photo:
+          "https://images.pexels.com/photos/3874337/pexels-photo-3874337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      },
+      {
+        photo:
+          "https://images.pexels.com/photos/4061420/pexels-photo-4061420.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      },
+    ],
+    brand: "Toyota",
+    model: "Supra",
+    engine: "3.0L, petrol",
+    mileage: "300",
+    year: "2021",
+    location: "Warsaw",
+    condition: "new",
+    day_price: "759.99",
+    hour_price: "79.99",
+    type: "sport",
+  },
+  {
     id: 2,
     photos: [
       {

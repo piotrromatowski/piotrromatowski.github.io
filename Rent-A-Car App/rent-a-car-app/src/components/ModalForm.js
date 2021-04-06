@@ -128,6 +128,9 @@ function ModalForm(props) {
           >
             {calendarState ? "SELECT DATES OF RENT" : "CLOSE CALENDAR"}
           </button>
+          <span className="information">
+            {calendarState ? "" : "Double click to set or change correct date"}
+          </span>
           <div
             className="calendars"
             calendarState={calendarState}
@@ -213,9 +216,9 @@ function ModalForm(props) {
         })}
         <div className="show-date">{showResDate}</div>
         {console.log(showResDate)}
-        <span>
+        {/* <span className="information">
           {calendarState ? "" : "Double click to set or change correct date"}
-        </span>
+        </span> */}
 
         <button type="submit">SEND</button>
       </form>
