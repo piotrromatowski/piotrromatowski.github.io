@@ -62,15 +62,28 @@ function PromotedCars() {
                 <div
                   className="carousel-with-pictures"
                   style={{ backgroundImage: `url(${data.linkCar})` }}
+                  key={data.id + data.linkCar}
                 >
-                  <div key={data.id} className="promoted-text">
-                    <p className="car-category">Luxury Car Rental</p>
-                    <h1 className="car-name">{data.carName}</h1>
-                    <h2 className="car-price">
+                  <div key={data.id + "text"} className="promoted-text">
+                    <p key={data.id + "category"} className="car-category">
+                      Luxury Car Rental
+                    </p>
+                    <h1 key={data.carName + data.id} className="car-name">
+                      {data.carName}
+                    </h1>
+                    <h2 key={data.price + data.id} className="car-price">
                       starting from ${data.price} per day
                     </h2>
-                    <button className="prices">
-                      <a href="/#cars-prices"> Show Prices</a>
+                    <button
+                      key={data.price + data.id + "button"}
+                      className="prices"
+                    >
+                      <a
+                        key={data.price + data.id + "link"}
+                        href="/#cars-prices"
+                      >
+                        Show Prices
+                      </a>
                     </button>
                   </div>
                 </div>

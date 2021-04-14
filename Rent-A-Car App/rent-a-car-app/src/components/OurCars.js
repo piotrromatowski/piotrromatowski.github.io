@@ -2,15 +2,16 @@ import React from "react";
 import { useState } from "react";
 import SingleCar from "./SingleCar";
 
-export let changeCarList = "";
+// export let changeCarList = "";
 
 function OurCars() {
   const [listType, setListType] = useState("");
 
   const handleTypeCarClick = (e) => {
     setListType(e.target.className);
-    changeCarList = e.target.className;
+    // changeCarList = e.target.className;
   };
+  console.log(listType);
 
   return (
     <>
@@ -45,7 +46,7 @@ function OurCars() {
             </li>
           </ul>
           <div className="newest-cars-list">
-            <SingleCar />
+            <SingleCar listType={listType} />
           </div>
         </div>
       </section>

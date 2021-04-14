@@ -3,6 +3,8 @@ import emailjs from "emailjs-com";
 import Calendar from "react-calendar";
 
 function ModalForm(props) {
+  // const {open, choosenCar} = props;
+
   const [user, setUser] = useState({
     username: "",
     userMail: "",
@@ -12,6 +14,15 @@ function ModalForm(props) {
     dateTo: new Date(),
   });
 
+  // const [username, setUsername] = useState("");
+  // const [userMail, setUserMail] = useState("");
+  // const [userPhone, setUserPhone] = useState("");
+  // const [message, setMessage] = useState("");
+
+  console.log(props.choosenCar);
+
+  const [selectedCar, setSelectedCar] = useState("");
+
   const [usernameError, setUsernameError] = useState({});
   const [userMailError, setUserMailError] = useState({});
   const [userPhoneError, setUserPhoneError] = useState({});
@@ -20,21 +31,26 @@ function ModalForm(props) {
   const [dateFrom, setDateFrom] = useState(new Date());
   const [dateTo, setDateTo] = useState(new Date());
 
-  let [calendarState, setCalendarState] = useState(true);
+  const [calendarState, setCalendarState] = useState(true);
   const [showResDate, setShowResDate] = useState("");
 
-  let style = {};
+  // let style = {};
   const onClickCalendarHandle = () => {
-    calendarState = !calendarState;
-    setCalendarState(calendarState);
+    // calendarState = !calendarState;
+    setCalendarState(!calendarState);
 
-    calendarState
-      ? (style = { display: "none" })
-      : (style = { display: "flex" });
+    // calendarState
+    //   ? (style = { display: "none" })
+    //   : (style = { display: "flex" });
   };
 
   const onChangeUser = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
+    // setUsername({...username, [e.target.name] : e.target.value});
+    // setUserMail({...userMail, [e.target.name] : e.target.value});
+    // setUserPhone({...userPhone, [e.target.name] : e.target.value});
+    // setMessage({...message, [e.target.name] : e.target.value});
+    setSelectedCar(props.choosenCar);
   };
 
   const sendEmail = (e) => {
@@ -60,6 +76,7 @@ function ModalForm(props) {
         );
       setUser({ username: "", userMail: "", userPhone: "", message: "" });
       setShowResDate("");
+      setSelectedCar("");
     }
 
     // e.target.reset();
@@ -78,7 +95,7 @@ function ModalForm(props) {
         ${dateTo.toLocaleDateString()}`
     );
   };
-  console.log(showResDate);
+  // console.log(showResDate);
 
   const formValidation = () => {
     const nameError = {};
@@ -129,7 +146,10 @@ function ModalForm(props) {
             {calendarState ? "SELECT DATES OF RENT" : "CLOSE CALENDAR"}
           </button>
           <span className="information">
-            {calendarState ? "" : "Double click to set or change correct date"}
+            {calendarState
+              ? ""
+              : "Double click to set or change correct date. "}
+            {selectedCar ? "" : `Selected car: ${props.choosenCar}`}
           </span>
           <div
             className="calendars"
@@ -169,6 +189,7 @@ function ModalForm(props) {
           value={user.username}
           onChange={onChangeUser}
         ></input>
+
         {Object.keys(usernameError).map((key) => {
           return <span style={{ color: "red" }}>{usernameError[key]}</span>;
         })}
@@ -219,7 +240,6 @@ function ModalForm(props) {
         {/* <span className="information">
           {calendarState ? "" : "Double click to set or change correct date"}
         </span> */}
-
         <button type="submit">SEND</button>
       </form>
     </div>

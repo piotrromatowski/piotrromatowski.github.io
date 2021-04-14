@@ -52,7 +52,8 @@ function Nav() {
 
           <li className="blog">
             <Link to="/blog">
-              <a href="#blog">Blog</a>
+              Blog
+              {/* Blog<a href="#blog">Blog</a> */}
             </Link>
           </li>
 
@@ -60,7 +61,7 @@ function Nav() {
             <a href="/#contact">Contact Us</a>
           </li>
           <li className="search">
-            <a href="/">
+            <a href="https://www.google.com/">
               <i className="fas fa-search"></i>
             </a>
           </li>

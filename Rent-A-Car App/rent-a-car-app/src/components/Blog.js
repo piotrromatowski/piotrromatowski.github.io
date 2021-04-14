@@ -9,9 +9,7 @@ function Blog() {
         <nav className="blog-nav">
           <ul className="blog-list">
             <li className="blog-list-nav-item">
-              <Link to="/">
-                <a href="/home">Home</a>
-              </Link>
+              <Link to="/">Home{/* <a href="/home">Home</a> */}</Link>
             </li>
 
             <li className="blog-list-nav-item">
