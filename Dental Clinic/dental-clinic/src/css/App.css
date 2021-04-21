@@ -1,0 +1,823 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .main {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  z-index: -1;
+}
+
+.home .main .custom-shape-divider-top-1618502493 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.home .main .custom-shape-divider-top-1618502493 svg {
+  position: relative;
+  display: block;
+  width: calc(155% + 1.3px);
+  height: 288px;
+}
+
+.home .main .custom-shape-divider-top-1618502493 .shape-fill {
+  fill: #ffffff;
+}
+
+.home .main-text-container {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .main-text-container .main-text {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://images.pexels.com/photos/4045552/pexels-photo-4045552.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  -webkit-filter: brightness(20%);
+          filter: brightness(20%);
+}
+
+.home .main-text-container .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  width: 60%;
+  text-align: center;
+}
+
+.home .main-text-container .text h1 {
+  color: white;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+}
+
+.home .main-text-container .text p {
+  color: white;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+}
+
+.home .main-text-container .text .btn-visit {
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  font-weight: 500;
+  border-radius: 0.2rem;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #13b3db;
+  color: white;
+  font-size: 1rem;
+}
+
+.home .main-text-container .text .btn-visit:hover {
+  color: #13b3db;
+  background-color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .home .main-text-container .text {
+    width: 90%;
+    top: -15%;
+  }
+}
+
+.navbar {
+  height: 25%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  padding: 5%;
+  text-transform: uppercase;
+}
+
+.navbar-logo {
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+}
+
+.navbar-logo img {
+  width: 50%;
+  margin-left: 2rem;
+  margin-top: 2.1rem;
+  z-index: 5;
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+  background-color: #13b3db;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: black;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .nav-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-links {
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+  }
+  .nav-links:hover {
+    background-color: #13b3db;
+    border-radius: 0;
+  }
+  .navbar-logo img {
+    position: absolute;
+    top: -8%;
+    left: -15%;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(-100%, 60%);
+            transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .fa-times {
+    color: black;
+    font-size: 2rem;
+  }
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    width: 80%;
+    background: #13b3db;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #13b3db;
+    -webkit-transition: 250ms;
+    transition: 250ms;
+  }
+  .btn {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  background: red;
+  width: 20%;
+  position: absolute;
+  top: 2%;
+  list-style: none;
+  text-align: start;
+}
+
+.dropdown-menu li {
+  background: #13b3db;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #19bddb;
+}
+
+.dropdown-menu.clicked {
+  display: none;
+}
+
+.dropdown-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 1;
+  font-size: 1rem;
+  position: relative;
+}
+
+@media screen and (max-width: 960px) {
+  .fa-caret-down {
+    display: none;
+  }
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--primary);
+}
+
+.btn:hover {
+  padding: 6px 18px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 4px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.team {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 2rem;
+  background-color: black;
+  overflow-x: hidden;
+  color: white;
+}
+
+.team .team-text {
+  padding: 4rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+.team .team-text .text-first {
+  width: 100%;
+  padding-right: 2rem;
+}
+
+.team .team-text .text-first h1 {
+  padding-bottom: 2rem;
+}
+
+.team .team-text .text-second {
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.team .team-text .text-second h1 {
+  padding-bottom: 1rem;
+  text-align: center;
+  padding-right: -2rem;
+}
+
+.team .team-text .text-second ul {
+  list-style: url("../pictures/check-solid.svg");
+}
+
+.team .team-text .text-second ul li {
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  color: white;
+}
+
+.team .team-members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.team .team-members .dentists,
+.team .team-members .dental-hygienists,
+.team .team-members .dental-assistants,
+.team .team-members .reception {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: black;
+  width: 80%;
+}
+
+.team .team-members .dentists .team-title,
+.team .team-members .dental-hygienists .team-title,
+.team .team-members .dental-assistants .team-title,
+.team .team-members .reception .team-title {
+  text-align: center;
+  padding: 2rem 0rem;
+}
+
+.team .team-members .dentists .team-persons,
+.team .team-members .dental-hygienists .team-persons,
+.team .team-members .dental-assistants .team-persons,
+.team .team-members .reception .team-persons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background-color: black;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list,
+.team .team-members .dental-hygienists .team-persons .single-persons-list,
+.team .team-members .dental-assistants .team-persons .single-persons-list,
+.team .team-members .reception .team-persons .single-persons-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 33%;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist,
+.team .team-members .dentists .team-persons .single-persons-list .dentist,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist,
+.team .team-members .reception .team-persons .single-persons-list .dentist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: black;
+  padding: 3rem;
+  margin: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .front,
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .back,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .front,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .back,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .front,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .back,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .front,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .back,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .front,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .back,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .front,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .back,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .front,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .back,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .front,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  -webkit-transform: perspective(500px) rotateY(0deg);
+          transform: perspective(500px) rotateY(0deg);
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.front .person-name,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.front .person-profession,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.front .person-name,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.front .person-profession,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.front .person-name,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.front .person-profession,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.front .person-name,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.front .person-profession {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0.4rem 0rem;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.front .person-photo,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.front .person-photo,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.front .person-photo,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.front .person-photo {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back {
+  -webkit-transform: perspective(500px) rotateY(180deg);
+          transform: perspective(500px) rotateY(180deg);
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back .information,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back .information,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back .information,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back .information,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back .information,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back .information,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back .information,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back .information {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: justify;
+  -webkit-transform: perspective(500px) translateZ(50px);
+          transform: perspective(500px) translateZ(50px);
+  width: 80%;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back .person-specialization,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back .person-specialization,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back .person-specialization,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back .person-specialization {
+  width: 80%;
+  padding: 1rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: perspective(500px) translateZ(50px);
+          transform: perspective(500px) translateZ(50px);
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon {
+  font-size: 1rem;
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card:hover .front,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card:hover .front,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card:hover .front,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card:hover .front,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card:hover .front,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card:hover .front,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card:hover .front,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card:hover .front {
+  -webkit-transform: perspective(500px) rotateY(180deg);
+          transform: perspective(500px) rotateY(180deg);
+}
+
+.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card:hover .back,
+.team .team-members .dentists .team-persons .single-persons-list .dentist .card:hover .back,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card:hover .back,
+.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card:hover .back,
+.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card:hover .back,
+.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card:hover .back,
+.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card:hover .back,
+.team .team-members .reception .team-persons .single-persons-list .dentist .card:hover .back {
+  -webkit-transform: perspective(500px) rotateY(360deg);
+          transform: perspective(500px) rotateY(360deg);
+}
+
+@media screen and (max-width: 960px) {
+  .team .team-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .team .team-text .text-first {
+    padding-right: 0;
+  }
+  .team .team-text .text-second {
+    padding-left: 0;
+  }
+  .team .team-text .text-second h1 {
+    padding: 1rem;
+  }
+  .team .team-members .dentists .team-persons .single-persons-list,
+  .team .team-members .dental-hygienists .team-persons .single-persons-list,
+  .team .team-members .dental-assistants .team-persons .single-persons-list,
+  .team .team-members .reception .team-persons .single-persons-list {
+    width: 100%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+}
+/*# sourceMappingURL=App.css.map */
