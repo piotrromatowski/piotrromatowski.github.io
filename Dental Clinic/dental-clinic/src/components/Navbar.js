@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link, Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../pictures/Mr_Dentist.png";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
-import Team from "./Team";
 
 function Navbar() {
   const [clickMenu, setClickMenu] = useState(false);

@@ -88,6 +88,7 @@
   background-color: black;
   overflow-x: hidden;
   color: white;
+  font-family: "Roboto Condensed", sans-serif;
 
   .team-text {
     padding: 4rem 0rem;
@@ -198,6 +199,7 @@
               align-items: center;
               justify-content: center;
               flex-direction: column;
+              cursor: pointer;
 
               .front,
               .back {
@@ -357,6 +359,7 @@
 
 @media screen and (max-width: 960px) {
   .team {
+    margin-top: 20%;
     .team-text {
       flex-direction: column;
 

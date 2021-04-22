@@ -1,8 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import logo from "../pictures/Mr_Dentist.png";
-// import Button from "./Button";
-// import Dropdown from "./Dropdown";
 import Navbar from "./Navbar";
 
 function Home() {
@@ -10,33 +6,7 @@ function Home() {
     <>
       <section className="home">
         <Navbar />
-        {/* <div className="navbar">
-          <div className="logo">
-            <img src={logo} alt=""></img>
-          </div>
-          <nav className="nav">
-            <ul>
-              <li>
-                Zespół <i class="fas fa-chevron-down"></i>
-              </li>
-              <li>
-                Usługi <i class="fas fa-chevron-down"></i>
-              </li>
-              <li>
-                Galeria <i class="fas fa-chevron-down"></i>
-              </li>
-              <li>
-                Cennik <i class="fas fa-chevron-down"></i>
-              </li>
-              <li>
-                Zapisy online <i class="fas fa-chevron-down"></i>
-              </li>
-              <li>
-                Kontakt <i class="fas fa-chevron-down"></i>
-              </li>
-            </ul>
-          </nav>
-        </div> */}
+
         <div className="home-picture">
           <img src="" alt=""></img>
         </div>

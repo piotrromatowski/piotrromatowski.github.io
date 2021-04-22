@@ -45,13 +45,13 @@ function Team() {
         <div className="team-members">
           <div className="mr-dentist-team">
             <h2 className="team-title">
-              <i class="fas fa-tooth"></i>
-              <i class="fas fa-tooth"></i>
-              <i class="fas fa-tooth"></i>
+              <i className="fas fa-tooth"></i>
+              <i className="fas fa-tooth"></i>
+              <i className="fas fa-tooth"></i>
               Nasz zespół
-              <i class="fas fa-tooth"></i>
-              <i class="fas fa-tooth"></i>
-              <i class="fas fa-tooth"></i>
+              <i className="fas fa-tooth"></i>
+              <i className="fas fa-tooth"></i>
+              <i className="fas fa-tooth"></i>
             </h2>
             <ul className="team-persons">
               {TeamMembersDentists.map((item, index) => {
