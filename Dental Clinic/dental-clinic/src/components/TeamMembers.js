@@ -158,8 +158,350 @@ export const TeamMembersDentists = [
       "Stomatologia dziecięca",
     ],
   },
+  //////higienistki
+  {
+    id: 11,
+    name: "Anna Słoneczna",
+    profession: "Higienistka stomatologiczna",
+    link:
+      "https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+           dolorum accusantium repellat animi porro quibusdam ea commodi nam
+           numquam rerum?`,
+    teamClassName: "hygienist",
+    icons: <i class="fas fa-tooth"></i>,
+    specialization: [
+      "Higienizacja zębów",
+      "Skaling",
+      "Piaskowanie",
+      "Fluoryzacja",
+    ],
+  },
+  {
+    id: 12,
+    name: "Marta Nowak",
+    profession: "Higienistka stomatologiczna",
+    link:
+      "https://images.pexels.com/photos/789304/pexels-photo-789304.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+           dolorum accusantium repellat animi porro quibusdam ea commodi nam
+           numquam rerum?`,
+    teamClassName: "hygienist",
+    icons: <i class="fas fa-tooth"></i>,
+    specialization: [
+      "Higienizacja zębów",
+      "Skaling",
+      "Piaskowanie",
+      "Fluoryzacja",
+    ],
+  },
+  {
+    id: 13,
+    name: "Angelika Sobieska",
+    profession: "Higienistka stomatologiczna",
+    link:
+      "https://images.pexels.com/photos/3660036/pexels-photo-3660036.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+           dolorum accusantium repellat animi porro quibusdam ea commodi nam
+           numquam rerum?`,
+    teamClassName: "hygienist",
+    icons: <i class="fas fa-tooth"></i>,
+    specialization: [
+      "Higienizacja zębów",
+      "Skaling",
+      "Piaskowanie",
+      "Fluoryzacja",
+    ],
+  },
+  {
+    id: 14,
+    name: "Joanna Piwowarska",
+    profession: "Higienistka stomatologiczna",
+    link:
+      "https://images.pexels.com/photos/1925482/pexels-photo-1925482.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+           dolorum accusantium repellat animi porro quibusdam ea commodi nam
+           numquam rerum?`,
+    teamClassName: "hygienist",
+    icons: <i class="fas fa-tooth"></i>,
+    specialization: [
+      "Higienizacja zębów",
+      "Skaling",
+      "Piaskowanie",
+      "Fluoryzacja",
+    ],
+  },
+  {
+    id: 15,
+    name: "Aneta Stachowiak",
+    profession: "Higienistka stomatologiczna",
+    link:
+      "https://images.pexels.com/photos/6417996/pexels-photo-6417996.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+           dolorum accusantium repellat animi porro quibusdam ea commodi nam
+           numquam rerum?`,
+    teamClassName: "hygienist",
+    icons: <i class="fas fa-tooth"></i>,
+    specialization: [
+      "Higienizacja zębów",
+      "Skaling",
+      "Piaskowanie",
+      "Fluoryzacja",
+    ],
+  },
+  /////asystentki
+  {
+    id: 16,
+    name: "Agnieszka Strzelecka",
+    profession: "Asystentka stomatologiczna",
+    link:
+      "https://images.pexels.com/photos/388517/pexels-photo-388517.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+             dolorum accusantium repellat animi porro quibusdam ea commodi nam
+             numquam rerum?`,
+    teamClassName: "dental-assistant",
+    icons: <i class="fas fa-tooth"></i>,
+    specialization: ["Asystentka stomatologiczna"],
+  },
+  {
+    id: 17,
+    name: "Magdalena Białołęcka",
+    profession: "Asystentka stomatologiczna",
+    link:
+      "https://images.pexels.com/photos/7593261/pexels-photo-7593261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+             dolorum accusantium repellat animi porro quibusdam ea commodi nam
+             numquam rerum?`,
+    teamClassName: "dental-assistant",
+    icons: <i class="fas fa-tooth"></i>,
+    specialization: ["Asystentka stomatologiczna"],
+  },
+  {
+    id: 18,
+    name: "Ewelina Mors",
+    profession: "Asystentka stomatologiczna",
+    link:
+      "https://images.pexels.com/photos/2065200/pexels-photo-2065200.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+             dolorum accusantium repellat animi porro quibusdam ea commodi nam
+             numquam rerum?`,
+    teamClassName: "dental-assistant",
+    icons: <i class="fas fa-tooth"></i>,
+    specialization: ["Asystentka stomatologiczna"],
+  },
+  /////recepcja
+  {
+    id: 19,
+    name: "Katarzyna Radziszewska",
+    profession: "Recepcjonistka",
+    link:
+      "https://images.pexels.com/photos/3839910/pexels-photo-3839910.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+                 dolorum accusantium repellat animi porro quibusdam ea commodi nam
+                 numquam rerum?`,
+    teamClassName: "receptionist",
+    icons: <i class="fas fa-desktop"></i>,
+    specialization: ["Recepcjonistka"],
+  },
+  {
+    id: 20,
+    name: "Aleksandra Kosmoska",
+    profession: "Recepcjonistka",
+    link:
+      "https://images.pexels.com/photos/1963075/pexels-photo-1963075.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+                 dolorum accusantium repellat animi porro quibusdam ea commodi nam
+                 numquam rerum?`,
+    teamClassName: "receptionist",
+    icons: <i class="fas fa-desktop"></i>,
+    specialization: ["Recepcjonistka"],
+  },
+  {
+    id: 21,
+    name: "Ewa Kołodziejska",
+    profession: "Recepcjonistka",
+    link:
+      "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+                 dolorum accusantium repellat animi porro quibusdam ea commodi nam
+                 numquam rerum?`,
+    teamClassName: "receptionist",
+    icons: <i class="fas fa-desktop"></i>,
+    specialization: ["Recepcjonistka"],
+  },
 ];
 
-export const TeamMembersHygienists = [];
-export const TeamMembersAssistants = [];
-export const TeamMembersReception = [];
+export const TeamMembersHygienists = [
+  //   {
+  //     id: 11,
+  //     name: "Anna Słoneczna",
+  //     profession: "Higienistka stomatologiczna",
+  //     link:
+  //       "https://images.pexels.com/photos/2448531/pexels-photo-2448531.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //              dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //              numquam rerum?`,
+  //     teamClassName: "hygienist",
+  //     icons: <i class="fas fa-tooth"></i>,
+  //     specialization: [
+  //       "Higienizacja zębów",
+  //       "Skaling",
+  //       "Piaskowanie",
+  //       "Fluoryzacja",
+  //     ],
+  //   },
+  //   {
+  //     id: 12,
+  //     name: "Marta Nowak",
+  //     profession: "Higienistka stomatologiczna",
+  //     link:
+  //       "https://images.pexels.com/photos/789304/pexels-photo-789304.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //              dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //              numquam rerum?`,
+  //     teamClassName: "hygienist",
+  //     icons: <i class="fas fa-tooth"></i>,
+  //     specialization: [
+  //       "Higienizacja zębów",
+  //       "Skaling",
+  //       "Piaskowanie",
+  //       "Fluoryzacja",
+  //     ],
+  //   },
+  //   {
+  //     id: 13,
+  //     name: "Angelika Sobieska",
+  //     profession: "Higienistka stomatologiczna",
+  //     link:
+  //       "https://images.pexels.com/photos/3660036/pexels-photo-3660036.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //              dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //              numquam rerum?`,
+  //     teamClassName: "hygienist",
+  //     icons: <i class="fas fa-tooth"></i>,
+  //     specialization: [
+  //       "Higienizacja zębów",
+  //       "Skaling",
+  //       "Piaskowanie",
+  //       "Fluoryzacja",
+  //     ],
+  //   },
+  //   {
+  //     id: 14,
+  //     name: "Joanna Piwowarska",
+  //     profession: "Higienistka stomatologiczna",
+  //     link:
+  //       "https://images.pexels.com/photos/1925482/pexels-photo-1925482.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //              dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //              numquam rerum?`,
+  //     teamClassName: "hygienist",
+  //     icons: <i class="fas fa-tooth"></i>,
+  //     specialization: [
+  //       "Higienizacja zębów",
+  //       "Skaling",
+  //       "Piaskowanie",
+  //       "Fluoryzacja",
+  //     ],
+  //   },
+  //   {
+  //     id: 15,
+  //     name: "Aneta Stachowiak",
+  //     profession: "Higienistka stomatologiczna",
+  //     link:
+  //       "https://images.pexels.com/photos/6417996/pexels-photo-6417996.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //              dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //              numquam rerum?`,
+  //     teamClassName: "hygienist",
+  //     icons: <i class="fas fa-tooth"></i>,
+  //     specialization: [
+  //       "Higienizacja zębów",
+  //       "Skaling",
+  //       "Piaskowanie",
+  //       "Fluoryzacja",
+  //     ],
+  //   },
+];
+export const TeamMembersAssistants = [
+  //   {
+  //     id: 16,
+  //     name: "Agnieszka Strzelecka",
+  //     profession: "Asystentka stomatologiczna",
+  //     link:
+  //       "https://images.pexels.com/photos/388517/pexels-photo-388517.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //              dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //              numquam rerum?`,
+  //     teamClassName: "dental-assistant",
+  //     icons: <i class="fas fa-tooth"></i>,
+  //     specialization: ["Asystentka stomatologiczna"],
+  //   },
+  //   {
+  //     id: 17,
+  //     name: "Magdalena Białołęcka",
+  //     profession: "Asystentka stomatologiczna",
+  //     link:
+  //       "https://images.pexels.com/photos/7593261/pexels-photo-7593261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //              dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //              numquam rerum?`,
+  //     teamClassName: "dental-assistant",
+  //     icons: <i class="fas fa-tooth"></i>,
+  //     specialization: ["Asystentka stomatologiczna"],
+  //   },
+  //   {
+  //     id: 18,
+  //     name: "Ewelina Mors",
+  //     profession: "Asystentka stomatologiczna",
+  //     link:
+  //       "https://images.pexels.com/photos/2065200/pexels-photo-2065200.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //              dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //              numquam rerum?`,
+  //     teamClassName: "dental-assistant",
+  //     icons: <i class="fas fa-tooth"></i>,
+  //     specialization: ["Asystentka stomatologiczna"],
+  //   },
+];
+export const TeamMembersReception = [
+  //   {
+  //     id: 19,
+  //     name: "Katarzyna Radziszewska",
+  //     profession: "Recepcjonistka",
+  //     link:
+  //       "https://images.pexels.com/photos/3839910/pexels-photo-3839910.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //                  dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //                  numquam rerum?`,
+  //     teamClassName: "receptionist",
+  //     icons: <i class="fas fa-desktop"></i>,
+  //     specialization: ["Recepcjonistka"],
+  //   },
+  //   {
+  //     id: 20,
+  //     name: "Aleksandra Kosmoska",
+  //     profession: "Recepcjonistka",
+  //     link:
+  //       "https://images.pexels.com/photos/1963075/pexels-photo-1963075.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //                  dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //                  numquam rerum?`,
+  //     teamClassName: "receptionist",
+  //     icons: <i class="fas fa-desktop"></i>,
+  //     specialization: ["Recepcjonistka"],
+  //   },
+  //   {
+  //     id: 21,
+  //     name: "Ewa Kołodziejska",
+  //     profession: "Recepcjonistka",
+  //     link:
+  //       "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  //     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  //                  dolorum accusantium repellat animi porro quibusdam ea commodi nam
+  //                  numquam rerum?`,
+  //     teamClassName: "receptionist",
+  //     icons: <i class="fas fa-desktop"></i>,
+  //     specialization: ["Recepcjonistka"],
+  //   },
+];

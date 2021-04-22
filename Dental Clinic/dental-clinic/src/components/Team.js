@@ -1,12 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import {
-  TeamMembersDentists,
-  TeamMembersHygienists,
-  TeamMembersAssistants,
-  TeamMembersReception,
-} from "./TeamMembers";
+import { TeamMembersDentists } from "./TeamMembers";
 
 function Team() {
   return (
@@ -49,8 +43,16 @@ function Team() {
           </div>
         </div>
         <div className="team-members">
-          <div className="dentists">
-            <h2 className="team-title">Lekarze dentyści</h2>
+          <div className="mr-dentist-team">
+            <h2 className="team-title">
+              <i class="fas fa-tooth"></i>
+              <i class="fas fa-tooth"></i>
+              <i class="fas fa-tooth"></i>
+              Nasz zespół
+              <i class="fas fa-tooth"></i>
+              <i class="fas fa-tooth"></i>
+              <i class="fas fa-tooth"></i>
+            </h2>
             <ul className="team-persons">
               {TeamMembersDentists.map((item, index) => {
                 return (
@@ -62,6 +64,7 @@ function Team() {
                           <h4 className="person-profession">
                             {item.profession}
                           </h4>
+                          <div className="crown"></div>
                           <img
                             className="person-photo"
                             src={item.link}
@@ -81,115 +84,6 @@ function Team() {
                               );
                             })}
                           </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </ol>
-                );
-              })}
-            </ul>
-          </div>
-          <div className="dental-hygienists">
-            <h2 className="team-title">Higienistki stomatologiczne</h2>
-            <ul>
-              {TeamMembersHygienists.map((item, index) => {
-                return (
-                  <ol className="single-persons-list" key={index}>
-                    <div className={item.teamClassName}>
-                      <div className="card">
-                        <div className="card front">
-                          <h3 className="person-name">{item.name}</h3>
-                          <h4 className="person-profession">
-                            {item.profession}
-                          </h4>
-                          <img
-                            className="person-photo"
-                            src={item.link}
-                            alt=""
-                          ></img>
-                        </div>
-                        <div className="card back">
-                          <p className="information">{item.information}</p>
-
-                          <ul className="person-specialization">
-                            {item.specialization.map((specs, index) => {
-                              return (
-                                <li className="specialization" key={index}>
-                                  {specs}
-                                  <i className="icon">{item.icons}</i>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </ol>
-                );
-              })}
-            </ul>
-          </div>
-          <div className="dental-assistants">
-            <h2 className="team-title">Asystentki stomatologiczne</h2>
-            <ul>
-              {TeamMembersAssistants.map((item, index) => {
-                return (
-                  <ol className="single-persons-list" key={index}>
-                    <div className={item.teamClassName}>
-                      <div className="card">
-                        <div className="card front">
-                          <h3 className="person-name">{item.name}</h3>
-                          <h4 className="person-profession">
-                            {item.profession}
-                          </h4>
-                          <img
-                            className="person-photo"
-                            src={item.link}
-                            alt=""
-                          ></img>
-                        </div>
-                        <div className="card back">
-                          <p className="information">{item.information}</p>
-
-                          <ul className="person-specialization">
-                            {item.specialization.map((specs, index) => {
-                              return (
-                                <li className="specialization" key={index}>
-                                  {specs}
-                                  <i className="icon">{item.icons}</i>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </ol>
-                );
-              })}
-            </ul>
-          </div>
-          <div className="reception">
-            <h2 className="team-title">Obsługa recepcji</h2>
-            <ul>
-              {TeamMembersReception.map((item, index) => {
-                return (
-                  <ol className="single-persons-list" key={index}>
-                    <div className={item.teamClassName}>
-                      <div className="card">
-                        <div className="card front">
-                          <h3 className="person-name">{item.name}</h3>
-                          <h4 className="person-profession">
-                            {item.profession}
-                          </h4>
-                          <img
-                            className="person-photo"
-                            src={item.link}
-                            alt=""
-                          ></img>
-                        </div>
-                        <div className="card back">
-                          <p className="information">{item.information}</p>
                         </div>
                       </div>
                     </div>

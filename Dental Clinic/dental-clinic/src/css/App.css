@@ -119,11 +119,15 @@
   background-color: #13b3db;
   color: white;
   font-size: 1rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .home .main-text-container .text .btn-visit:hover {
   color: #13b3db;
   background-color: white;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 @media screen and (max-width: 960px) {
@@ -162,6 +166,7 @@
   margin-left: 2rem;
   margin-top: 2.1rem;
   z-index: 5;
+  border-radius: 1rem;
 }
 
 .nav-menu {
@@ -356,25 +361,113 @@
 }
 
 .btn {
-  padding: 8px 20px;
-  border-radius: 4px;
-  outline: none;
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  font-weight: 500;
+  border-radius: 0.2rem;
+  outline: transparent;
   border: none;
-  font-size: 18px;
-  color: #fff;
   cursor: pointer;
-  background-color: var(--primary);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #13b3db;
+  color: white;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .btn:hover {
-  padding: 6px 18px;
+  color: #13b3db;
+  background-color: white;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  background-color: transparent;
-  color: #fff;
-  border-radius: 4px;
-  border: 2px solid var(--primary);
-  transition: all 0.3s ease-out;
+}
+
+@-webkit-keyframes crown {
+  0% {
+    top: 10%;
+    right: 20%;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+    width: 8rem;
+    height: 8rem;
+  }
+  25% {
+    top: 0%;
+    right: 5%;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 9rem;
+    height: 9rem;
+  }
+  50% {
+    top: 5%;
+    right: 10%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+    width: 10rem;
+    height: 10rem;
+  }
+  75% {
+    top: 8%;
+    right: 15%;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 9rem;
+    height: 9rem;
+  }
+  100% {
+    top: 10%;
+    right: 20%;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@keyframes crown {
+  0% {
+    top: 10%;
+    right: 20%;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+    width: 8rem;
+    height: 8rem;
+  }
+  25% {
+    top: 0%;
+    right: 5%;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 9rem;
+    height: 9rem;
+  }
+  50% {
+    top: 5%;
+    right: 10%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+    width: 10rem;
+    height: 10rem;
+  }
+  75% {
+    top: 8%;
+    right: 15%;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 9rem;
+    height: 9rem;
+  }
+  100% {
+    top: 10%;
+    right: 20%;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
 .team {
@@ -434,7 +527,7 @@
 }
 
 .team .team-text .text-second ul {
-  list-style: url("../pictures/check-solid.svg");
+  list-style: url("../pictures/vectorpaint.svg");
 }
 
 .team .team-text .text-second ul li {
@@ -457,12 +550,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 5rem;
 }
 
-.team .team-members .dentists,
-.team .team-members .dental-hygienists,
-.team .team-members .dental-assistants,
-.team .team-members .reception {
+.team .team-members .mr-dentist-team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,20 +569,20 @@
           flex-direction: column;
   background-color: black;
   width: 80%;
+  padding-bottom: 2rem;
 }
 
-.team .team-members .dentists .team-title,
-.team .team-members .dental-hygienists .team-title,
-.team .team-members .dental-assistants .team-title,
-.team .team-members .reception .team-title {
+.team .team-members .mr-dentist-team .team-title {
   text-align: center;
-  padding: 2rem 0rem;
+  padding: 3rem 0rem;
+  margin-bottom: 2rem;
 }
 
-.team .team-members .dentists .team-persons,
-.team .team-members .dental-hygienists .team-persons,
-.team .team-members .dental-assistants .team-persons,
-.team .team-members .reception .team-persons {
+.team .team-members .mr-dentist-team .team-title i {
+  padding: 0rem 0.5rem;
+}
+
+.team .team-members .mr-dentist-team .team-persons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,10 +602,7 @@
   background-color: black;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list,
-.team .team-members .dental-hygienists .team-persons .single-persons-list,
-.team .team-members .dental-assistants .team-persons .single-persons-list,
-.team .team-members .reception .team-persons .single-persons-list {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,14 +621,11 @@
   width: 33%;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist,
-.team .team-members .dentists .team-persons .single-persons-list .dentist,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist,
-.team .team-members .reception .team-persons .single-persons-list .dentist {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,16 +646,27 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  border: 1px solid transparent;
+  -webkit-transition: 0.4s linear 1s;
+  transition: 0.4s linear 1s;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist:hover,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist:hover,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist:hover,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant:hover,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist:hover {
+  border: 1px solid #13b3db;
+  -webkit-transition: 0.4s linear 1s;
+  transition: 0.4s linear 1s;
+  border-radius: 1rem;
+}
+
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card {
   position: relative;
   width: 300px;
   height: 400px;
@@ -591,22 +687,16 @@
           flex-direction: column;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .front,
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .back,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .front,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .back,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .front,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .back,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .front,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .back,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .front,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .back,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .front,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .back,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .front,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .back,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .front,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .back {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .back {
   position: absolute;
   top: 0;
   left: 0;
@@ -631,78 +721,72 @@
           transform: perspective(500px) rotateY(0deg);
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.front .person-name,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.front .person-profession,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.front .person-name,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.front .person-profession,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.front .person-name,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.front .person-profession,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.front .person-name,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.front .person-profession {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.front .person-name,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.front .person-profession,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.front .person-name,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.front .person-profession,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.front .person-name,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.front .person-profession,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.front .person-name,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.front .person-profession {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 0.4rem 0rem;
+  padding: 0.1rem 0rem;
+  -webkit-transform: perspective(500px) translateZ(50px);
+          transform: perspective(500px) translateZ(50px);
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.front .person-photo,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.front .person-photo,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.front .person-photo,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.front .person-photo {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .crown,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.front .crown,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.front .crown,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.front .crown,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.front .crown {
+  display: none;
+}
+
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.front .person-photo,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.front .person-photo,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.front .person-photo,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.front .person-photo {
   max-width: 100%;
   max-height: 100%;
-  margin: 1rem;
   border-radius: 1rem;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.back {
+  background-color: #242525;
   -webkit-transform: perspective(500px) rotateY(180deg);
           transform: perspective(500px) rotateY(180deg);
+  border-radius: 1rem;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back .information,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back .information,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back .information,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back .information,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back .information,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back .information,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back .information,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back .information {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .information,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .information,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .information,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .information,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.back .information {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: justify;
   -webkit-transform: perspective(500px) translateZ(50px);
           transform: perspective(500px) translateZ(50px);
   width: 80%;
+  padding: 0rem 1rem;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back .person-specialization,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back .person-specialization,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back .person-specialization,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back .person-specialization {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .person-specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .person-specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .person-specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.back .person-specialization {
   width: 80%;
   padding: 1rem;
   -ms-flex-item-align: center;
@@ -725,14 +809,11 @@
           transform: perspective(500px) translateZ(50px);
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .person-specialization .specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .person-specialization .specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.back .person-specialization .specialization {
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -749,39 +830,89 @@
           flex-direction: row-reverse;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .person-specialization .specialization .icon,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.back .person-specialization .specialization .icon {
   font-size: 1rem;
+  padding-right: 0.5rem;
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card:hover .front,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card:hover .front,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card:hover .front,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card:hover .front,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card:hover .front,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card:hover .front,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card:hover .front,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card:hover .front {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .dentist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .person-specialization .dentist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .person-specialization .dentist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .person-specialization .dentist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card .card.back .person-specialization .dentist {
+  border-color: blue;
+}
+
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card:hover .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card:hover .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card:hover .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card:hover .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card:hover .front {
   -webkit-transform: perspective(500px) rotateY(180deg);
           transform: perspective(500px) rotateY(180deg);
 }
 
-.team .team-members .dentists .team-persons .single-persons-list .owner-dentist .card:hover .back,
-.team .team-members .dentists .team-persons .single-persons-list .dentist .card:hover .back,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .owner-dentist .card:hover .back,
-.team .team-members .dental-hygienists .team-persons .single-persons-list .dentist .card:hover .back,
-.team .team-members .dental-assistants .team-persons .single-persons-list .owner-dentist .card:hover .back,
-.team .team-members .dental-assistants .team-persons .single-persons-list .dentist .card:hover .back,
-.team .team-members .reception .team-persons .single-persons-list .owner-dentist .card:hover .back,
-.team .team-members .reception .team-persons .single-persons-list .dentist .card:hover .back {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card:hover .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card:hover .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card:hover .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card:hover .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .receptionist .card:hover .back {
   -webkit-transform: perspective(500px) rotateY(360deg);
           transform: perspective(500px) rotateY(360deg);
+}
+
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .crown {
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: crown;
+  animation-name: crown;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  position: absolute;
+  display: block;
+  top: 10%;
+  right: 20%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  background-image: url(../pictures/PikPng.com_pink-crown-png_2883035.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8rem;
+  height: 8rem;
+}
+
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .crown:hover {
+  position: relative;
+}
+
+@media screen and (max-width: 1630px) {
+  .team .team-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .team .team-text .text-first {
+    padding-right: 0;
+  }
+  .team .team-text .text-second {
+    padding-left: 0;
+  }
+  .team .team-text .text-second h1 {
+    padding: 1rem;
+  }
+  .team .team-members .mr-dentist-team {
+    width: 100%;
+  }
+  .team .team-members .mr-dentist-team .team-persons .single-persons-list {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -800,10 +931,10 @@
   .team .team-text .text-second h1 {
     padding: 1rem;
   }
-  .team .team-members .dentists .team-persons .single-persons-list,
-  .team .team-members .dental-hygienists .team-persons .single-persons-list,
-  .team .team-members .dental-assistants .team-persons .single-persons-list,
-  .team .team-members .reception .team-persons .single-persons-list {
+  .team .team-members .mr-dentist-team {
+    width: 100%;
+  }
+  .team .team-members .mr-dentist-team .team-persons .single-persons-list {
     width: 100%;
   }
 }

@@ -128,10 +128,12 @@
         background-color: rgb(19, 179, 219);
         color: white;
         font-size: 1rem;
+        transition: all 0.3s ease-out;
 
         &:hover {
           color: rgb(19, 179, 219);
           background-color: white;
+          transition: all 0.3s ease-out;
         }
       }
     }

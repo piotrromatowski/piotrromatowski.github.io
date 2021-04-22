@@ -25,6 +25,7 @@
     margin-left: 2rem;
     margin-top: 2.1rem;
     z-index: 5;
+    border-radius: 1rem;
   }
 }
 // .fa-firstdraft {
@@ -72,6 +73,7 @@
 .menu-icon {
   display: none;
 }
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
