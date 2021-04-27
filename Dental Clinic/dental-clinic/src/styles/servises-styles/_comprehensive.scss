@@ -1,0 +1,373 @@
+@mixin animate($name, $duration, $iteration, $direction) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-iteration-count: $iteration;
+  -o-animation-iteration-count: $iteration;
+  animation-iteration-count: $iteration;
+
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+
+  -webkit-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -o-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+.comprehensive-treatment {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  .comprehensive-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .comprehensive-title {
+      padding: 2rem 1rem;
+      //   margin: 1rem 1rem;
+      text-align: left;
+      background-color: rgba(19, 179, 219, 0.75);
+      width: 100%;
+      text-align: center;
+    }
+    .comprehensive-subtitle {
+      padding: 2rem 1rem;
+    }
+
+    .comprehensive-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 80%;
+      flex-direction: row;
+
+      .comprehensive-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 22rem;
+        height: 22rem;
+        padding: 2rem 2rem;
+        margin: 2rem 2rem;
+        // overflow: hidden;
+        border: 1px solid rgba(19, 179, 219, 0.75);
+        position: relative;
+
+        i {
+          border: 1px solid rgba(19, 179, 219, 0.75);
+          color: rgba(19, 179, 219, 0.75);
+          padding: 1rem 1rem;
+          font-size: 2rem;
+          align-self: flex-start;
+          justify-self: flex-start;
+          margin-bottom: 2rem;
+          width: 4rem;
+          height: 4rem;
+          position: absolute;
+          top: 9%;
+          left: 9%;
+        }
+
+        span {
+          width: 100%;
+          padding: 1rem 0rem;
+          font-size: 1.2rem;
+          margin-top: 20%;
+        }
+        p {
+          padding: 1rem 0rem;
+          color: gray;
+          flex-grow: 2;
+        }
+      }
+    }
+    .comprehensive-summary {
+      padding: 2rem 2rem;
+      width: 60%;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .questions-answers {
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 1rem;
+
+    .questions-answers-title {
+      font-size: 1.5rem;
+      padding: 2rem 1rem;
+    }
+
+    .questions-answers-list {
+      list-style: none;
+      width: 80%;
+
+      .question {
+        padding: 1rem 1rem;
+        font-size: 1rem;
+
+        .answer {
+          padding: 1rem 0rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+.doctors {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  font-size: 1.2rem;
+
+  .doctors-text {
+    width: 100%;
+    padding: 5rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  .selected-doctors-info {
+    padding: 2rem 2rem;
+  }
+
+  .selected-doctors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //   flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+
+    .dentist,
+    .comprehensive {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 25%;
+      padding: 4rem 0rem;
+
+      .selected-card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        transform-style: preserve-3d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 2rem 0rem;
+
+        .selected-front,
+        .selected-back {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          backface-visibility: hidden;
+          transition: 2s ease-in-out;
+          transform: perspective(500px) rotateY(0deg);
+        }
+
+        .selected-front {
+          .selected-person-name,
+          .selected-person-profession {
+            align-self: center;
+            padding: 0.1rem 0rem;
+
+            transform: perspective(500px) translateZ(50px);
+          }
+          .crown {
+            display: none;
+          }
+          .selected-person-photo {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 1rem;
+          }
+        }
+
+        .selected-back {
+          background-color: rgb(36, 37, 37);
+          transform: perspective(500px) rotateY(180deg);
+          border-radius: 1rem;
+          .selected-information {
+            flex-wrap: wrap;
+            text-align: justify;
+            transform: perspective(500px) translateZ(50px);
+            width: 80%;
+            padding: 0rem 1rem;
+            font-size: 1rem;
+          }
+          .selected-person-specialization {
+            font-size: 1rem;
+            width: 80%;
+            padding: 1rem;
+            align-self: center;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            transform: perspective(500px) translateZ(50px);
+            .selected-specialization {
+              font-size: 1rem;
+              align-self: center;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              flex-direction: row-reverse;
+              .selected-icon {
+                font-size: 1rem;
+                padding-right: 0.5rem;
+              }
+            }
+            .dentist {
+              border-color: blue;
+            }
+          }
+        }
+        &:hover {
+          .selected-front {
+            transform: perspective(500px) rotateY(180deg);
+          }
+          .selected-back {
+            transform: perspective(500px) rotateY(360deg);
+          }
+        }
+      }
+    }
+  }
+}
+.comprehensive-prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+
+  .comprehensive-prices-title {
+    padding: 1rem 1rem;
+  }
+  .price-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    .type {
+      border: 0.5px solid rgba(19, 179, 219, 0.75);
+      min-width: calc(100% - 4px);
+      width: 100%;
+      margin: 10px;
+      //   background-color: white;
+      min-height: 40vh;
+      display: inline-block;
+      position: relative;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 3px;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid-column;
+      i {
+        padding: 0rem 0rem;
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+      }
+      h2 {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+      }
+      h3 {
+        width: 100%;
+        padding: 1rem 0rem;
+
+        text-align: center;
+        // word-break: break-all;
+        // width: 100%;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        // flex-wrap: wrap;
+        width: 100%;
+        cursor: pointer;
+
+        &:nth-child(even) {
+          background: black;
+        }
+        &:nth-child(odd) {
+          background: rgb(36, 37, 37);
+        }
+
+        &:hover {
+          background: rgba(19, 179, 219, 0.75);
+        }
+      }
+      li {
+        // width: 50%;
+        list-style: none;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

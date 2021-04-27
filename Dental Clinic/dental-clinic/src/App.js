@@ -5,6 +5,8 @@ import { ScrollToTop } from "react-router-scroll-to-top";
 import Home from "./components/Home";
 import Team from "./components/Team";
 import Gallery from "./components/Gallery";
+import Prices from "./components/Prices";
+import Comprehensive from "./components/services-pages/ComprehensiveTreatment";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Route component={Home} path="/" exact />
             <Route component={Team} path="/team" />
             <Route component={Gallery} path="/gallery" />
+            <Route component={Prices} path="/prices" />
+            <Route component={Comprehensive} path="/comprehensive-treatment" />
           </Switch>
         </ScrollToTop>
       </Router>

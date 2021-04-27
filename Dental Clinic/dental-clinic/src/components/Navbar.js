@@ -60,24 +60,16 @@ function Navbar() {
             <Link to="/team" className="nav-links" onClick={closeMobileMenu}>
               Zespół
             </Link>
-            <li className="nav-item">
-              <Link
-                to="/prices"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Cennik
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/gallery"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Galeria
-              </Link>
-            </li>
+          </li>
+          <li className="nav-item">
+            <Link to="/prices" className="nav-links" onClick={closeMobileMenu}>
+              Cennik
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/gallery" className="nav-links" onClick={closeMobileMenu}>
+              Galeria
+            </Link>
           </li>
           <li className="nav-item">
             <Link
