@@ -25,7 +25,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist",
+    teamClassName: "dentist root",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Endodoncja",
@@ -42,7 +42,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist comprehensive",
+    teamClassName: "dentist comprehensive root",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Endodoncja",
@@ -60,7 +60,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist comprehensive",
+    teamClassName: "dentist comprehensive root",
     icons: <i class="fas fa-tooth"></i>,
     specialization: ["Endodoncja", "Stomatologia zachowawcza"],
   },
@@ -133,7 +133,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist comprehensive",
+    teamClassName: "dentist comprehensive root",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Endodoncja",

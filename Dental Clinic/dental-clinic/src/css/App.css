@@ -1326,11 +1326,44 @@
 .comprehensive-treatment .questions-answers .questions-answers-list .question {
   padding: 1rem 1rem;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+.comprehensive-treatment .questions-answers .questions-answers-list .question i {
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: 1px solid rgba(19, 179, 219, 0.75);
+  padding: 0.5rem;
+  color: rgba(19, 179, 219, 0.75);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.comprehensive-treatment .questions-answers .questions-answers-list .question i:hover {
+  background-color: rgba(19, 179, 219, 0.75);
+  color: white;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .comprehensive-treatment .questions-answers .questions-answers-list .question .answer {
   padding: 1rem 0rem;
   font-size: 0.9rem;
+  margin-left: 3rem;
+}
+
+.doctors-text {
+  width: 80%;
+  padding: 5rem 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.selected-doctors-info {
+  width: 80%;
+  padding: 2rem 2rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .doctors {
@@ -1348,16 +1381,8 @@
   width: 80%;
   height: auto;
   font-size: 1.2rem;
-}
-
-.doctors .doctors-text {
-  width: 100%;
-  padding: 5rem 2rem;
-  font-size: 1.2rem;
-}
-
-.doctors .selected-doctors-info {
-  padding: 2rem 2rem;
+  background-color: black;
+  color: white;
 }
 
 .doctors .selected-doctors {
@@ -1377,7 +1402,8 @@
 }
 
 .doctors .selected-doctors .dentist,
-.doctors .selected-doctors .comprehensive {
+.doctors .selected-doctors .comprehensive,
+.doctors .selected-doctors .root {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1398,7 +1424,8 @@
 }
 
 .doctors .selected-doctors .dentist .selected-card,
-.doctors .selected-doctors .comprehensive .selected-card {
+.doctors .selected-doctors .comprehensive .selected-card,
+.doctors .selected-doctors .root .selected-card {
   position: relative;
   width: 300px;
   height: 400px;
@@ -1424,7 +1451,9 @@
 .doctors .selected-doctors .dentist .selected-card .selected-front,
 .doctors .selected-doctors .dentist .selected-card .selected-back,
 .doctors .selected-doctors .comprehensive .selected-card .selected-front,
-.doctors .selected-doctors .comprehensive .selected-card .selected-back {
+.doctors .selected-doctors .comprehensive .selected-card .selected-back,
+.doctors .selected-doctors .root .selected-card .selected-front,
+.doctors .selected-doctors .root .selected-card .selected-back {
   position: absolute;
   top: 0;
   left: 0;
@@ -1452,7 +1481,9 @@
 .doctors .selected-doctors .dentist .selected-card .selected-front .selected-person-name,
 .doctors .selected-doctors .dentist .selected-card .selected-front .selected-person-profession,
 .doctors .selected-doctors .comprehensive .selected-card .selected-front .selected-person-name,
-.doctors .selected-doctors .comprehensive .selected-card .selected-front .selected-person-profession {
+.doctors .selected-doctors .comprehensive .selected-card .selected-front .selected-person-profession,
+.doctors .selected-doctors .root .selected-card .selected-front .selected-person-name,
+.doctors .selected-doctors .root .selected-card .selected-front .selected-person-profession {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1462,19 +1493,22 @@
 }
 
 .doctors .selected-doctors .dentist .selected-card .selected-front .crown,
-.doctors .selected-doctors .comprehensive .selected-card .selected-front .crown {
+.doctors .selected-doctors .comprehensive .selected-card .selected-front .crown,
+.doctors .selected-doctors .root .selected-card .selected-front .crown {
   display: none;
 }
 
 .doctors .selected-doctors .dentist .selected-card .selected-front .selected-person-photo,
-.doctors .selected-doctors .comprehensive .selected-card .selected-front .selected-person-photo {
+.doctors .selected-doctors .comprehensive .selected-card .selected-front .selected-person-photo,
+.doctors .selected-doctors .root .selected-card .selected-front .selected-person-photo {
   max-width: 100%;
   max-height: 100%;
   border-radius: 1rem;
 }
 
 .doctors .selected-doctors .dentist .selected-card .selected-back,
-.doctors .selected-doctors .comprehensive .selected-card .selected-back {
+.doctors .selected-doctors .comprehensive .selected-card .selected-back,
+.doctors .selected-doctors .root .selected-card .selected-back {
   background-color: #242525;
   -webkit-transform: perspective(500px) rotateY(180deg);
           transform: perspective(500px) rotateY(180deg);
@@ -1482,7 +1516,8 @@
 }
 
 .doctors .selected-doctors .dentist .selected-card .selected-back .selected-information,
-.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-information {
+.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-information,
+.doctors .selected-doctors .root .selected-card .selected-back .selected-information {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: justify;
@@ -1494,7 +1529,8 @@
 }
 
 .doctors .selected-doctors .dentist .selected-card .selected-back .selected-person-specialization,
-.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-person-specialization {
+.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-person-specialization,
+.doctors .selected-doctors .root .selected-card .selected-back .selected-person-specialization {
   font-size: 1rem;
   width: 80%;
   padding: 1rem;
@@ -1519,7 +1555,8 @@
 }
 
 .doctors .selected-doctors .dentist .selected-card .selected-back .selected-person-specialization .selected-specialization,
-.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-person-specialization .selected-specialization {
+.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-person-specialization .selected-specialization,
+.doctors .selected-doctors .root .selected-card .selected-back .selected-person-specialization .selected-specialization {
   font-size: 1rem;
   -ms-flex-item-align: center;
       align-self: center;
@@ -1538,29 +1575,37 @@
 }
 
 .doctors .selected-doctors .dentist .selected-card .selected-back .selected-person-specialization .selected-specialization .selected-icon,
-.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-person-specialization .selected-specialization .selected-icon {
+.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-person-specialization .selected-specialization .selected-icon,
+.doctors .selected-doctors .root .selected-card .selected-back .selected-person-specialization .selected-specialization .selected-icon {
   font-size: 1rem;
   padding-right: 0.5rem;
 }
 
 .doctors .selected-doctors .dentist .selected-card .selected-back .selected-person-specialization .dentist,
-.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-person-specialization .dentist {
+.doctors .selected-doctors .comprehensive .selected-card .selected-back .selected-person-specialization .dentist,
+.doctors .selected-doctors .root .selected-card .selected-back .selected-person-specialization .dentist {
   border-color: blue;
 }
 
 .doctors .selected-doctors .dentist .selected-card:hover .selected-front,
-.doctors .selected-doctors .comprehensive .selected-card:hover .selected-front {
+.doctors .selected-doctors .comprehensive .selected-card:hover .selected-front,
+.doctors .selected-doctors .root .selected-card:hover .selected-front {
   -webkit-transform: perspective(500px) rotateY(180deg);
           transform: perspective(500px) rotateY(180deg);
 }
 
 .doctors .selected-doctors .dentist .selected-card:hover .selected-back,
-.doctors .selected-doctors .comprehensive .selected-card:hover .selected-back {
+.doctors .selected-doctors .comprehensive .selected-card:hover .selected-back,
+.doctors .selected-doctors .root .selected-card:hover .selected-back {
   -webkit-transform: perspective(500px) rotateY(360deg);
           transform: perspective(500px) rotateY(360deg);
 }
 
-.comprehensive-prices {
+.services-prices-title {
+  padding: 1rem 1rem;
+}
+
+.selected-prices {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1575,13 +1620,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
+  color: white;
+  background-color: black;
 }
 
-.comprehensive-prices .comprehensive-prices-title {
-  padding: 1rem 1rem;
-}
-
-.comprehensive-prices .price-list {
+.selected-prices .price-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1598,7 +1641,7 @@
   width: 100%;
 }
 
-.comprehensive-prices .price-list .type {
+.selected-prices .price-list .type {
   border: 0.5px solid rgba(19, 179, 219, 0.75);
   min-width: calc(100% - 4px);
   width: 100%;
@@ -1616,26 +1659,26 @@
   break-inside: avoid-column;
 }
 
-.comprehensive-prices .price-list .type i {
+.selected-prices .price-list .type i {
   padding: 0rem 0rem;
   text-align: center;
   width: 100%;
   font-size: 2rem;
 }
 
-.comprehensive-prices .price-list .type h2 {
+.selected-prices .price-list .type h2 {
   text-align: center;
   padding: 2rem;
   width: 100%;
 }
 
-.comprehensive-prices .price-list .type h3 {
+.selected-prices .price-list .type h3 {
   width: 100%;
   padding: 1rem 0rem;
   text-align: center;
 }
 
-.comprehensive-prices .price-list .type ul {
+.selected-prices .price-list .type ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1653,22 +1696,72 @@
   cursor: pointer;
 }
 
-.comprehensive-prices .price-list .type ul:nth-child(even) {
+.selected-prices .price-list .type ul:nth-child(even) {
   background: black;
 }
 
-.comprehensive-prices .price-list .type ul:nth-child(odd) {
+.selected-prices .price-list .type ul:nth-child(odd) {
   background: #242525;
 }
 
-.comprehensive-prices .price-list .type ul:hover {
+.selected-prices .price-list .type ul:hover {
   background: rgba(19, 179, 219, 0.75);
 }
 
-.comprehensive-prices .price-list .type li {
+.selected-prices .price-list .type li {
   list-style: none;
   padding: 0.5rem 0.5rem;
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .doctors .selected-doctors .dentist,
+  .doctors .selected-doctors .comprehensive {
+    width: 50%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .doctors .selected-doctors .dentist,
+  .doctors .selected-doctors .comprehensive {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-width: 360px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .comprehensive-treatment {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  .comprehensive-treatment .comprehensive-info {
+    max-width: 100%;
+  }
+  .comprehensive-treatment .comprehensive-info .comprehensive-title {
+    text-align: center;
+  }
+  .comprehensive-treatment .comprehensive-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+  .comprehensive-treatment .comprehensive-wrapper .comprehensive-text {
+    width: 100%;
+    padding: 0;
+  }
+  .comprehensive-treatment .comprehensive-wrapper .comprehensive-text i {
+    -webkit-transform: translate(-25%, -25%) scale(0.7);
+            transform: translate(-25%, -25%) scale(0.7);
+  }
+  .comprehensive-treatment .comprehensive-wrapper .comprehensive-text span {
+    font-size: 0.8rem;
+  }
+  .comprehensive-treatment .comprehensive-wrapper .comprehensive-text p {
+    font-size: 0.8rem;
+  }
 }
 
 * {

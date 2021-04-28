@@ -7,6 +7,7 @@ import Team from "./components/Team";
 import Gallery from "./components/Gallery";
 import Prices from "./components/Prices";
 import Comprehensive from "./components/services-pages/ComprehensiveTreatment";
+import RootCanal from "./components/services-pages/RootCanal";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route component={Gallery} path="/gallery" />
             <Route component={Prices} path="/prices" />
             <Route component={Comprehensive} path="/comprehensive-treatment" />
+            <Route component={RootCanal} path="/root-canal-treatment" />
           </Switch>
         </ScrollToTop>
       </Router>
