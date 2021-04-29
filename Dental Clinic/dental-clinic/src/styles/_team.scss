@@ -258,7 +258,8 @@
                   flex-wrap: wrap;
                   transform: perspective(500px) translateZ(50px);
                   .specialization {
-                    align-self: center;
+                    padding-top: 0.2rem;
+                    align-self: flex-start;
                     display: flex;
                     align-content: center;
                     justify-content: center;

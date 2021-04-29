@@ -90,7 +90,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist",
+    teamClassName: "dentist surgeon implant",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Chirurgia stomatologiczna",

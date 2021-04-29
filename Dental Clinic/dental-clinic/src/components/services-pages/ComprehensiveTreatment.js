@@ -26,15 +26,15 @@ function Comprehensive() {
     <>
       <Navbar />
       <section className="comprehensive-treatment">
-        <div className="comprehensive-info">
-          <h1 className="comprehensive-title">
+        <div className="subpage-info">
+          <h1 className="subpage-title">
             Kompleksowe leczenie stomatologiczne
           </h1>
-          <h2 className="comprehensive-subtitle">
+          <h2 className="subpage-subtitle">
             Dlaczego warto podjąć leczenie kompleksowe w Mr Dentist?
           </h2>
-          <div className="comprehensive-wrapper">
-            <div className="comprehensive-text">
+          <div className="subpage-wrapper">
+            <div className="subpage-text">
               <i className="fas fa-check-square"></i>
               <span>PROFESJONALNE PODEJŚCIE</span>
               <p>
@@ -43,7 +43,7 @@ function Comprehensive() {
                 starannością przy pomocy materiałów bardzo wysokiej klasy.
               </p>
             </div>
-            <div className="comprehensive-text">
+            <div className="subpage-text">
               <i className="fas fa-user-check"></i>
               <span>KOMPLET SPECJALISTÓW</span>
               <p>
@@ -52,7 +52,7 @@ function Comprehensive() {
                 potrzeby odwiedzania innych gabinetów.
               </p>
             </div>
-            <div className="comprehensive-text">
+            <div className="subpage-text">
               <i className="fas fa-camera"></i>
               <span>PEŁNA DIAGNOSTYKA</span>
               <p>
@@ -62,7 +62,7 @@ function Comprehensive() {
                 najlepszych na rynku.
               </p>
             </div>
-            <div className="comprehensive-text">
+            <div className="subpage-text">
               <i className="fas fa-users"></i>
               <span>WSPÓLNE PLANOWANIE LECZENIA</span>
               <p>
@@ -72,7 +72,7 @@ function Comprehensive() {
                 procedury z zakresu wszystkich dziedzin stomatologii.
               </p>
             </div>
-            <div className="comprehensive-text">
+            <div className="subpage-text">
               <i className="fas fa-dna"></i>
               <span>NAJNOWOCZEŚNIEJSZE TECHNIKI</span>
               <p>
@@ -81,7 +81,7 @@ function Comprehensive() {
                 pozwala na wdrażanie coraz lepszych metod leczenia.
               </p>
             </div>
-            <div className="comprehensive-text">
+            <div className="subpage-text">
               <i className="far fa-grin-beam"></i>
               <span>TROSKLIWY ZESPÓŁ ASYSTENTEK</span>
               <p>
@@ -91,7 +91,7 @@ function Comprehensive() {
               </p>
             </div>
           </div>
-          <p className="comprehensive-summary">
+          <p className="subpage-summary">
             W Mr Dentist zdrowie Pacjenta jest dla nas najważniejsze, w związku
             z tym mając na uwadze cały organizm człowieka oraz jego dobro,
             skupiamy się nie tylko na zębach lecz na całej jamie ustnej oraz

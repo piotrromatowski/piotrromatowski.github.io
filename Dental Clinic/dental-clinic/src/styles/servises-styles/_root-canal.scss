@@ -8,72 +8,72 @@
   background-color: black;
   color: white;
 
-  .root-canal-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
+  .subpage-info {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+    // width: 100%;
 
-    .root-canal-title {
-      padding: 2rem 1rem;
-      text-align: left;
-      background-color: rgba(19, 179, 219, 0.75);
-      width: 100%;
-      text-align: center;
-    }
-    .root-canal-subtitle {
-      padding: 2rem 1rem;
-    }
+    // .subpage-title {
+    //   padding: 2rem 1rem;
+    //   text-align: left;
+    //   background-color: rgba(19, 179, 219, 0.75);
+    //   width: 100%;
+    //   text-align: center;
+    // }
+    // .subpage-subtitle {
+    //   padding: 2rem 1rem;
+    // }
 
-    .root-canal-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 80%;
-      flex-direction: row;
+    // .subpage-wrapper {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   flex-wrap: wrap;
+    //   max-width: 80%;
+    //   flex-direction: row;
 
-      .root-canal-text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 22rem;
-        height: 22rem;
-        padding: 2rem 2rem;
-        margin: 2rem 2rem;
-        border: 1px solid rgba(19, 179, 219, 0.75);
-        position: relative;
+    //   .subpage-text {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     flex-direction: column;
+    //     width: 22rem;
+    //     height: 22rem;
+    //     padding: 2rem 2rem;
+    //     margin: 2rem 2rem;
+    //     border: 1px solid rgba(19, 179, 219, 0.75);
+    //     position: relative;
 
-        i {
-          border: 1px solid rgba(19, 179, 219, 0.75);
-          color: rgba(19, 179, 219, 0.75);
-          padding: 1rem 1rem;
-          font-size: 2rem;
-          align-self: flex-start;
-          justify-self: flex-start;
-          margin-bottom: 2rem;
-          width: 4rem;
-          height: 4rem;
-          position: absolute;
-          top: 9%;
-          left: 9%;
-        }
-        span {
-          width: 100%;
-          padding: 1rem 0rem;
-          font-size: 1.2rem;
-          margin-top: 20%;
-          text-transform: uppercase;
-        }
-        p {
-          padding: 1rem 0rem;
-          color: gray;
-          flex-grow: 2;
-        }
-      }
-    }
+    //     i {
+    //       border: 1px solid rgba(19, 179, 219, 0.75);
+    //       color: rgba(19, 179, 219, 0.75);
+    //       padding: 1rem 1rem;
+    //       font-size: 2rem;
+    //       align-self: flex-start;
+    //       justify-self: flex-start;
+    //       margin-bottom: 2rem;
+    //       width: 4rem;
+    //       height: 4rem;
+    //       position: absolute;
+    //       top: 9%;
+    //       left: 9%;
+    //     }
+    //     span {
+    //       width: 100%;
+    //       padding: 1rem 0rem;
+    //       font-size: 1.2rem;
+    //       margin-top: 20%;
+    //       text-transform: uppercase;
+    //     }
+    //     p {
+    //       padding: 1rem 0rem;
+    //       color: gray;
+    //       flex-grow: 2;
+    //     }
+    //   }
+    // }
     .root-canal-explanation {
       width: 70%;
       padding: 2rem;
@@ -130,7 +130,7 @@
   .root-canal {
     margin-top: 17%;
     text-align: center;
-    .root-canal-info {
+    .subpage-info {
       .root-canal-explanation {
         width: 100%;
 
@@ -147,20 +147,20 @@
           }
         }
       }
-      .root-canal-wrapper {
-        .root-canal-text {
-          width: 100%;
-          i {
-            transform: translate(-25%, -25%) scale(0.7);
-          }
-          span {
-            font-size: 0.8rem;
-          }
-          p {
-            font-size: 0.8rem;
-          }
-        }
-      }
+      // .root-canal-wrapper {
+      //   .root-canal-text {
+      //     width: 100%;
+      //     i {
+      //       transform: translate(-25%, -25%) scale(0.7);
+      //     }
+      //     span {
+      //       font-size: 0.8rem;
+      //     }
+      //     p {
+      //       font-size: 0.8rem;
+      //     }
+      //   }
+      // }
     }
   }
 } ;

@@ -45,79 +45,78 @@
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+}
+.subpage-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-  .comprehensive-info {
+  .subpage-title {
+    padding: 2rem 1rem;
+    text-align: left;
+    background-color: rgba(19, 179, 219, 0.75);
+    width: 100%;
+    text-align: center;
+  }
+  .subpage-subtitle {
+    padding: 2rem 1rem;
+  }
+
+  .subpage-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 80%;
+    flex-direction: row;
 
-    .comprehensive-title {
-      padding: 2rem 1rem;
-      text-align: left;
-      background-color: rgba(19, 179, 219, 0.75);
-      width: 100%;
-      text-align: center;
-    }
-    .comprehensive-subtitle {
-      padding: 2rem 1rem;
-    }
-
-    .comprehensive-wrapper {
+    .subpage-text {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      max-width: 80%;
-      flex-direction: row;
+      flex-direction: column;
+      width: 22rem;
+      height: 22rem;
+      padding: 2rem 2rem;
+      margin: 2rem 2rem;
+      border: 1px solid rgba(19, 179, 219, 0.75);
+      position: relative;
 
-      .comprehensive-text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 22rem;
-        height: 22rem;
-        padding: 2rem 2rem;
-        margin: 2rem 2rem;
+      i {
         border: 1px solid rgba(19, 179, 219, 0.75);
-        position: relative;
+        color: rgba(19, 179, 219, 0.75);
+        padding: 1rem 1rem;
+        font-size: 2rem;
+        align-self: flex-start;
+        justify-self: flex-start;
+        margin-bottom: 2rem;
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: 9%;
+        left: 9%;
+      }
 
-        i {
-          border: 1px solid rgba(19, 179, 219, 0.75);
-          color: rgba(19, 179, 219, 0.75);
-          padding: 1rem 1rem;
-          font-size: 2rem;
-          align-self: flex-start;
-          justify-self: flex-start;
-          margin-bottom: 2rem;
-          width: 4rem;
-          height: 4rem;
-          position: absolute;
-          top: 9%;
-          left: 9%;
-        }
-
-        span {
-          width: 100%;
-          padding: 1rem 0rem;
-          font-size: 1.2rem;
-          margin-top: 20%;
-        }
-        p {
-          padding: 1rem 0rem;
-          color: gray;
-          flex-grow: 2;
-        }
+      span {
+        width: 100%;
+        padding: 1rem 0rem;
+        font-size: 1.2rem;
+        margin-top: 20%;
+      }
+      p {
+        padding: 1rem 0rem;
+        color: gray;
+        flex-grow: 2;
       }
     }
-    .comprehensive-summary {
-      padding: 2rem 2rem;
-      width: 60%;
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
+  }
+  .comprehensive-summary {
+    padding: 2rem 2rem;
+    width: 60%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
   }
 }
 .questions-answers {
@@ -262,6 +261,7 @@
           .selected-person-profession {
             align-self: center;
             padding: 0.1rem 0rem;
+            text-align: center;
             transform: perspective(500px) translateZ(50px);
           }
           .crown {
@@ -298,8 +298,9 @@
             flex-wrap: wrap;
             transform: perspective(500px) translateZ(50px);
             .selected-specialization {
+              padding-top: 0.2rem;
               font-size: 1rem;
-              align-self: center;
+              align-self: flex-start;
               display: flex;
               align-content: center;
               justify-content: center;
@@ -436,28 +437,29 @@
 @media screen and (max-width: 540px) {
   .comprehensive-treatment {
     margin-top: 4rem;
-    .comprehensive-info {
-      max-width: 100%;
-      .comprehensive-title {
-        text-align: center;
-      }
-    }
     text-align: center;
-    .comprehensive-wrapper {
+  }
+  .subpage-info {
+    max-width: 100%;
+    .subpage-title {
+      text-align: center;
+    }
+  }
+
+  .subpage-wrapper {
+    width: 100%;
+    padding: 0;
+    .subpage-text {
       width: 100%;
       padding: 0;
-      .comprehensive-text {
-        width: 100%;
-        padding: 0;
-        i {
-          transform: translate(-25%, -25%) scale(0.7);
-        }
-        span {
-          font-size: 0.8rem;
-        }
-        p {
-          font-size: 0.8rem;
-        }
+      i {
+        transform: translate(-25%, -25%) scale(0.7);
+      }
+      span {
+        font-size: 0.8rem;
+      }
+      p {
+        font-size: 0.8rem;
       }
     }
   }

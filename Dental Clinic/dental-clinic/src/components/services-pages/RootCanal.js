@@ -38,13 +38,13 @@ function RootCanal() {
     <>
       <Navbar />
       <section className="root-canal">
-        <div className="root-canal-info">
-          <h1 className="root-canal-title">Leczenie kanałowe</h1>
-          <h2 className="root-canal-subtitle">
+        <div className="subpage-info">
+          <h1 className="subpage-title">Leczenie kanałowe</h1>
+          <h2 className="subpage-subtitle">
             Dlaczego leczenie kanałowe w Mr Dentist?
           </h2>
-          <div className="root-canal-wrapper">
-            <div className="root-canal-text">
+          <div className="subpage-wrapper">
+            <div className="subpage-text">
               <i className="fas fa-check-square"></i>
               <span>Leczenie kanałowe pod mikroskopem</span>
               <p>
@@ -53,7 +53,7 @@ function RootCanal() {
                 doliczamy żadnych dodatkowych opłat za wykorzystanie mikroskopu
               </p>
             </div>
-            <div className="root-canal-text">
+            <div className="subpage-text">
               <i className="fas fa-tooth"></i>
               <span>Leczymy trudne przypadki</span>
               <p>
@@ -63,7 +63,7 @@ function RootCanal() {
                 bardzo zakrzywionymi, wąskimi kanałami
               </p>
             </div>
-            <div className="root-canal-text">
+            <div className="subpage-text">
               <i className="fas fa-camera"></i>
               <span>Nowoczesny sprzęt</span>
               <p>
@@ -73,7 +73,7 @@ function RootCanal() {
                 pantomograficzne)
               </p>
             </div>
-            <div className="root-canal-text">
+            <div className="subpage-text">
               <i className="fas fa-users"></i>
               <span>Doświadczeni stomatolodzy</span>
               <p>
@@ -82,7 +82,7 @@ function RootCanal() {
                 kanałowego. Masz pewność, że trafisz na dobrą opiekę.
               </p>
             </div>
-            <div className="root-canal-text">
+            <div className="subpage-text">
               <i className="far fa-heart"></i>
               <span>Oryginalne narzędzia i materiały</span>
               <p>
@@ -92,7 +92,7 @@ function RootCanal() {
                 endodontycznych)
               </p>
             </div>
-            <div className="root-canal-text">
+            <div className="subpage-text">
               <i className="fas fa-atom"></i>
               <span>Tomografia 3D</span>
               <p>
