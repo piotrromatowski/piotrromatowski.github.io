@@ -119,51 +119,70 @@
       margin-bottom: 2rem;
     }
   }
+}
+.questions-answers {
+  background-color: rgb(24, 24, 24);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 1rem;
 
-  .questions-answers {
-    background-color: rgb(24, 24, 24);
-    width: 100%;
+  .questions-answers-title {
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .questions-answers-list {
+    list-style: none;
+    width: 80%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
 
-    .questions-answers-title {
-      font-size: 1.5rem;
-      padding: 2rem 1rem;
-    }
+    .question {
+      padding: 1rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
 
-    .questions-answers-list {
-      list-style: none;
-      width: 80%;
-
-      .question {
-        padding: 1rem 1rem;
+      .question-text {
+        width: 100%;
+        padding: 0rem 0rem;
+        font-size: 0.9rem;
+        margin-left: 3rem;
+        flex-grow: 2;
         font-size: 1rem;
-        cursor: pointer;
+      }
 
-        i {
-          margin-right: 1rem;
-          border-radius: 50%;
-          border: 1px solid rgba(19, 179, 219, 0.75);
-          padding: 0.5rem;
-          color: rgba(19, 179, 219, 0.75);
+      i {
+        flex-grow: 1;
+        // margin-right: 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(19, 179, 219, 0.75);
+        padding: 0.5rem;
+        color: rgba(19, 179, 219, 0.75);
+        transition: 0.3s linear;
+
+        &:hover {
+          background-color: rgba(19, 179, 219, 0.75);
+          color: white;
           transition: 0.3s linear;
-
-          &:hover {
-            background-color: rgba(19, 179, 219, 0.75);
-            color: white;
-            transition: 0.3s linear;
-          }
-        }
-
-        .answer {
-          padding: 1rem 0rem;
-          font-size: 0.9rem;
-          margin-left: 3rem;
         }
       }
+    }
+    .answer {
+      width: 100%;
+      padding: 1rem 0rem;
+      font-size: 0.9rem;
+      margin-left: 6rem;
     }
   }
 }
@@ -176,7 +195,7 @@
 .selected-doctors-info {
   width: 80%;
   padding: 2rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -310,6 +329,7 @@
 
 .services-prices-title {
   padding: 1rem 1rem;
+  font-size: 1.5rem;
 }
 
 .selected-prices {
@@ -438,6 +458,42 @@
         p {
           font-size: 0.8rem;
         }
+      }
+    }
+  }
+  .questions-answers {
+    .questions-answers-title {
+      font-size: 1.5rem;
+      padding: 2rem 1rem;
+    }
+
+    .questions-answers-list {
+      width: 100%;
+      padding-right: 1rem;
+
+      .question {
+        padding: 1rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .question-text {
+          width: 100%;
+          padding: 0rem 1rem;
+          justify-self: flex-start;
+          //   padding: 0;
+          margin: 0;
+        }
+      }
+      .answer {
+        padding: 1rem 0rem;
+
+        margin-left: 4rem;
+        //   flex-grow: 3;
       }
     }
   }

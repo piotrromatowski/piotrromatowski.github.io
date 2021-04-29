@@ -113,93 +113,95 @@ function Comprehensive() {
               ) : (
                 <i className="fas fa-plus"></i>
               )}
-              Jaka jest idea naszej pracy?
-              {showFirstAnswer ? (
-                <p className="answer">
-                  Większość pacjentów wymaga leczenia kompleksowego, czyli
-                  ingerencji więcej niż jednego czy dwóch lekarzy. W Mr Dentist
-                  kładziemy na to bardzo duży nacisk. Leczenie zachowawcze,
-                  endodontyczne, chirurgiczne, implantologiczne, protetyczne,
-                  ortodontyczne i periodontologiczne oraz pełna diagnostyka
-                  odbywa się w jednym miejscu dzięki aktywnej współpracy
-                  wszystkich specjalistów. Z racji tego, że nie da się być
-                  ekspertem we wszystkim, każdy z naszych lekarzy zajmuje się
-                  inną dziedziną stomatologii i jest w tym niekwestionowanym
-                  ekspertem. Leczenie kompleksowe daje nam możliwość osiągnięcia
-                  przewidywanych i długotrwałych efektów leczenia.
-                </p>
-              ) : null}
+              <p className="question-text">Jaka jest idea naszej pracy?</p>
             </li>
+            {showFirstAnswer ? (
+              <li className="answer">
+                Większość pacjentów wymaga leczenia kompleksowego, czyli
+                ingerencji więcej niż jednego czy dwóch lekarzy. W Mr Dentist
+                kładziemy na to bardzo duży nacisk. Leczenie zachowawcze,
+                endodontyczne, chirurgiczne, implantologiczne, protetyczne,
+                ortodontyczne i periodontologiczne oraz pełna diagnostyka odbywa
+                się w jednym miejscu dzięki aktywnej współpracy wszystkich
+                specjalistów. Z racji tego, że nie da się być ekspertem we
+                wszystkim, każdy z naszych lekarzy zajmuje się inną dziedziną
+                stomatologii i jest w tym niekwestionowanym ekspertem. Leczenie
+                kompleksowe daje nam możliwość osiągnięcia przewidywanych i
+                długotrwałych efektów leczenia.
+              </li>
+            ) : null}
             <li className="question" onClick={showOnClickSecond}>
               {showSecondAnswer ? (
                 <i className="fas fa-minus"></i>
               ) : (
                 <i className="fas fa-plus"></i>
               )}
-              Od czego zaczynamy?
-              {showSecondAnswer ? (
-                <p className="answer">
-                  Na podstawie przeglądu jamy ustnej, diagnostyki zdjęć
-                  rentgenowskich, informacji z wywiadu lekarskiego oraz rozmowy
-                  na temat oczekiwań, Pacjent otrzymuje informacje na temat
-                  stanu jamy ustnej. Wywiad lekarski, to część wizyty, której
-                  poświęcamy dużo uwagi, ze względu na to, że dostarcza nam
-                  niezbędnych informacji, nierzadko ukierunkowujących dalsze
-                  leczenie.
-                </p>
-              ) : null}
+              <p className="question-text">Od czego zaczynamy?</p>
             </li>
+            {showSecondAnswer ? (
+              <li className="answer">
+                Na podstawie przeglądu jamy ustnej, diagnostyki zdjęć
+                rentgenowskich, informacji z wywiadu lekarskiego oraz rozmowy na
+                temat oczekiwań, Pacjent otrzymuje informacje na temat stanu
+                jamy ustnej. Wywiad lekarski, to część wizyty, której poświęcamy
+                dużo uwagi, ze względu na to, że dostarcza nam niezbędnych
+                informacji, nierzadko ukierunkowujących dalsze leczenie.
+              </li>
+            ) : null}
             <li className="question" onClick={showOnClickThird}>
               {showThirdAnswer ? (
                 <i className="fas fa-minus"></i>
               ) : (
                 <i className="fas fa-plus"></i>
               )}
-              Jak odbywa się planowanie leczenia?
-              {showThirdAnswer ? (
-                <p className="answer">
-                  Jeżeli jest konieczność kompleksowego leczenia a Pacjent jest
-                  zainteresowany otrzymaniem informacji na temat możliwych
-                  rozwiązań, wykonywane są modele diagnostyczne (modele gipsowe
-                  odwzorowujące sytuację w jamie ustnej) oraz niezbędne zdjęcia
-                  aparatem fotograficznym. Po wykonaniu modeli oraz zdjęć
-                  specjaliści Mr Dentist spotykają się by dokładnie
-                  przeanalizować sytuację Pacjenta i stworzyć optymalny dla
-                  Niego plan leczenia. Dzięki temu Pacjent nie musi odwiedzać
-                  każdego specjalisty z osobna, co znacznie skraca czas
-                  leczenia.
-                </p>
-              ) : null}
+              <p className="question-text">
+                Jak odbywa się planowanie leczenia?
+              </p>
             </li>
+            {showThirdAnswer ? (
+              <li className="answer">
+                Jeżeli jest konieczność kompleksowego leczenia a Pacjent jest
+                zainteresowany otrzymaniem informacji na temat możliwych
+                rozwiązań, wykonywane są modele diagnostyczne (modele gipsowe
+                odwzorowujące sytuację w jamie ustnej) oraz niezbędne zdjęcia
+                aparatem fotograficznym. Po wykonaniu modeli oraz zdjęć
+                specjaliści Mr Dentist spotykają się by dokładnie przeanalizować
+                sytuację Pacjenta i stworzyć optymalny dla Niego plan leczenia.
+                Dzięki temu Pacjent nie musi odwiedzać każdego specjalisty z
+                osobna, co znacznie skraca czas leczenia.
+              </li>
+            ) : null}
             <li className="question" onClick={showOnClickFourth}>
               {showFourthAnswer ? (
                 <i className="fas fa-minus"></i>
               ) : (
                 <i className="fas fa-plus"></i>
               )}
-              Co robimy aby efekt naszego leczenia był przewidywalny?
-              {showFourthAnswer ? (
-                <p className="answer">
-                  Przed podjęciem przez Pacjenta decyzji o kompleksowym
-                  leczeniu, nasi lekarze wykonują wax-up oraz mock-up. Celem
-                  tego jest zwizualizowanie Pacjentowi ostatecznego efektu
-                  leczenia. Wax-up wykonywany jest przez pracownię protetyczną.
-                  Polega na woskowaniu modeli gipsowych zębów Pacjenta, co daje
-                  możliwość zmiany ich kształtu oraz wielkości w oparciu o
-                  sugestie Pacjenta. W celu przeniesienia woskowej wizualizacji
-                  do ust Pacjenta wykonywany jest mock-up. Na jego podstawie
-                  można zobaczyć bardzo zbliżony do ostatecznego efekt leczenia,
-                  jeszcze przed jego rozpoczęciem. W celu lepszej komunikacji z
-                  Pacjentem oraz pracownią protetyczną możliwe jest wykonanie
-                  graficznej wizualizacji uśmiechu, czyli Digital Smile Design.
-                  W przeznaczonym do tego programie wykonywany jest projekt
-                  kształtu, wielkości oraz koloru zębów. Wszystkie wyżej
-                  wymienione procedury wykonywane są w celu osiągnięcia
-                  najlepszych efektów leczenia oraz sprostania oczekiwaniom
-                  Pacjenta.
-                </p>
-              ) : null}
+              <p className="question-text">
+                Co robimy aby efekt naszego leczenia był przewidywalny?
+              </p>
             </li>
+            {showFourthAnswer ? (
+              <li className="answer">
+                Przed podjęciem przez Pacjenta decyzji o kompleksowym leczeniu,
+                nasi lekarze wykonują wax-up oraz mock-up. Celem tego jest
+                zwizualizowanie Pacjentowi ostatecznego efektu leczenia. Wax-up
+                wykonywany jest przez pracownię protetyczną. Polega na
+                woskowaniu modeli gipsowych zębów Pacjenta, co daje możliwość
+                zmiany ich kształtu oraz wielkości w oparciu o sugestie
+                Pacjenta. W celu przeniesienia woskowej wizualizacji do ust
+                Pacjenta wykonywany jest mock-up. Na jego podstawie można
+                zobaczyć bardzo zbliżony do ostatecznego efekt leczenia, jeszcze
+                przed jego rozpoczęciem. W celu lepszej komunikacji z Pacjentem
+                oraz pracownią protetyczną możliwe jest wykonanie graficznej
+                wizualizacji uśmiechu, czyli Digital Smile Design. W
+                przeznaczonym do tego programie wykonywany jest projekt
+                kształtu, wielkości oraz koloru zębów. Wszystkie wyżej
+                wymienione procedury wykonywane są w celu osiągnięcia
+                najlepszych efektów leczenia oraz sprostania oczekiwaniom
+                Pacjenta.
+              </li>
+            ) : null}
           </ul>
         </div>
         <p className="doctors-text">
