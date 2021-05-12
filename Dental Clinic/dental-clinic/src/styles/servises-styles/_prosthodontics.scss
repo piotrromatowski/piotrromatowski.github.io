@@ -1,0 +1,38 @@
+.prosthodontics {
+  .prosthodontics-explanation {
+    width: 70vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    .explanation-question {
+      padding: 1rem 1rem;
+      background-color: rgb(24, 24, 24);
+      width: 100%;
+    }
+    .explanation-answer {
+      padding: 1rem 1rem;
+    }
+    .explanation-question-list {
+      list-style: url("./vectorpaint.svg");
+      padding: 0.2rem 3rem;
+    }
+    .explanation-answer-list {
+      padding: 0rem 1rem;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .prosthodontics {
+    .prosthodontics-explanation {
+      width: 100%;
+      .explanation-question {
+        text-align: center;
+      }
+
+      .explanation-answer-list {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

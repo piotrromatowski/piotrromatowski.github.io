@@ -8,7 +8,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "owner-dentist",
+    teamClassName: "owner dentist prosthodontist aesthetics conservative",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Stomatologia zachowawcza",
@@ -25,7 +25,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist root",
+    teamClassName: "dentist root aesthetics conservative",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Endodoncja",
@@ -42,7 +42,8 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist comprehensive root",
+    teamClassName:
+      "dentist comprehensive root aesthetics conservative pediatric",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Endodoncja",
@@ -60,7 +61,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist comprehensive root",
+    teamClassName: "dentist comprehensive root conservative",
     icons: <i class="fas fa-tooth"></i>,
     specialization: ["Endodoncja", "Stomatologia zachowawcza"],
   },
@@ -73,7 +74,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist",
+    teamClassName: "dentist prosthodontist aesthetics conservative",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Protetyka",
@@ -107,7 +108,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist comprehensive",
+    teamClassName: "dentist comprehensive prosthodontist",
     icons: <i class="fas fa-tooth"></i>,
     specialization: ["Protetyka stomatologiczna", "Stomatologia estetyczna"],
   },
@@ -120,9 +121,9 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist",
+    teamClassName: "dentist aesthetics periodontist",
     icons: <i class="fas fa-tooth"></i>,
-    specialization: ["Periodontologia"],
+    specialization: ["Periodontologia", "Stomatologia estetyczna"],
   },
   {
     id: 9,
@@ -133,7 +134,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist comprehensive root",
+    teamClassName: "dentist comprehensive root aesthetics conservative",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Endodoncja",
@@ -150,12 +151,13 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
      dolorum accusantium repellat animi porro quibusdam ea commodi nam
      numquam rerum?`,
-    teamClassName: "dentist",
+    teamClassName: "dentist aesthetics orthodontist conservative pediatric",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Ortodoncja",
       "Stomatologia zachowawcza",
       "Stomatologia dziecięca",
+      "Stomatologia estetyczna",
     ],
   },
   //////higienistki
@@ -168,7 +170,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
            dolorum accusantium repellat animi porro quibusdam ea commodi nam
            numquam rerum?`,
-    teamClassName: "hygienist",
+    teamClassName: "dentist hygienist",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Higienizacja zębów",
@@ -186,7 +188,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
            dolorum accusantium repellat animi porro quibusdam ea commodi nam
            numquam rerum?`,
-    teamClassName: "hygienist",
+    teamClassName: "dentist hygienist",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Higienizacja zębów",
@@ -204,7 +206,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
            dolorum accusantium repellat animi porro quibusdam ea commodi nam
            numquam rerum?`,
-    teamClassName: "hygienist",
+    teamClassName: "dentist hygienist",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Higienizacja zębów",
@@ -222,7 +224,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
            dolorum accusantium repellat animi porro quibusdam ea commodi nam
            numquam rerum?`,
-    teamClassName: "hygienist",
+    teamClassName: "dentist hygienist",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Higienizacja zębów",
@@ -240,7 +242,7 @@ export const TeamMembersDentists = [
     information: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
            dolorum accusantium repellat animi porro quibusdam ea commodi nam
            numquam rerum?`,
-    teamClassName: "hygienist",
+    teamClassName: "dentist hygienist",
     icons: <i class="fas fa-tooth"></i>,
     specialization: [
       "Higienizacja zębów",

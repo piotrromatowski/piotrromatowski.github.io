@@ -253,7 +253,7 @@
     opacity: 1;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 5;
   }
   .nav-links {
     text-align: center;
@@ -327,6 +327,7 @@
   top: 2%;
   list-style: none;
   text-align: start;
+  z-index: 5;
 }
 
 .dropdown-menu li {
@@ -351,7 +352,6 @@
   text-decoration: none;
   color: #fff;
   padding: 0.5rem;
-  z-index: 1;
   font-size: 1rem;
   position: relative;
 }
@@ -624,7 +624,7 @@
   width: 33%;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant,
@@ -654,7 +654,7 @@
   transition: 0.4s linear 1s;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist:hover,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner:hover,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist:hover,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist:hover,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant:hover,
@@ -665,7 +665,7 @@
   border-radius: 1rem;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card,
@@ -691,8 +691,8 @@
   cursor: pointer;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .front,
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .back,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .front,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .back,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .front,
@@ -725,8 +725,8 @@
           transform: perspective(500px) rotateY(0deg);
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .person-name,
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .person-profession,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.front .person-name,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.front .person-profession,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.front .person-name,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.front .person-profession,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.front .person-name,
@@ -743,7 +743,7 @@
           transform: perspective(500px) translateZ(50px);
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .crown,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.front .crown,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.front .crown,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.front .crown,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.front .crown,
@@ -751,7 +751,7 @@
   display: none;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .person-photo,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.front .person-photo,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.front .person-photo,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.front .person-photo,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.front .person-photo,
@@ -761,7 +761,7 @@
   border-radius: 1rem;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.back,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back,
@@ -772,7 +772,7 @@
   border-radius: 1rem;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .information,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.back .information,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .information,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .information,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .information,
@@ -786,7 +786,7 @@
   padding: 0rem 1rem;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.back .person-specialization,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .person-specialization,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .person-specialization,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .person-specialization,
@@ -813,7 +813,7 @@
           transform: perspective(500px) translateZ(50px);
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.back .person-specialization .specialization,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .person-specialization .specialization,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .person-specialization .specialization,
@@ -835,7 +835,7 @@
           flex-direction: row-reverse;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .specialization .icon,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.back .person-specialization .specialization .icon,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .person-specialization .specialization .icon,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .person-specialization .specialization .icon,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .person-specialization .specialization .icon,
@@ -844,7 +844,7 @@
   padding-right: 0.5rem;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.back .person-specialization .dentist,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.back .person-specialization .dentist,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card .card.back .person-specialization .dentist,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card .card.back .person-specialization .dentist,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card .card.back .person-specialization .dentist,
@@ -852,7 +852,7 @@
   border-color: blue;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card:hover .front,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card:hover .front,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card:hover .front,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card:hover .front,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card:hover .front,
@@ -861,7 +861,7 @@
           transform: perspective(500px) rotateY(180deg);
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card:hover .back,
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card:hover .back,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dentist .card:hover .back,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .hygienist .card:hover .back,
 .team .team-members .mr-dentist-team .team-persons .single-persons-list .dental-assistant .card:hover .back,
@@ -870,7 +870,7 @@
           transform: perspective(500px) rotateY(360deg);
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .crown {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.front .crown {
   -webkit-animation-duration: 0.6s;
   animation-duration: 0.6s;
   -webkit-animation-iteration-count: infinite;
@@ -892,7 +892,7 @@
   height: 8rem;
 }
 
-.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner-dentist .card .card.front .crown:hover {
+.team .team-members .mr-dentist-team .team-persons .single-persons-list .owner .card .card.front .crown:hover {
   position: relative;
 }
 
@@ -1166,7 +1166,19 @@
   font-size: 0.9rem;
 }
 
-.comprehensive-treatment {
+.comprehensive-treatment,
+.root-canal,
+.prosthodontics,
+.conservative-dentistry,
+.periodontology,
+.pediatric-dentistry,
+.orthodontics,
+.dental-x-ray,
+.dental-surgery,
+.dental-hygiene,
+.cosmetic-dentistry,
+.dental-surgery,
+.implants {
   max-width: 100vw;
   min-height: 100vh;
   background-color: black;
@@ -1201,13 +1213,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 2;
+  background-color: black;
 }
 
 .subpage-info .subpage-title {
   padding: 2rem 1rem;
   text-align: left;
   background-color: rgba(19, 179, 219, 0.75);
-  width: 100%;
+  width: 100vw;
   text-align: center;
 }
 
@@ -1257,13 +1271,19 @@
 }
 
 .subpage-info .subpage-wrapper .subpage-text i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 1px solid rgba(19, 179, 219, 0.75);
   color: rgba(19, 179, 219, 0.75);
   padding: 1rem 1rem;
   font-size: 2rem;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  justify-self: flex-start;
   margin-bottom: 2rem;
   width: 4rem;
   height: 4rem;
@@ -1277,6 +1297,7 @@
   padding: 1rem 0rem;
   font-size: 1.2rem;
   margin-top: 20%;
+  text-transform: uppercase;
 }
 
 .subpage-info .subpage-wrapper .subpage-text p {
@@ -1646,6 +1667,7 @@
 .services-prices-title {
   padding: 1rem 1rem;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .selected-prices {
@@ -1783,6 +1805,7 @@
   }
   .subpage-info {
     max-width: 100%;
+    text-align: center;
   }
   .subpage-info .subpage-title {
     text-align: center;
@@ -1808,6 +1831,7 @@
   .questions-answers .questions-answers-title {
     font-size: 1.5rem;
     padding: 2rem 1rem;
+    text-align: center;
   }
   .questions-answers .questions-answers-list {
     width: 100%;
@@ -1841,26 +1865,6 @@
     padding: 1rem 0rem;
     margin-left: 4rem;
   }
-}
-
-.root-canal {
-  min-height: 100vh;
-  max-width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: black;
-  color: white;
 }
 
 .root-canal .subpage-info .root-canal-explanation {
@@ -1974,7 +1978,7 @@
   }
 }
 
-.dental-surgery {
+.dental-surgery .subpage-background-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1988,11 +1992,386 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100vh;
-  max-width: 100vw;
-  color: white;
-  background-color: black;
   width: 100%;
+  height: 40vh;
+  position: relative;
+}
+
+.dental-surgery .subpage-background-wrapper .subpage-background,
+.dental-surgery .subpage-background-wrapper .subpage-background-second {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://images.pexels.com/photos/4270367/pexels-photo-4270367.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+  z-index: 1;
+}
+
+.dental-surgery .subpage-background-wrapper .subpage-background span,
+.dental-surgery .subpage-background-wrapper .subpage-background-second span {
+  color: white;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.dental-surgery .subpage-background-wrapper .subpage-background-second {
+  background-image: url("https://images.pexels.com/photos/6812453/pexels-photo-6812453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+}
+
+.dental-surgery .subpage-background-wrapper .explanation-question {
+  position: relative;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  height: 100%;
+  top: 50%;
+  text-align: center;
+  padding: 3rem;
+  z-index: 2;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 2%;
+}
+
+.dental-surgery .dental-surgery-explanation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 0;
+}
+
+.dental-surgery .dental-surgery-explanation .explanation-answer {
+  padding: 1rem;
+  margin-bottom: 5%;
+  text-align: justify;
+}
+
+.dental-surgery .dental-surgery-explanation .explanation-question-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: url("./vectorpaint.svg");
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.dental-surgery .dental-surgery-explanation .explanation-question-list .explanation-answer-list {
+  font-size: 1rem;
+  font-weight: 300;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0.5rem;
+}
+
+.dental-surgery .dental-surgery-explanation .explanation-question-list .explanation-answer-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem 1rem;
+}
+
+.dental-surgery .dental-surgery-explanation .explanation-question-list .explanation-answer-photo .explanation-answer-photo-first,
+.dental-surgery .dental-surgery-explanation .explanation-question-list .explanation-answer-photo .explanation-answer-photo-second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dental-surgery .dental-surgery-explanation .explanation-question-list .explanation-answer-photo .explanation-answer-photo-first img,
+.dental-surgery .dental-surgery-explanation .explanation-question-list .explanation-answer-photo .explanation-answer-photo-second img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0rem 1rem;
+}
+
+.dental-surgery .dental-surgery-explanation .explanation-question-list .explanation-answer-photo .explanation-answer-photo-first span,
+.dental-surgery .dental-surgery-explanation .explanation-question-list .explanation-answer-photo .explanation-answer-photo-second span {
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+.implants .implants-explanation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 70%;
+  padding: 4rem 0rem;
+}
+
+.implants .implants-explanation .explanation-question {
+  padding: 2rem 0rem;
+  text-align: center;
+  width: 100%;
+}
+
+.implants .implants-explanation .explanation-answer {
+  padding: 1rem 0rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.implants .implants-explanation .explanation-question-list {
+  padding: 1rem 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  list-style: url("./vectorpaint.svg");
+}
+
+.implants .implants-explanation .explanation-question-list .explanation-answer-list {
+  padding: 0.5rem 1rem;
+}
+
+.implants .implants-explanation .implant-photo {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+  margin: 1rem 1rem;
+}
+
+.implants .implants-explanation .implants-explanation-question-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+.implants .implants-explanation .implants-explanation-question-list .implants-explanation-answer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1rem 0rem;
+}
+
+.implants .implants-explanation .implants-explanation-question-list .implants-explanation-answer-list:hover .implants-icon {
+  border: 1px solid rgba(19, 179, 219, 0.75);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.implants .implants-explanation .implants-explanation-question-list .implants-explanation-answer-list .implants-icon {
+  width: 5rem;
+  height: 5rem;
+  border: 8px solid rgba(19, 179, 219, 0.75);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  position: relative;
+  z-index: 2;
+  background-color: black;
+}
+
+.implants .implants-explanation .implants-explanation-question-list .implants-explanation-answer-list .implants-icon i {
+  padding: 2rem;
+  font-size: 1.8rem;
+  z-index: 2;
+}
+
+.implants .implants-explanation .implants-explanation-question-list .implants-explanation-answer-list .implants-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.implants .implants-explanation .implants-explanation-question-list .implants-explanation-answer-list .implants-wrapper .implants-title {
+  padding: 0.5rem 0rem;
+}
+
+.implants .implants-explanation .explanation-question-list {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.implants .implants-explanation .explanation-question-list .implants-photo {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 2rem 0rem;
+  border-radius: 1rem;
+}
+
+.implants .implants-explanation .explanation-question-list .explanation-answer-list {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.prosthodontics .prosthodontics-explanation {
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.prosthodontics .prosthodontics-explanation .explanation-question {
+  padding: 1rem 1rem;
+  background-color: #181818;
+  width: 100%;
+}
+
+.prosthodontics .prosthodontics-explanation .explanation-answer {
+  padding: 1rem 1rem;
+}
+
+.prosthodontics .prosthodontics-explanation .explanation-question-list {
+  list-style: url("./vectorpaint.svg");
+  padding: 0.2rem 3rem;
+}
+
+.prosthodontics .prosthodontics-explanation .explanation-answer-list {
+  padding: 0rem 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .prosthodontics .prosthodontics-explanation {
+    width: 100%;
+  }
+  .prosthodontics .prosthodontics-explanation .explanation-question {
+    text-align: center;
+  }
+  .prosthodontics .prosthodontics-explanation .explanation-answer-list {
+    padding: 0.5rem 1rem;
+  }
 }
 
 * {

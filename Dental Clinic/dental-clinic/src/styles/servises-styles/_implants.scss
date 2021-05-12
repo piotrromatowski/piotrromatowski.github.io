@@ -1,0 +1,111 @@
+.implants {
+  .implants-explanation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 4rem 0rem;
+
+    .explanation-question {
+      padding: 2rem 0rem;
+      text-align: center;
+      width: 100%;
+    }
+    .explanation-answer {
+      padding: 1rem 0rem;
+      align-self: flex-start;
+    }
+    .explanation-question-list {
+      padding: 1rem 1rem;
+      align-self: flex-start;
+      list-style: url("./vectorpaint.svg");
+
+      .explanation-answer-list {
+        padding: 0.5rem 1rem;
+      }
+    }
+    .implant-photo {
+      width: 50%;
+      height: fit-content;
+      border-radius: 1rem;
+      margin: 1rem 1rem;
+    }
+
+    .implants-explanation-question-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      list-style: none;
+
+      .implants-explanation-answer-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 1rem 0rem;
+
+        &:hover {
+          .implants-icon {
+            border: 1px solid rgba(19, 179, 219, 0.75);
+            transition: 0.7s;
+          }
+        }
+
+        .implants-icon {
+          width: 5rem;
+          height: 5rem;
+          border: 8px solid rgba(19, 179, 219, 0.75);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 0.7s;
+          position: relative;
+          z-index: 2;
+          background-color: black;
+
+          i {
+            padding: 2rem;
+            font-size: 1.8rem;
+            z-index: 2;
+          }
+        }
+        .implants-wrapper {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          padding: 1rem 2rem;
+
+          .implants-title {
+            padding: 0.5rem 0rem;
+          }
+        }
+      }
+    }
+    .explanation-question-list {
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      .implants-photo {
+        width: 100%;
+        height: fit-content;
+        align-self: center;
+        margin: 2rem 0rem;
+        border-radius: 1rem;
+      }
+
+      .explanation-answer-list {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
