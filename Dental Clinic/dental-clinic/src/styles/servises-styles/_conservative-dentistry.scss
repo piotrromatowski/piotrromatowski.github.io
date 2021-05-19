@@ -1,0 +1,45 @@
+.conservative-dentistry {
+  .conservative-dentistry-explanation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 2rem 4rem;
+
+    .explanation-question,
+    .explanation-answer {
+      padding: 1rem 0rem;
+    }
+    .explanation-question-list {
+      list-style: url("./vectorpaint.svg");
+      padding: 0.5rem 2rem;
+      .explanation-answer-list {
+        padding: 0.5rem 0rem;
+      }
+    }
+    .tooth-graphic,
+    .caries {
+      align-self: center;
+      margin: 2rem 0rem;
+      border-radius: 1rem;
+      max-width: 100%;
+      height: fit-content;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .conservative-dentistry {
+    .conservative-dentistry-explanation {
+      width: 100%;
+      padding: 2rem 1rem;
+
+      .explanation-question {
+        align-self: center;
+        text-align: center;
+      }
+    }
+  }
+}

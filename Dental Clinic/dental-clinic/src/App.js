@@ -3,6 +3,7 @@ import React from "react";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import { ScrollToTop } from "react-router-scroll-to-top";
 import Home from "./components/Home";
+import Services from "./components/Services";
 import Team from "./components/Team";
 import Gallery from "./components/Gallery";
 import Prices from "./components/Prices";
@@ -27,6 +28,7 @@ function App() {
         <ScrollToTop>
           <Switch>
             <Route component={Home} path="/" exact />
+            <Route component={Services} path="/services" />
             <Route component={Team} path="/team" />
             <Route component={Gallery} path="/gallery" />
             <Route component={Prices} path="/prices" />

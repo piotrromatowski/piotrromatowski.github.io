@@ -1,0 +1,93 @@
+.orthodontics {
+  .orthodontics-explanation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 2rem 4rem;
+
+    .explanation-question,
+    .explanation-answer {
+      padding: 1rem 0rem;
+    }
+    .explanation-question-list {
+      list-style: url("./vectorpaint.svg");
+      padding: 0.5rem 2rem;
+      .explanation-answer-list {
+        padding: 0.5rem 0rem;
+      }
+    }
+    .photo-wrapper {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin: 2rem 0rem;
+      border: 4px solid rgb(24, 24, 24);
+      padding: 1rem 1rem;
+      border-radius: 1rem;
+      .orthodontics-photo {
+        margin: 2rem 0rem;
+        border-radius: 1rem;
+        max-width: 100%;
+        height: fit-content;
+      }
+    }
+    .photos-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .first-photo,
+      .second-photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border: 4px solid rgb(24, 24, 24);
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+        width: 45%;
+        margin: 1rem 1rem;
+
+        .orthodontics-photos {
+          border-radius: 1rem;
+          margin: 2rem 0rem;
+          max-width: 100%;
+          height: fit-content;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .orthodontics {
+    .orthodontics-explanation {
+      .photos-wrapper {
+        .first-photo,
+        .second-photo {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .orthodontics {
+    .orthodontics-explanation {
+      width: 100%;
+      padding: 2rem 1rem;
+      .explanation-question {
+        align-self: center;
+      }
+    }
+  }
+}

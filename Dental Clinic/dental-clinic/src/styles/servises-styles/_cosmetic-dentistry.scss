@@ -1,0 +1,170 @@
+.cosmetic-dentistry {
+  .cosmetic-dentistry-explanation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+
+    .explanation-question {
+      padding: 1rem 2rem;
+      width: 100%;
+    }
+    .explanation-answer {
+      padding: 1rem 2rem;
+      width: 100%;
+    }
+
+    .explanation-veneers-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      .composite,
+      .ceramic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .composite-text,
+        .ceramic-text {
+          padding: 1rem 2rem;
+
+          .composite-title,
+          .ceramic-title {
+            padding: 1rem 1rem;
+            background-color: rgb(24, 24, 24);
+          }
+          .text {
+            padding: 1rem 1rem;
+          }
+        }
+
+        .composite-photos,
+        .ceramic-photos {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 2rem 2rem;
+          width: 100%;
+
+          .before,
+          .after {
+            padding: 0rem 1rem;
+            width: 50%;
+            height: fit-content;
+          }
+        }
+      }
+    }
+    .explanation-question,
+    .explanation-answer {
+      padding: 1rem 3rem;
+    }
+    .explanation-question-list {
+      list-style: url("./vectorpaint.svg");
+      padding: 0.5rem 5rem;
+      .explanation-answer-list {
+        padding: 0.5rem 0rem;
+      }
+    }
+    .whitening {
+      padding: 1rem 2rem;
+      background-color: rgb(24, 24, 24);
+      width: 100%;
+    }
+
+    .methods {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      .methods-title {
+        padding: 1rem 3rem;
+      }
+      .prevdent,
+      .overlay {
+        padding: 0.5rem 3rem;
+      }
+      .method-explanation {
+        padding: 1rem 3rem;
+        margin-bottom: 2rem;
+      }
+      .method-question,
+      .method-answer {
+        padding: 1rem 3rem;
+      }
+      .method-answer-list {
+        list-style: url("./vectorpaint.svg");
+        padding: 1rem 5rem;
+        .single-method-answer {
+          padding: 0.5rem 0rem;
+        }
+      }
+      .prevdent-photo {
+        align-self: center;
+        border-radius: 1rem;
+        max-width: 80%;
+        height: fit-content;
+        margin: 2rem 0rem;
+      }
+      .overlay-photos {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .opalescence,
+        .splint {
+          border-radius: 1rem;
+          margin: 2rem 2rem;
+          max-width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cosmetic-dentistry {
+    .cosmetic-dentistry-explanation {
+      width: 100%;
+
+      .explanation-question {
+        text-align: center;
+      }
+
+      .explanation-veneers-wrapper {
+        .composite,
+        .ceramic {
+          .composite-text,
+          .ceramic-text {
+            padding: 1rem 1rem;
+          }
+
+          .composite-photos,
+          .ceramic-photos {
+            flex-direction: column;
+            padding: 2rem 1rem;
+            width: 100%;
+
+            .before,
+            .after {
+              padding: 1rem 1rem;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

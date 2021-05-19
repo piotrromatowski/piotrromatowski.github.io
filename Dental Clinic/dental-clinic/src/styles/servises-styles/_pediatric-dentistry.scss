@@ -1,0 +1,50 @@
+.pediatric-dentistry {
+  .pediatric-explanation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: fit-content;
+    margin: 3rem 0rem;
+    .explanation-text {
+      width: 50%;
+      text-align: justify;
+      margin-right: 1rem;
+    }
+    .explanation-image {
+      background-image: url("https://images.pexels.com/photos/3992391/pexels-photo-3992391.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 540px;
+      height: 540px;
+      align-self: flex-start;
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pediatric-dentistry {
+    .pediatric-explanation {
+      flex-direction: column;
+      .explanation-text {
+        width: 100%;
+      }
+      .explanation-image {
+        align-self: center;
+        margin: 2rem 2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .pediatric-dentistry {
+    .pediatric-explanation {
+      .explanation-image {
+        align-self: center;
+        margin: 2rem 2rem;
+
+        max-width: 100%;
+      }
+    }
+  }
+}
