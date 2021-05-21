@@ -1,0 +1,190 @@
+.dental-hygiene {
+  .subpage-background-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    .subpage-background-hygiene {
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-image: url("https://images.pexels.com/photos/4269353/pexels-photo-4269353.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      filter: brightness(30%);
+      z-index: 1;
+    }
+    .btn-hygiene {
+      color: white;
+      filter: brightness(100%);
+      z-index: 2;
+      text-transform: uppercase;
+      padding: 0.8rem 1.2rem;
+      font-weight: 500;
+      border-radius: 0.2rem;
+      outline: transparent;
+      border: none;
+      cursor: pointer;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      background-color: rgb(19, 179, 219);
+      color: white;
+      font-size: 1.2rem;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        color: rgb(19, 179, 219);
+        background-color: white;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+  .explanation-main-title {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  .hygiene-explanation {
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .scaling,
+    .sandblasting,
+    .fluoridation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 33%;
+      padding: 0.5rem;
+
+      .hygiene-explanation-title,
+      .hygiene-explanation-subtitle,
+      .hygiene-explanation-text-list {
+        text-align: center;
+        padding: 1rem 1rem;
+      }
+      .hygiene-explanation-text {
+        text-align: justify;
+        padding: 1rem 1rem;
+      }
+
+      .hygiene-explanation-text-list {
+        list-style: url("./vectorpaint.svg");
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 3rem;
+        margin-bottom: 3rem;
+
+        .hygiene-explanation-list-item {
+          align-self: flex-start;
+          padding: 0.5rem 0rem;
+          text-align: justify;
+        }
+      }
+    }
+  }
+  .hygiene-gallery {
+    margin-top: 3rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    .hygiene-single-picture {
+      width: 33%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .hygiene-photo {
+        width: 100%;
+        height: auto;
+        transition: 0.5s linear;
+        // &:hover {
+        //   transition: 0.8s linear;
+
+        //   border: 10px solid rgba(19, 179, 219, 0.75);
+        //   transform: scale(2);
+        //   align-self: center;
+        //   justify-content: center;
+        //   z-index: 3;
+        // }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .dental-hygiene {
+    .hygiene-gallery {
+      .hygiene-single-picture {
+        .hygiene-photo {
+          &:hover {
+            transition: 0.8s linear;
+
+            border: 10px solid rgba(19, 179, 219, 0.75);
+            transform: scale(2);
+            align-self: center;
+            justify-content: center;
+            z-index: 3;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 940px) {
+  .dental-hygiene {
+    .hygiene-explanation {
+      width: 90%;
+      .scaling,
+      .sandblasting,
+      .fluoridation {
+        padding: 0.2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 680px) {
+  .dental-hygiene {
+    .hygiene-explanation {
+      // width: 90%;
+      .scaling,
+      .sandblasting,
+      .fluoridation {
+        width: 50%;
+      }
+    }
+    .hygiene-gallery {
+      width: 90%;
+      .hygiene-single-picture {
+        width: 100%;
+        padding: 0.5rem 0.5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .dental-hygiene {
+    .hygiene-explanation {
+      width: 100%;
+      .scaling,
+      .sandblasting,
+      .fluoridation {
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

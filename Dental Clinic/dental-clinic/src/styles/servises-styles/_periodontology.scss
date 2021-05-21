@@ -1,0 +1,61 @@
+.periodontology {
+  .periodontology-explanation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+
+    .explanation-question {
+      padding: 1rem 1rem;
+      align-self: flex-start;
+    }
+    .explanation-answer {
+      padding: 1rem 1rem;
+    }
+    .explanation-question-list {
+      list-style: url("./vectorpaint.svg");
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      align-self: flex-start;
+      padding-left: 3rem;
+      .explanation-answer-list {
+        align-self: flex-start;
+        padding: 0.5rem 0.5rem;
+      }
+    }
+    .peridontology-image {
+      width: 40%;
+      border-radius: 1rem;
+      margin: 1rem 1rem;
+    }
+    .explanation-answer-title {
+      padding: 1rem 1rem;
+      align-self: flex-start;
+
+      i {
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .periodontology {
+    .periodontology-explanation {
+      width: 100%;
+      .explanation-question {
+        align-self: center;
+      }
+      .explanation-answer {
+        text-align: justify;
+      }
+      .peridontology-image {
+        width: 90%;
+      }
+    }
+  }
+}

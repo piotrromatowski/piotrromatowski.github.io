@@ -3086,6 +3086,510 @@
   }
 }
 
+.dental-x-ray .x-ray-photos-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.dental-x-ray .x-ray-photos-wrapper .x-ray-photo-card {
+  width: 22%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1rem 1rem;
+}
+
+.dental-x-ray .x-ray-photos-wrapper .x-ray-photo-card .photo-title {
+  text-align: center;
+  padding: 0.5rem 0rem;
+}
+
+.dental-x-ray .x-ray-photos-wrapper .x-ray-photo-card .photo-description {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
+.dental-x-ray .x-ray-photos-wrapper .x-ray-photo-card .x-ray-photo {
+  width: 100%;
+  padding: 1rem 0rem;
+}
+
+.dental-x-ray .x-ray-photos-wrapper .x-ray-photo-card .photo-price {
+  color: #13b3db;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1rem;
+}
+
+.dental-x-ray .promo {
+  padding: 2rem 1rem;
+  color: red;
+  text-align: center;
+}
+
+.dental-x-ray .promo i {
+  padding-right: 1rem;
+}
+
+.dental-x-ray .x-ray-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+}
+
+.dental-x-ray .x-ray-contact .x-ray-address,
+.dental-x-ray .x-ray-contact .x-ray-hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 1rem;
+  margin: 0rem 2rem;
+  max-width: 50%;
+}
+
+.dental-x-ray .x-ray-contact .x-ray-address .x-ray-contact-title,
+.dental-x-ray .x-ray-contact .x-ray-hours .x-ray-contact-title {
+  padding: 1rem 0rem;
+  width: 100%;
+}
+
+.dental-x-ray .x-ray-contact .x-ray-address .x-ray-data,
+.dental-x-ray .x-ray-contact .x-ray-address .x-ray-week,
+.dental-x-ray .x-ray-contact .x-ray-address .x-ray-weekend,
+.dental-x-ray .x-ray-contact .x-ray-hours .x-ray-data,
+.dental-x-ray .x-ray-contact .x-ray-hours .x-ray-week,
+.dental-x-ray .x-ray-contact .x-ray-hours .x-ray-weekend {
+  padding: 0.5rem 0rem;
+  margin: 0;
+}
+
+.dental-x-ray .x-ray-contact .x-ray-address .x-ray-data i,
+.dental-x-ray .x-ray-contact .x-ray-address .x-ray-week i,
+.dental-x-ray .x-ray-contact .x-ray-address .x-ray-weekend i,
+.dental-x-ray .x-ray-contact .x-ray-hours .x-ray-data i,
+.dental-x-ray .x-ray-contact .x-ray-hours .x-ray-week i,
+.dental-x-ray .x-ray-contact .x-ray-hours .x-ray-weekend i {
+  padding-right: 1rem;
+}
+
+.dental-x-ray .x-ray-map {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dental-x-ray .x-ray-map .x-ray-location {
+  padding: 2rem 2rem;
+}
+
+.dental-x-ray .x-ray-map .location-map {
+  width: 100%;
+  height: 50vh;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 820px) {
+  .dental-x-ray .x-ray-photos-wrapper .x-ray-photo-card {
+    width: 80%;
+  }
+  .dental-x-ray .x-ray-contact {
+    width: 100%;
+  }
+  .dental-x-ray .x-ray-contact .x-ray-address,
+  .dental-x-ray .x-ray-contact .x-ray-hours {
+    max-width: 100%;
+  }
+}
+
+.dental-hygiene .subpage-background-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 40vh;
+  position: relative;
+}
+
+.dental-hygiene .subpage-background-wrapper .subpage-background-hygiene {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-image: url("https://images.pexels.com/photos/4269353/pexels-photo-4269353.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+  z-index: 1;
+}
+
+.dental-hygiene .subpage-background-wrapper .btn-hygiene {
+  color: white;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  z-index: 2;
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  font-weight: 500;
+  border-radius: 0.2rem;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #13b3db;
+  color: white;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.dental-hygiene .subpage-background-wrapper .btn-hygiene:hover {
+  color: #13b3db;
+  background-color: white;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.dental-hygiene .explanation-main-title {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.dental-hygiene .hygiene-explanation {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dental-hygiene .hygiene-explanation .scaling,
+.dental-hygiene .hygiene-explanation .sandblasting,
+.dental-hygiene .hygiene-explanation .fluoridation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 33%;
+  padding: 0.5rem;
+}
+
+.dental-hygiene .hygiene-explanation .scaling .hygiene-explanation-title,
+.dental-hygiene .hygiene-explanation .scaling .hygiene-explanation-subtitle,
+.dental-hygiene .hygiene-explanation .scaling .hygiene-explanation-text-list,
+.dental-hygiene .hygiene-explanation .sandblasting .hygiene-explanation-title,
+.dental-hygiene .hygiene-explanation .sandblasting .hygiene-explanation-subtitle,
+.dental-hygiene .hygiene-explanation .sandblasting .hygiene-explanation-text-list,
+.dental-hygiene .hygiene-explanation .fluoridation .hygiene-explanation-title,
+.dental-hygiene .hygiene-explanation .fluoridation .hygiene-explanation-subtitle,
+.dental-hygiene .hygiene-explanation .fluoridation .hygiene-explanation-text-list {
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+.dental-hygiene .hygiene-explanation .scaling .hygiene-explanation-text,
+.dental-hygiene .hygiene-explanation .sandblasting .hygiene-explanation-text,
+.dental-hygiene .hygiene-explanation .fluoridation .hygiene-explanation-text {
+  text-align: justify;
+  padding: 1rem 1rem;
+}
+
+.dental-hygiene .hygiene-explanation .scaling .hygiene-explanation-text-list,
+.dental-hygiene .hygiene-explanation .sandblasting .hygiene-explanation-text-list,
+.dental-hygiene .hygiene-explanation .fluoridation .hygiene-explanation-text-list {
+  list-style: url("./vectorpaint.svg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 3rem;
+  margin-bottom: 3rem;
+}
+
+.dental-hygiene .hygiene-explanation .scaling .hygiene-explanation-text-list .hygiene-explanation-list-item,
+.dental-hygiene .hygiene-explanation .sandblasting .hygiene-explanation-text-list .hygiene-explanation-list-item,
+.dental-hygiene .hygiene-explanation .fluoridation .hygiene-explanation-text-list .hygiene-explanation-list-item {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0.5rem 0rem;
+  text-align: justify;
+}
+
+.dental-hygiene .hygiene-gallery {
+  margin-top: 3rem;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.dental-hygiene .hygiene-gallery .hygiene-single-picture {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dental-hygiene .hygiene-gallery .hygiene-single-picture .hygiene-photo {
+  width: 100%;
+  height: auto;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+@media screen and (min-width: 940px) {
+  .dental-hygiene .hygiene-gallery .hygiene-single-picture .hygiene-photo:hover {
+    -webkit-transition: 0.8s linear;
+    transition: 0.8s linear;
+    border: 10px solid rgba(19, 179, 219, 0.75);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .dental-hygiene .hygiene-explanation {
+    width: 90%;
+  }
+  .dental-hygiene .hygiene-explanation .scaling,
+  .dental-hygiene .hygiene-explanation .sandblasting,
+  .dental-hygiene .hygiene-explanation .fluoridation {
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .dental-hygiene .hygiene-explanation .scaling,
+  .dental-hygiene .hygiene-explanation .sandblasting,
+  .dental-hygiene .hygiene-explanation .fluoridation {
+    width: 50%;
+  }
+  .dental-hygiene .hygiene-gallery {
+    width: 90%;
+  }
+  .dental-hygiene .hygiene-gallery .hygiene-single-picture {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dental-hygiene .hygiene-explanation {
+    width: 100%;
+  }
+  .dental-hygiene .hygiene-explanation .scaling,
+  .dental-hygiene .hygiene-explanation .sandblasting,
+  .dental-hygiene .hygiene-explanation .fluoridation {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+.periodontology .periodontology-explanation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 70%;
+}
+
+.periodontology .periodontology-explanation .explanation-question {
+  padding: 1rem 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.periodontology .periodontology-explanation .explanation-answer {
+  padding: 1rem 1rem;
+}
+
+.periodontology .periodontology-explanation .explanation-question-list {
+  list-style: url("./vectorpaint.svg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 3rem;
+}
+
+.periodontology .periodontology-explanation .explanation-question-list .explanation-answer-list {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0.5rem 0.5rem;
+}
+
+.periodontology .periodontology-explanation .peridontology-image {
+  width: 40%;
+  border-radius: 1rem;
+  margin: 1rem 1rem;
+}
+
+.periodontology .periodontology-explanation .explanation-answer-title {
+  padding: 1rem 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.periodontology .periodontology-explanation .explanation-answer-title i {
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .periodontology .periodontology-explanation {
+    width: 100%;
+  }
+  .periodontology .periodontology-explanation .explanation-question {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .periodontology .periodontology-explanation .explanation-answer {
+    text-align: justify;
+  }
+  .periodontology .periodontology-explanation .peridontology-image {
+    width: 90%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
