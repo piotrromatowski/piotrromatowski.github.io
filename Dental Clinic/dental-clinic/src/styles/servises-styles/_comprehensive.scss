@@ -47,7 +47,8 @@
 .dental-hygiene,
 .cosmetic-dentistry,
 .dental-surgery,
-.implants {
+.implants,
+.cookies {
   max-width: 100vw;
   min-height: 100vh;
 
@@ -441,6 +442,24 @@
     }
   }
 }
+@media screen and (max-width: 960px) {
+  .comprehensive-treatment,
+  .root-canal,
+  .prosthodontics,
+  .conservative-dentistry,
+  .periodontology,
+  .pediatric-dentistry,
+  .orthodontics,
+  .dental-x-ray,
+  .dental-surgery,
+  .dental-hygiene,
+  .cosmetic-dentistry,
+  .dental-surgery,
+  .implants,
+  .cookies {
+    margin-top: 4rem;
+  }
+}
 @media screen and (max-width: 640px) {
   .doctors {
     .selected-doctors {
@@ -455,7 +474,20 @@
 }
 
 @media screen and (max-width: 540px) {
-  .comprehensive-treatment {
+  .comprehensive-treatment,
+  .root-canal,
+  .prosthodontics,
+  .conservative-dentistry,
+  .periodontology,
+  .pediatric-dentistry,
+  .orthodontics,
+  .dental-x-ray,
+  .dental-surgery,
+  .dental-hygiene,
+  .cosmetic-dentistry,
+  .dental-surgery,
+  .implants,
+  .cookies {
     margin-top: 4rem;
     text-align: center;
   }

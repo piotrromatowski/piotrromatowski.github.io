@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 import ServicesPrices from "./ServicesPrices";
 import ServicesDoctors from "./ServicesDoctors";
@@ -222,6 +223,7 @@ function Comprehensive() {
         <h3 className="services-prices-title">Cennik leczenia kompleksowego</h3>
         <ServicesPrices pricesdata={"Kompleksowe planowanie leczenia"} />
       </section>
+      <Footer />
     </>
   );
 }

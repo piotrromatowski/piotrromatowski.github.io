@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 import ServicesPrices from "./ServicesPrices";
 import ServicesDoctors from "./ServicesDoctors";
 
@@ -341,6 +342,7 @@ function RootCanal() {
         <h2 className="services-prices-title">Cennik leczenia kanałowego</h2>
         <ServicesPrices pricesdata={"Leczenie kanałowe – Endodoncja"} />
       </section>
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { PricesItems } from "./PricesItems";
 
 function Prices() {
@@ -32,6 +33,7 @@ function Prices() {
           })}
         </div>
       </section>
+      <Footer />
     </>
   );
 }

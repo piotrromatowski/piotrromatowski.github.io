@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 import ServicesPrices from "./ServicesPrices";
 import ServicesDoctors from "./ServicesDoctors";
 
@@ -288,6 +289,7 @@ function ConservativeDentistry() {
         </h2>
         <ServicesPrices pricesdata={"Stomatologia zachowawcza"} />
       </section>
+      <Footer />
     </>
   );
 }

@@ -20,6 +20,9 @@ import DentalXRay from "./components/services-pages/DentalXRay";
 import DentalHygiene from "./components/services-pages/DentalHygiene";
 import Periodontology from "./components/services-pages/Periodontology";
 import Contact from "./components/Contact";
+import Cookies from "./components/services-pages/Cookies";
+import SignUp from "./components/SignUp";
+import UserAccount from "./components/UserAccount";
 
 function App() {
   return (
@@ -33,6 +36,7 @@ function App() {
             <Route component={Gallery} path="/gallery" />
             <Route component={Prices} path="/prices" />
             <Route component={Contact} path="/contact-us" />
+            <Route component={SignUp} path="/sign-up" />
             <Route component={Comprehensive} path="/comprehensive-treatment" />
             <Route component={RootCanal} path="/root-canal-treatment" />
             <Route component={DentalSurgery} path="/dental-surgery" />
@@ -48,6 +52,8 @@ function App() {
             <Route component={DentalXRay} path="/dental-x-ray" />
             <Route component={DentalHygiene} path="/dental-hygiene" />
             <Route component={Periodontology} path="/periodontology" />
+            <Route component={Cookies} path="/cookies" />
+            <Route component={UserAccount} path="/user-account" />
           </Switch>
         </ScrollToTop>
       </Router>

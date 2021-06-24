@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 import ServicesPrices from "./ServicesPrices";
 import ServicesDoctors from "./ServicesDoctors";
 
@@ -295,6 +296,7 @@ function Orthodontics() {
         </h2>
         <ServicesPrices pricesdata={"Ortodoncja"} />
       </section>
+      <Footer />
     </>
   );
 }

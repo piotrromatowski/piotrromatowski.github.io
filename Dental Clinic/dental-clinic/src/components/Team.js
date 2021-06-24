@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { TeamMembersDentists } from "./TeamMembers";
 
 function Team() {
@@ -94,6 +95,7 @@ function Team() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

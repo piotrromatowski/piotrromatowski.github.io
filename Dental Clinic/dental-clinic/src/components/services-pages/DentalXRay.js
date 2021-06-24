@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 import ServicesPrices from "./ServicesPrices";
 
 import pantomogram from "./services-pages-images/pantomogram.jpg";
@@ -317,6 +318,7 @@ function DentalXRay() {
         </h2>
         <ServicesPrices pricesdata={"Rentgen stomatologiczny"} />
       </section>
+      <Footer />
     </>
   );
 }
