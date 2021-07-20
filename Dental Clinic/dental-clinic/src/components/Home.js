@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import HomeSlider from "./HomeSlider";
 import Footer from "./Footer";
 
 function Home() {
@@ -7,10 +9,6 @@ function Home() {
     <>
       <section className="home">
         <Navbar />
-
-        <div className="home-picture">
-          <img src="" alt=""></img>
-        </div>
 
         <div className="main">
           <div className="custom-shape-divider-top-1618502493">
@@ -36,10 +34,14 @@ function Home() {
               opiekę stomatologiczną najwyższej jakości z zachowaniem
               najwyższych standardów europejskich.
             </p>
-            <button className="btn-visit">Umów wizytę</button>
+
+            <Link to="/sign-up">
+              <button className="btn-visit">Umów wizytę</button>
+            </Link>
           </div>
         </div>
       </section>
+      <HomeSlider />
       <Footer />
     </>
   );

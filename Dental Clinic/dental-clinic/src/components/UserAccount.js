@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TeamMembersDentists } from "./TeamMembers";
 import Calendar from "react-calendar";
+import UserAccountFullList from "./services-pages/UserAccountFullList";
+import UserAccountHistoryList from "./services-pages/UserAccountHistoryList";
 import "react-calendar/dist/Calendar.css";
+// import {} from "gulp";
 
 function UserAccount({ user, name, phone }) {
   const [selectedOption, setSelectedOption] = useState([0]);
@@ -10,74 +13,105 @@ function UserAccount({ user, name, phone }) {
   const [onChangeValue, setOnChangeValue] = useState();
   const [wrongDate, setWrongDate] = useState("");
 
-  const actualDate = new Date().toLocaleDateString();
+  const actualDate = new Date();
 
   const [docs, setDocs] = useState("");
 
-  const [acceptedVisit, setAcceptedVisit] = useState([]);
+  const [acceptedVisit, setAcceptedVisit] = useState([
+    {
+      id: Math.random(),
+      date: new Date(),
+      hours: "",
+      doctor: "",
+    },
+  ]);
   const [previousVisit, setPreviousVisit] = useState([
     {
-      date: "",
+      id: Math.random(),
+      date: new Date(""),
       hours: "",
       doctor: "",
     },
   ]);
 
-  //   console.log(acceptedVisit);
-  //   if (acceptedVisit.length > 0) {
-  //     console.log(acceptedVisit[0].props.children[0]);
-  //   }
-  //   for (let i = 0; i < acceptedVisit.length; i++) {
-  //     console.log(acceptedVisit[i].props.children[0]);
-  //     console.log(acceptedVisit[i].props.children[1]);
-  //     console.log(acceptedVisit[i].props.children[2]);
-  //     console.log(acceptedVisit[i].props.children[3]);
-  //     console.log(acceptedVisit[i].props.children[4] != "undefined");
-  //   }
+  const [isDuplicate, setIsDuplicate] = useState(false);
 
   const acceptVisit = () => {
-    if (
-      calendarData.toLocaleDateString() > actualDate &&
-      onChangeValue != "" &&
-      selectedOption != "Wybierz..."
-    ) {
-      setAcceptedVisit([
-        ...acceptedVisit,
-        <li className="sheduled-item">
-          {calendarData.toLocaleDateString()}
-          {" godz."}
-          {onChangeValue}{" "}
-          {TeamMembersDentists.map((item2, index) => {
-            if (selectedOption == item2.link)
-              return (
-                <>
-                  <span>{item2.name}</span>
-                  {setDocs(item2.name)}
-                </>
-              );
+    setWrongDate("");
 
-            setPreviousVisit([
-              ...previousVisit,
-              {
-                date: calendarData.toLocaleDateString(),
-                hours: onChangeValue,
-                doctor: docs,
-              },
-            ]);
-          })}
-        </li>,
-      ]);
-      //   setPreviousVisit([
-      //     previousVisit,
-      //     {
-      //       date: calendarData.toLocaleDateString(),
-      //       hours: onChangeValue,
-      //       doctor: docs,
-      //     },
-      //   ]);
+    if (
+      calendarData > actualDate &&
+      onChangeValue !== "" &&
+      selectedOption !== "Wybierz..."
+    ) {
+      acceptedVisit.map((item, index) => {
+        if (
+          item.date === calendarData &&
+          item.hours === onChangeValue &&
+          item.doctor === docs
+        ) {
+          setIsDuplicate(true);
+          setAcceptedVisit([...acceptedVisit], {});
+          setPreviousVisit([...previousVisit], {});
+          setIsDuplicate(false);
+          alert("Ta wizyta została już umówiona");
+        } else if (
+          item.date !== calendarData &&
+          item.hours !== onChangeValue &&
+          item.doctor !== docs
+        ) {
+          alert(
+            `Wizyta umówiona na ${calendarData.toLocaleDateString()}, godzina ${onChangeValue}`
+          );
+          setIsDuplicate(false);
+          setAcceptedVisit([
+            ...acceptedVisit,
+            {
+              date: calendarData,
+              hours: onChangeValue,
+              doctor: docs,
+            },
+          ]);
+
+          setPreviousVisit([
+            ...previousVisit,
+            {
+              date: calendarData,
+              hours: onChangeValue,
+              doctor: docs,
+            },
+          ]);
+        }
+        return null;
+      });
+
       setWrongDate("");
-    } else setWrongDate("Brak wolnych wizyt w wybranej dacie");
+    } else if (onChangeValue === " ") {
+      setWrongDate("Wybierz datę, godzinę oraz lekarza");
+    } else return setWrongDate("Brak wolnych wizyt w wybranej dacie");
   };
+
+  useEffect(() => {
+    TeamMembersDentists.map((item2, index) => {
+      if (selectedOption === item2.link) {
+        return (
+          <>
+            <span>{item2.name}</span>
+            {setDocs(item2.name)}
+            {console.log(docs)}
+          </>
+        );
+      } else if (acceptedVisit.date < actualDate) {
+        return setPreviousVisit([
+          {
+            date: acceptedVisit.date,
+            hours: acceptedVisit.hours,
+            doctor: acceptedVisit.docs,
+          },
+        ]);
+      } else return null;
+    });
+  });
 
   return (
     <>
@@ -87,8 +121,6 @@ function UserAccount({ user, name, phone }) {
           <h2 className="patient-info-title">Twoje dane</h2>
           <div className="patient-data">
             <span className="name">{name}</span>
-            {/* <span className="surname">Kowalski</span> */}
-
             <span className="mail">{user}</span>
             <span className="phone">tel. {phone}</span>
           </div>
@@ -98,21 +130,19 @@ function UserAccount({ user, name, phone }) {
           <div className="appointments-all">
             <div className="sheduled">
               <h2 className="sheduled-title">Zaplanowane wizyty</h2>
-              <ul className="sheduled-list">{acceptedVisit}</ul>
+              <UserAccountFullList
+                acceptedVisit={acceptedVisit}
+                actualDate={actualDate}
+                isDuplicate={isDuplicate}
+              ></UserAccountFullList>
             </div>
             <div className="previous">
               <h2 className="previous-title">Historia wizyt</h2>
-              <ul className="previous-list">
-                {previousVisit.map((item, index) => {
-                  if (item.date < actualDate) {
-                    return (
-                      <li className="previous-item">
-                        {item.date} {item.hours} {item.doctor}
-                      </li>
-                    );
-                  }
-                })}
-              </ul>
+              <UserAccountHistoryList
+                previousVisit={previousVisit}
+                actualDate={actualDate}
+                isDuplicate={isDuplicate}
+              ></UserAccountHistoryList>
             </div>
           </div>
         </div>
@@ -160,14 +190,14 @@ function UserAccount({ user, name, phone }) {
                     name="radios"
                     value="8:00 - 9:00"
                   />
-                  <label for="radio1">8:00 - 9:00</label>
+                  <label for="radio1">08:00 - 09:00</label>
                   <input
                     type="radio"
                     id="radio2"
                     name="radios"
                     value="9:00 - 10:00"
                   />
-                  <label for="radio2">9:00 - 10:00</label>
+                  <label for="radio2">09:00 - 10:00</label>
                   <input
                     type="radio"
                     id="radio3"

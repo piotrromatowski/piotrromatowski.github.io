@@ -1,4 +1,5 @@
 @import "./home";
+@import "./home-slider";
 @import "./services";
 @import "./navbar";
 @import "./dropdown";
@@ -28,6 +29,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  // background-color: white !important;
+  // color: black !important;
+
+  // button {
+  //   color: black !important;
+  //   background-color: rgb(19, 179, 219) !important;
+  // }
 }
 body {
   max-width: 100vw;

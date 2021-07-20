@@ -34,12 +34,16 @@
       justify-content: center;
       flex-direction: column;
       width: 100%;
-      .footer-item {
-        margin: 0.5rem 0rem;
-        padding-bottom: 0.5rem;
-        display: inline-block;
-        border-bottom: 1px solid rgba(19, 179, 219, 0.2);
+      .footer-link {
+        color: rgb(19, 179, 219);
         width: 100%;
+        .footer-item {
+          margin: 0.5rem 0rem;
+          padding-bottom: 0.5rem;
+          display: inline-block;
+          border-bottom: 1px solid rgba(19, 179, 219, 0.2);
+          width: 100%;
+        }
       }
     }
   }

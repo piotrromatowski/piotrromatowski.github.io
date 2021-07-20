@@ -117,3 +117,21 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .dental-surgery {
+    .dental-surgery-explanation {
+      width: 100%;
+      padding: 2rem 2rem;
+      .explanation-question {
+        align-self: center;
+      }
+    }
+    .subpage-background-wrapper {
+      .subpage-background,
+      .subpage-background-second {
+        background-size: contain;
+      }
+    }
+  }
+}

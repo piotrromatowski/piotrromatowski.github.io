@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function LoginScreen({ Login, error }) {
+function LoginScreen({ Login, error, hide }) {
   const [details, setDetails] = useState({
     email: "",
     password: "",
@@ -16,8 +16,8 @@ function LoginScreen({ Login, error }) {
 
   return (
     <>
-      <form onSubmit={submitHandler} className="login active">
-        {error != "" ? <div className="error">{error}</div> : ""}
+      <form onSubmit={submitHandler} className={hide ? "active" : "hide"}>
+        {error !== "" ? <div className="error">{error}</div> : ""}
         <label>adres email</label>
         <input
           type="email"

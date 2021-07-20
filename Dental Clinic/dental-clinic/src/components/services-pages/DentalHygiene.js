@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import ServicesPrices from "./ServicesPrices";
@@ -65,10 +66,10 @@ function DentalHygiene() {
                 higieny) w atrakcyjnych cenach:
                 <br />
                 <br />
-                - happy hours w godz. 10 – 14 w cenie 250 zł
+                - happy hours w godz. 10 – 14 : 250 zł
                 <br />
-                - pozostałe terminy w cenie 290 zł
-                <br />- pakiet dla dwojga w cenie 480 zł
+                - pozostałe terminy : 290 zł
+                <br />- pakiet dla dwojga : 480 zł
               </p>
             </div>
             <div className="subpage-text">
@@ -92,7 +93,9 @@ function DentalHygiene() {
         </div>
         <div className="subpage-background-wrapper">
           <div className="subpage-background-hygiene"></div>
-          <buttton className="btn-hygiene">Zapisz się na higienę!</buttton>
+          <Link to="/sign-up" className="btn-hygiene">
+            <buttton>Zapisz się na higienę!</buttton>
+          </Link>
         </div>
         <h2 className="explanation-main-title">
           Zabiegi profilaktyczne w gabinecie stomatologicznym Mr Dentist

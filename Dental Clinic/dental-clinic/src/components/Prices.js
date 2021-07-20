@@ -8,11 +8,6 @@ function Prices() {
     <>
       <Navbar />
       <section className="prices">
-        {/* <div className="prices-background">
-          <div className="bgr-first"></div>
-          <div className="bgr-second"></div>
-          <div className="bgr-third"></div>
-        </div> */}
         <div className="price-list">
           {PricesItems.map((item, index) => {
             return (
@@ -22,7 +17,7 @@ function Prices() {
                 <h3>{item.information}</h3>
                 {item.type.map((items, index) => {
                   return (
-                    <ul key={items.activity}>
+                    <ul className="prices-items" key={items.activity}>
                       <li className="activity">{items.activity}</li>
                       <li className="price">{items.price}</li>
                     </ul>

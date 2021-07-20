@@ -88,6 +88,19 @@
       .explanation-question {
         align-self: center;
       }
+      .photo-wrapper {
+        .orthodontics-photo {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .photos-wrapper {
+        .first-photo,
+        .second-photo {
+          width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 }
