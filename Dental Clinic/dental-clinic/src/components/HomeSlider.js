@@ -79,6 +79,7 @@ function HomeSlider() {
             centerSlidePercentage="30"
             width="100%"
             styles={styles}
+            useKeyboardArrows="true"
           >
             {list.map((item, index) => {
               return (
