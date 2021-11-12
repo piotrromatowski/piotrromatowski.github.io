@@ -34,5 +34,6 @@ Simple dental clinic page created with React, Sccs and few routes.
 ## Live 📍
 
 https://mrdentist.netlify.app/
+Demo account : Login: admin@admin.com, Password: admin123
 
 ## License 🔱
