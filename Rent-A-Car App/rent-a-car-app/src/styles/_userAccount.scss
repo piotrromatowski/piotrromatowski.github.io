@@ -1,0 +1,12 @@
+.user-form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+
+  .main,
+  .profile {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+}

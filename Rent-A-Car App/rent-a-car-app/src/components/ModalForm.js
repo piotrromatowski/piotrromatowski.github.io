@@ -14,12 +14,7 @@ function ModalForm(props) {
     dateTo: new Date(),
   });
 
-  // const [username, setUsername] = useState("");
-  // const [userMail, setUserMail] = useState("");
-  // const [userPhone, setUserPhone] = useState("");
-  // const [message, setMessage] = useState("");
-
-  console.log(props.choosenCar);
+  console.log(typeof props.choosenCar);
 
   const [selectedCar, setSelectedCar] = useState("");
 

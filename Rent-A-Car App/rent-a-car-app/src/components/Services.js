@@ -9,7 +9,7 @@ const carPictures = [
   "https://images.unsplash.com/photo-1552519507-ac11af17dcc8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
 ];
 
-function Services() {
+function Services(carResults) {
   const [currentImage, setCurrentImage] = useState(0);
 
   const prevPhotoOnClickHandle = () => {
@@ -19,6 +19,19 @@ function Services() {
   const nextPhotoOnClickHandle = () => {
     currentImage < carPictures.length - 1 && setCurrentImage(currentImage + 1);
   };
+
+  let offerCarBannerSilder = [];
+
+  const offerCarBanner = carResults.carResults.slice(3, 6);
+  const offerCarBannerMainPhoto = offerCarBanner.map((mainPic) => {
+    return mainPic.photos.slice(2, 3);
+  });
+
+  offerCarBannerMainPhoto.forEach((element) => {
+    element.map((pic) => {
+      return offerCarBannerSilder.push(...[pic.photo]);
+    });
+  });
 
   // const [buttonModal, setButtonModal] = useState(false);
   return (
@@ -49,7 +62,9 @@ function Services() {
 
             <div
               className="best-cars-carousel"
-              style={{ backgroundImage: `url(${carPictures[currentImage]})` }}
+              style={{
+                backgroundImage: `url(${offerCarBannerSilder[currentImage]})`,
+              }}
             >
               <div>
                 <p>starting from $299 per day</p>

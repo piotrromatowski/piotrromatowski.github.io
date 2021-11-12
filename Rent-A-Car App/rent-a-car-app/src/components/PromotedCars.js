@@ -25,12 +25,14 @@ const mainCarData = [
   },
 ];
 
-function PromotedCars() {
+function PromotedCars(carResults) {
   const itemsPerPage = 1;
   const items = [1, 2, 3];
   const carouselRef = useRef(null);
   const totalPages = Math.ceil(items.length / itemsPerPage);
   let resetTimeout;
+
+  const promoCarBanner = carResults.carResults.slice(0, 4);
 
   return (
     <>
@@ -93,38 +95,26 @@ function PromotedCars() {
         </Carousel>
 
         <div className="popular-cars">
-          <div className="popular-car">
-            <img
-              src="https://images.pexels.com/photos/5704227/pexels-photo-5704227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt=""
-            />
-            <h3 className="popular-car-name">Mercedes</h3>
-            <h4 className="popular-car-price">starting from $120</h4>
-          </div>
-          <div className="popular-car">
-            <img
-              src="https://images.pexels.com/photos/4909544/pexels-photo-4909544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt=""
-            />
-            <h3 className="popular-car-name">Cadillac</h3>
-            <h4 className="popular-car-price">starting from $120</h4>
-          </div>
-          <div className="popular-car">
-            <img
-              src="https://images.pexels.com/photos/1719647/pexels-photo-1719647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt=""
-            />
-            <h3 className="popular-car-name">Audi</h3>
-            <h4 className="popular-car-price">starting from $120</h4>
-          </div>
-          <div className="popular-car">
-            <img
-              src="https://images.pexels.com/photos/3972750/pexels-photo-3972750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt=""
-            />
-            <h3 className="popular-car-name">Lexus</h3>
-            <h4 className="popular-car-price">starting from $120</h4>
-          </div>
+          {promoCarBanner.map((promotedCar) => {
+            return (
+              <>
+                <div className="popular-car">
+                  <img
+                    src={promotedCar.photos
+                      .map((pics) => {
+                        return pics.photo;
+                      })
+                      .slice(0, 1)}
+                    alt=""
+                  />
+                  <h3 className="popular-car-name">{promotedCar.brand}</h3>
+                  <h4 className="popular-car-price">
+                    starting from $ {promotedCar.day_price}
+                  </h4>
+                </div>
+              </>
+            );
+          })}
         </div>
       </section>
     </>

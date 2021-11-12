@@ -4,14 +4,14 @@ import SingleCar from "./SingleCar";
 
 // export let changeCarList = "";
 
-function OurCars() {
+function OurCars({ promotedCarsData, carResults, login }) {
   const [listType, setListType] = useState("");
 
   const handleTypeCarClick = (e) => {
     setListType(e.target.className);
-    // changeCarList = e.target.className;
   };
   console.log(listType);
+  console.log(login);
 
   return (
     <>
@@ -46,7 +46,11 @@ function OurCars() {
             </li>
           </ul>
           <div className="newest-cars-list">
-            <SingleCar listType={listType} />
+            <SingleCar
+              listType={listType}
+              carResults={carResults}
+              login={login}
+            />
           </div>
         </div>
       </section>

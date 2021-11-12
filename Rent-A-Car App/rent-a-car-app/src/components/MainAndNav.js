@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../img/1300231.png";
 import { Link } from "react-router-dom";
 
@@ -10,10 +10,29 @@ import OurCars from "./OurCars";
 import Opinions from "./Opinions";
 import Contact from "./Contact";
 import Footer from "./Footer";
-// import Blog from "./Blog";
+import UserAccount from "./UserAccount";
+import UserReservation from "./UserReservation";
 
-function Nav() {
+function Nav(isClientLoggedIn) {
   const [isActive, setActive] = useState("false");
+
+  const [carResults, setCarResults] = useState([]);
+
+  console.log({ ...isClientLoggedIn.isClientLoggedIn });
+  const { logged, login } = isClientLoggedIn.isClientLoggedIn;
+  console.log({ login });
+
+  useEffect(() => {
+    fetchCar();
+
+    async function fetchCar() {
+      const res = await fetch(
+        "https://car-rental-rest-api.herokuapp.com/cars/"
+      );
+      const data = await res.json();
+      setCarResults(data.results);
+    }
+  }, []);
 
   const burgerHandler = () => {
     setActive(!isActive);
@@ -61,17 +80,15 @@ function Nav() {
             <a href="/#contact">Contact Us</a>
           </li>
           <li className="search">
-            <a href="https://www.google.com/">
-              <i className="fas fa-search"></i>
-            </a>
+            <Link to="/account">{login !== "" ? login : `Log In`}</Link>
           </li>
         </ul>
       </nav>
-      <PromotedCars />
+      <PromotedCars carResults={carResults} />
       <About />
       <Awards />
-      <Services />
-      <OurCars />
+      <Services carResults={carResults} />
+      <OurCars carResults={carResults} login={login} />
       <Opinions />
       <Contact />
       <Footer />
