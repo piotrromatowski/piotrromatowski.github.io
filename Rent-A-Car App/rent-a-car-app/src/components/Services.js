@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import ModalForm from "./ModalForm";
 
 const carPictures = [
   "https://images.pexels.com/photos/358189/pexels-photo-358189.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",

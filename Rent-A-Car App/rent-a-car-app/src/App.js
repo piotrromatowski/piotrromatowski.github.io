@@ -5,7 +5,7 @@ import { ScrollToTop } from "react-router-scroll-to-top";
 import Nav from "./components/MainAndNav";
 import Blog from "./components/Blog";
 import UserAccount from "./components/UserAccount";
-import ModalForm from "./components/ModalForm";
+import ModalForm from "./components/ModalCalendarForm";
 
 function App() {
   const [isClientLoggedIn, setIsClientLoggedIn] = useState({
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Router>
-      {<ModalForm isClientLoggedIn={isClientLoggedIn} />}
+      {<ModalForm />}
       <ScrollToTop>
         <main className="page">
           <Switch>

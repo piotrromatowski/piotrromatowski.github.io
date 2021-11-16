@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "react-elastic-carousel";
 // import OurCars, { changeCarList, listType } from "./OurCars";
-import ModalForm from "./ModalForm";
-import UserReservation from "./UserReservation";
+import ModalForm from "./ModalCalendarForm";
 
 // const singlecarResults = [
 //   {
@@ -413,8 +412,8 @@ function SingleCar({ listType, carResults, login }) {
     setReservation({
       car: reservedCar,
       car_id: login,
-      booking_start: "",
-      booking_end: "",
+      booking_start: new Date(),
+      booking_end: new Date(),
     });
   };
 
@@ -537,13 +536,31 @@ function SingleCar({ listType, carResults, login }) {
           );
       })}
 
-      <ModalForm
-        bookingDate={bookingDate}
-        setBookingDate={setBookingDate}
-        trigger={buttonModal}
-        setTrigger={setButtonModal}
-        choosenCar={choosenCar}
-      />
+      {login !== "" ? (
+        <ModalForm
+          bookingDate={bookingDate}
+          setBookingDate={setBookingDate}
+          trigger={buttonModal}
+          setTrigger={setButtonModal}
+          choosenCar={choosenCar}
+        />
+      ) : (
+        <span
+          style={{
+            fontSize: "35px",
+            fontWeight: "600",
+            color: "red",
+            position: "fixed",
+            top: "50%",
+            backgroundColor: "rgba(125,125,125,0.7)",
+            padding: "15px 20px",
+            borderRadius: "20px",
+            zIndex: "1",
+          }}
+        >
+          You must be logged in
+        </span>
+      )}
     </div>
   );
 }
