@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { LoginContext } from "./LoginContext";
 
 function UserLogout({ setIsLoggedIn, ...isLoggedIn }) {
+  const [access, setAccess] = useContext(LoginContext);
+
   const logout = (e) => {
     setIsLoggedIn(!isLoggedIn);
 
@@ -10,10 +13,18 @@ function UserLogout({ setIsLoggedIn, ...isLoggedIn }) {
     const url = "https://car-rental-rest-api.herokuapp.com/logout/";
     fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        accept: "application/json",
+        authorization: `Bearer ${access.access}`,
+        "Content-Type": "application/json",
+        "X-CSRFToken": `${access.access}`,
+      },
       body: JSON.stringify(),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        response.json();
+        console.log(response.status);
+      })
       .then(() => {
         console.log("Success logged out");
       })

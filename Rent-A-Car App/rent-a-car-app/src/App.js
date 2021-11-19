@@ -6,6 +6,7 @@ import Nav from "./components/MainAndNav";
 import Blog from "./components/Blog";
 import UserAccount from "./components/UserAccount";
 import ModalForm from "./components/ModalCalendarForm";
+import { LoginProvider } from "./components/LoginContext";
 
 function App() {
   const [isClientLoggedIn, setIsClientLoggedIn] = useState({
@@ -16,25 +17,27 @@ function App() {
   console.log(isClientLoggedIn);
 
   return (
-    <Router>
-      {<ModalForm />}
-      <ScrollToTop>
-        <main className="page">
-          <Switch>
-            <Route path="/" exact>
-              <Nav isClientLoggedIn={isClientLoggedIn} />
-            </Route>
-            <Route component={Blog} path="/blog" />
-            <Route path="/">
-              <UserAccount
-                setIsClientLoggedIn={setIsClientLoggedIn}
-                isClientLoggedIn={isClientLoggedIn}
-              />
-            </Route>
-          </Switch>
-        </main>
-      </ScrollToTop>
-    </Router>
+    <LoginProvider>
+      <Router>
+        {<ModalForm />}
+        <ScrollToTop>
+          <main className="page">
+            <Switch>
+              <Route path="/" exact>
+                <Nav isClientLoggedIn={isClientLoggedIn} />
+              </Route>
+              <Route component={Blog} path="/blog" />
+              <Route path="/">
+                <UserAccount
+                  setIsClientLoggedIn={setIsClientLoggedIn}
+                  isClientLoggedIn={isClientLoggedIn}
+                />
+              </Route>
+            </Switch>
+          </main>
+        </ScrollToTop>
+      </Router>
+    </LoginProvider>
   );
 }
 

@@ -51,7 +51,7 @@ function ModalForm({
           booking_start: date.startDate,
           booking_end: date.endDate,
         });
-      }
+      } else return;
     };
 
     upadateDate();
@@ -80,10 +80,10 @@ function ModalForm({
           {isAccepted ? (
             <span className="accept-date-span">
               Reservation date:
-              {` ${confirmation}`};
+              {confirmation};
             </span>
           ) : (
-            ""
+            <span className="accept-date-span"></span>
           )}
         </div>
       </div>

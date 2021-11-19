@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Carousel from "react-elastic-carousel";
 // import OurCars, { changeCarList, listType } from "./OurCars";
 import ModalForm from "./ModalCalendarForm";
+import UserReservation from "./UserReservation";
 
 // const singlecarResults = [
 //   {
@@ -561,6 +562,12 @@ function SingleCar({ listType, carResults, login }) {
           You must be logged in
         </span>
       )}
+      <UserReservation
+        reservation={reservation}
+        login={login}
+        reservedCar={reservedCar}
+        bookingDate={bookingDate}
+      />
     </div>
   );
 }
