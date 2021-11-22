@@ -36,6 +36,9 @@ function ModalForm({
       `${new Date(bookingDate.booking_start).toLocaleDateString()} -
               ${new Date(bookingDate.booking_end).toLocaleDateString()}`
     );
+    if (confirmation !== "") {
+      setTrigger(false);
+    }
   };
 
   const selectDate = (date) => {

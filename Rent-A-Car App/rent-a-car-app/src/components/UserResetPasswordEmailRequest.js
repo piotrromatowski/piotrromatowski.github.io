@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { LoginContext } from "./LoginContext";
 
 function UserResetPasswordEmailRequest(params) {
+  const [access, setAccess] = useContext(LoginContext);
   const [passwordReset, setPasswordReset] = useState({
     email: "",
   });
@@ -20,7 +22,12 @@ function UserResetPasswordEmailRequest(params) {
 
     fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        accept: "application/json",
+        authorization: `Bearer ${access.access}`,
+        "Content-Type": "application/json",
+        "X-CSRFToken": `${access.access}`,
+      },
       body: JSON.stringify(passwordReset),
     }).then((response) => {
       console.log(passwordReset);
