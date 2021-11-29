@@ -412,7 +412,7 @@ function SingleCar({ listType, carResults, login }) {
     getData();
     setReservation({
       car: reservedCar,
-      car_id: login,
+      car_id: value8,
       booking_start: new Date(),
       booking_end: new Date(),
     });
@@ -424,6 +424,7 @@ function SingleCar({ listType, carResults, login }) {
   return (
     <div className="newest-cars-list">
       {carResults.map((carResults) => {
+        // console.log(carResults.url.slice(47, 48));
         if (
           // changeCarList === "all" ||
           // changeCarList === "" ||
@@ -436,7 +437,7 @@ function SingleCar({ listType, carResults, login }) {
           return (
             <div
               key={carResults.count}
-              id={carResults.count}
+              id={carResults.url.slice(47, 48)}
               className="single-new-car"
             >
               <Carousel
@@ -523,7 +524,7 @@ function SingleCar({ listType, carResults, login }) {
                   data-value5={carResults.location}
                   data-value6={carResults.condition}
                   data-value7={carResults.day_price}
-                  data-value8={carResults.id}
+                  data-value8={carResults.url.slice(47, 48)}
                 >
                   rent car
                   {/* <a href="/rent">rent car</a> */}

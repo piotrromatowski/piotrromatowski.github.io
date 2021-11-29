@@ -30,6 +30,7 @@ function Nav(isClientLoggedIn) {
         "https://car-rental-rest-api.herokuapp.com/cars/"
       );
       const data = await res.json();
+      // console.log(res.json());
       setCarResults(data.results);
     }
   }, []);

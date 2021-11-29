@@ -36,9 +36,9 @@ function ModalForm({
       `${new Date(bookingDate.booking_start).toLocaleDateString()} -
               ${new Date(bookingDate.booking_end).toLocaleDateString()}`
     );
-    if (confirmation !== "") {
-      setTrigger(false);
-    }
+    // if (confirmation !== "") {
+    //   setTrigger(false);
+    // }
   };
 
   const selectDate = (date) => {
@@ -82,11 +82,11 @@ function ModalForm({
           </button>
           {isAccepted ? (
             <span className="accept-date-span">
-              Reservation date:
-              {confirmation};
+              Booking date accepted
+              {/* {confirmation}; */}
             </span>
           ) : (
-            <span className="accept-date-span"></span>
+            ""
           )}
         </div>
       </div>

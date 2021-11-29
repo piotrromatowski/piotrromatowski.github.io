@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import UserLogin from "./UserLogin";
 import UserRegister from "./UserRegister";
 import { LoginContext } from "./LoginContext";
+import AdminPanel from "./AdminPanel";
 
 function UserAccount({ setIsClientLoggedIn, ...isClientLoggedIn }) {
   const [access] = useContext(LoginContext);
@@ -95,16 +96,20 @@ function UserAccount({ setIsClientLoggedIn, ...isClientLoggedIn }) {
                     Booking updated:{" "}
                     {new Date(result.updated).toISOString().slice(0, 10)}
                   </li>
+                  <li>{result.count}</li>
+                  <button className="booking_btn">Cancel reservation</button>
                 </ul>
               );
             })
           : ""}
+        <button>Show all bookings</button>
       </div>
       <UserLogin
         isClientLoggedIn={isClientLoggedIn}
         setIsClientLoggedIn={setIsClientLoggedIn}
       />
       <UserRegister />
+      <AdminPanel></AdminPanel>
     </>
   );
 }
