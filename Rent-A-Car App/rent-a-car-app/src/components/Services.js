@@ -21,7 +21,7 @@ function Services(carResults) {
 
   let offerCarBannerSilder = [];
 
-  const offerCarBanner = carResults.carResults.slice(3, 6);
+  const offerCarBanner = carResults.carResults.slice(0, 3);
   const offerCarBannerMainPhoto = offerCarBanner.map((mainPic) => {
     return mainPic.photos.slice(2, 3);
   });

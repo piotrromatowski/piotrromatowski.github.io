@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function UserRegister(params) {
+  const [registerForm, setRegisterForm] = useState(false);
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -26,6 +27,10 @@ function UserRegister(params) {
   const [userPassword2Error, setUserPassword2Error] = useState({});
   const [userPhoneError, setUserPhoneError] = useState({});
   const [otherError, setOtherError] = useState({});
+
+  const openRegisterFormOnClick = (e) => {
+    setRegisterForm(!registerForm);
+  };
 
   const onChangeuser = (e) => {
     setUser({
@@ -154,163 +159,178 @@ function UserRegister(params) {
 
   return (
     <>
-      <form type="submit" className="user-form" onSubmit={registerUser}>
-        <div className="main">
-          MAIN
-          <label>Username</label>
-          <input
-            name="username"
-            className="username"
-            type="text"
-            placeholder="username"
-            value={user.username}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(usernameError).map((key) => {
-            return <span style={{ color: "red" }}>{usernameError[key]}</span>;
-          })}
-          <label>Email</label>
-          <input
-            name="email"
-            className="email"
-            type="email"
-            placeholder="email"
-            value={user.email}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(userMailError).map((key) => {
-            return <span style={{ color: "red" }}>{userMailError[key]}</span>;
-          })}
-          <label>Password</label>
-          <input
-            name="password"
-            className="password"
-            type="password"
-            placeholder="password"
-            value={user.password}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(userPasswordError).map((key) => {
-            return (
-              <span style={{ color: "red" }}>{userPasswordError[key]}</span>
-            );
-          })}
-          <label>Confirm password</label>
-          <input
-            name="password2"
-            className="confirm-password"
-            type="password"
-            placeholder="confirm password"
-            value={user.password2}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(userPassword2Error).map((key) => {
-            return (
-              <span style={{ color: "red" }}>{userPassword2Error[key]}</span>
-            );
-          })}
-        </div>
-        <div className="profile">
-          PROFILE
-          <label>Login</label>
-          <input
-            name="first_name"
-            className="first-name"
-            type="text"
-            placeholder="first name"
-            value={profile.first_name}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(otherError).map((key) => {
-            return <span style={{ color: "red" }}>{otherError[key]}</span>;
-          })}
-          <label>Last name</label>
-          <input
-            name="last_name"
-            className="last-name"
-            type="text"
-            placeholder="last name"
-            value={profile.last_name}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(otherError).map((key) => {
-            return <span style={{ color: "red" }}>{otherError[key]}</span>;
-          })}
-          <label>City</label>
-          <input
-            name="city"
-            className="city"
-            type="text"
-            placeholder="city"
-            value={profile.city}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(otherError).map((key) => {
-            return <span style={{ color: "red" }}>{otherError[key]}</span>;
-          })}
-          <label>Country</label>
-          <input
-            name="country"
-            className="country"
-            type="text"
-            placeholder="country"
-            value={profile.country}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(otherError).map((key) => {
-            return <span style={{ color: "red" }}>{otherError[key]}</span>;
-          })}
-          <label>Postal code</label>
-          <input
-            name="postal_code"
-            className="postal-code"
-            type="text"
-            placeholder="postal code"
-            value={profile.postal_code}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(otherError).map((key) => {
-            return <span style={{ color: "red" }}>{otherError[key]}</span>;
-          })}
-          <label>Street</label>
-          <input
-            name="street"
-            className="street"
-            type="text"
-            placeholder="street"
-            value={profile.street}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(otherError).map((key) => {
-            return <span style={{ color: "red" }}>{otherError[key]}</span>;
-          })}
-          <label>Apartment number</label>
-          <input
-            name="apartment_number"
-            className="apartment-number"
-            type="text"
-            placeholder="apartment number"
-            value={profile.apartment_number}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(otherError).map((key) => {
-            return <span style={{ color: "red" }}>{otherError[key]}</span>;
-          })}
-          <label>Phone</label>
-          <input
-            name="phone_number"
-            className="phone"
-            type="phone"
-            placeholder="phone"
-            value={profile.phone_number}
-            onChange={onChangeuser}
-          ></input>
-          {Object.keys(userPhoneError).map((key) => {
-            return <span style={{ color: "red" }}>{userPhoneError[key]}</span>;
-          })}
-        </div>
-        <button type="submit">Register</button>
-      </form>
+      <div className="register-form">
+        <button onClick={openRegisterFormOnClick}>Register</button>
+        {registerForm ? (
+          <form type="submit" className="user-form" onSubmit={registerUser}>
+            <div className="main">
+              MAIN
+              <label>Username</label>
+              <input
+                name="username"
+                className="username"
+                type="text"
+                placeholder="username"
+                value={user.username}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(usernameError).map((key) => {
+                return (
+                  <span style={{ color: "red" }}>{usernameError[key]}</span>
+                );
+              })}
+              <label>Email</label>
+              <input
+                name="email"
+                className="email"
+                type="email"
+                placeholder="email"
+                value={user.email}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(userMailError).map((key) => {
+                return (
+                  <span style={{ color: "red" }}>{userMailError[key]}</span>
+                );
+              })}
+              <label>Password</label>
+              <input
+                name="password"
+                className="password"
+                type="password"
+                placeholder="password"
+                value={user.password}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(userPasswordError).map((key) => {
+                return (
+                  <span style={{ color: "red" }}>{userPasswordError[key]}</span>
+                );
+              })}
+              <label>Confirm password</label>
+              <input
+                name="password2"
+                className="confirm-password"
+                type="password"
+                placeholder="confirm password"
+                value={user.password2}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(userPassword2Error).map((key) => {
+                return (
+                  <span style={{ color: "red" }}>
+                    {userPassword2Error[key]}
+                  </span>
+                );
+              })}
+            </div>
+            <div className="profile">
+              PROFILE
+              <label>Login</label>
+              <input
+                name="first_name"
+                className="first-name"
+                type="text"
+                placeholder="first name"
+                value={profile.first_name}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(otherError).map((key) => {
+                return <span style={{ color: "red" }}>{otherError[key]}</span>;
+              })}
+              <label>Last name</label>
+              <input
+                name="last_name"
+                className="last-name"
+                type="text"
+                placeholder="last name"
+                value={profile.last_name}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(otherError).map((key) => {
+                return <span style={{ color: "red" }}>{otherError[key]}</span>;
+              })}
+              <label>City</label>
+              <input
+                name="city"
+                className="city"
+                type="text"
+                placeholder="city"
+                value={profile.city}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(otherError).map((key) => {
+                return <span style={{ color: "red" }}>{otherError[key]}</span>;
+              })}
+              <label>Country</label>
+              <input
+                name="country"
+                className="country"
+                type="text"
+                placeholder="country"
+                value={profile.country}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(otherError).map((key) => {
+                return <span style={{ color: "red" }}>{otherError[key]}</span>;
+              })}
+              <label>Postal code</label>
+              <input
+                name="postal_code"
+                className="postal-code"
+                type="text"
+                placeholder="postal code"
+                value={profile.postal_code}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(otherError).map((key) => {
+                return <span style={{ color: "red" }}>{otherError[key]}</span>;
+              })}
+              <label>Street</label>
+              <input
+                name="street"
+                className="street"
+                type="text"
+                placeholder="street"
+                value={profile.street}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(otherError).map((key) => {
+                return <span style={{ color: "red" }}>{otherError[key]}</span>;
+              })}
+              <label>Apartment number</label>
+              <input
+                name="apartment_number"
+                className="apartment-number"
+                type="text"
+                placeholder="apartment number"
+                value={profile.apartment_number}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(otherError).map((key) => {
+                return <span style={{ color: "red" }}>{otherError[key]}</span>;
+              })}
+              <label>Phone</label>
+              <input
+                name="phone_number"
+                className="phone"
+                type="phone"
+                placeholder="phone"
+                value={profile.phone_number}
+                onChange={onChangeuser}
+              ></input>
+              {Object.keys(userPhoneError).map((key) => {
+                return (
+                  <span style={{ color: "red" }}>{userPhoneError[key]}</span>
+                );
+              })}
+            </div>
+            <button type="submit">Register</button>
+          </form>
+        ) : (
+          ""
+        )}
+      </div>
     </>
   );
 }

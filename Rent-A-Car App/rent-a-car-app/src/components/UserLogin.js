@@ -47,7 +47,7 @@ function UserLogin({ setIsClientLoggedIn, ...isClientLoggedIn }) {
       // setAccess(response.text());
       // setAccess(response.text());
 
-      if (response.status === 200) {
+      if (response.ok) {
         setIsLoggedIn(!isLoggedIn);
         setCorrectLogin(correctLogin);
         setIsClientLoggedIn({
