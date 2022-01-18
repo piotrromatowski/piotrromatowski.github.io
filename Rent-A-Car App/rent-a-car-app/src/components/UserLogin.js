@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import curl from "curl";
+import logo from "../img/1300231.png";
 import UserLogout from "./UserLogout";
 import UserResetPasswordEmailRequest from "./UserResetPasswordEmailRequest";
 import { LoginContext } from "./LoginContext";
@@ -14,8 +14,6 @@ function UserLogin({ setIsClientLoggedIn, ...isClientLoggedIn }) {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [correctLogin, setCorrectLogin] = useState(true);
-
-  // const [access, setAccess] = useState("");
 
   const onChangeLogin = (e) => {
     setLogin({
@@ -70,39 +68,49 @@ function UserLogin({ setIsClientLoggedIn, ...isClientLoggedIn }) {
 
   return (
     <>
-      <form type="submit" className="user-form" onSubmit={userLogin}>
-        <h2>
-          {isLoggedIn
-            ? `You're logged in ${login.username}`
-            : "You're not logged in"}
-        </h2>
-        <label>Login</label>
-        <input
-          name="username"
-          className="login"
-          type="text"
-          placeholder="login"
-          value={login.username}
-          onChange={onChangeLogin}
-        ></input>
-        <label>Password</label>
-        <input
-          name="password"
-          className="password"
-          type="password"
-          placeholder="password"
-          value={login.password}
-          onChange={onChangeLogin}
-        ></input>
-        {correctLogin ? (
+      <div className="login-wrapper">
+        <h2>{access.access ? "You're logged in" : "You're not logged in"}</h2>
+        {access.access ? (
           ""
         ) : (
-          <span style={{ color: "red" }}>Incorrect login or password</span>
+          <div className="form-wrapper">
+            <h2 className="form-title">Car Rental User Account</h2>
+            <img src={logo} className="logo" alt=""></img>
+            <form type="submit" className="user-form" onSubmit={userLogin}>
+              {/* <label>Login</label> */}
+              <input
+                name="username"
+                className="login"
+                type="text"
+                placeholder="login"
+                value={login.username}
+                onChange={onChangeLogin}
+              ></input>
+              {/* <label>Password</label> */}
+              <input
+                name="password"
+                className="password"
+                type="password"
+                placeholder="password"
+                value={login.password}
+                onChange={onChangeLogin}
+              ></input>
+              {correctLogin ? (
+                ""
+              ) : (
+                <span style={{ color: "red" }}>
+                  Incorrect login or password
+                </span>
+              )}
+              <button className="login-btn" type="submit">
+                Log In
+              </button>
+            </form>
+          </div>
         )}
-        <button type="submit">Log In</button>
-      </form>
-      <UserLogout setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
-      <UserResetPasswordEmailRequest />
+        <UserLogout setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
+        <UserResetPasswordEmailRequest />
+      </div>
     </>
   );
 }

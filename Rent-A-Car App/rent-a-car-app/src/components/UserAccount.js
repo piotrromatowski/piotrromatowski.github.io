@@ -49,12 +49,17 @@ function UserAccount({ setIsClientLoggedIn, ...isClientLoggedIn }) {
   return (
     <>
       {/* <Nav /> */}
-      <div>
-        <h1>User Account</h1>
-        <h2>
+      <div className="user-account">
+        <h2 className="back-to-main">
           <Link to="/">Main{/* <a href="/home">Home</a> */}</Link>
         </h2>
       </div>
+      <UserLogin
+        isClientLoggedIn={isClientLoggedIn}
+        setIsClientLoggedIn={setIsClientLoggedIn}
+      />
+      <UserRegister />
+      <AdminPanel></AdminPanel>
       <div className="bookings">
         {showAllBookings
           ? userBookings && userBookings.results
@@ -105,7 +110,7 @@ function UserAccount({ setIsClientLoggedIn, ...isClientLoggedIn }) {
                       Booking updated:{" "}
                       {new Date(result.updated).toISOString().slice(0, 10)}
                     </li>
-                    <li>
+                    <li className="booking_element">
                       Booking ID:{result.url.slice(51, 55).replace("/", "")}
                     </li>
                   </ul>
@@ -113,16 +118,14 @@ function UserAccount({ setIsClientLoggedIn, ...isClientLoggedIn }) {
               })
             : ""
           : ""}
-        <button onClick={showAllBookingsOnClick}>
-          {!showAllBookings ? "Show all bookings" : "Hide all bookings"}
-        </button>
+        {access.access ? (
+          <button className="all_bookings_btn" onClick={showAllBookingsOnClick}>
+            {!showAllBookings ? "Show all bookings" : "Hide all bookings"}
+          </button>
+        ) : (
+          ""
+        )}
       </div>
-      <UserLogin
-        isClientLoggedIn={isClientLoggedIn}
-        setIsClientLoggedIn={setIsClientLoggedIn}
-      />
-      <UserRegister />
-      <AdminPanel></AdminPanel>
     </>
   );
 }

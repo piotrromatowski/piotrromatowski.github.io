@@ -1,0 +1,551 @@
+.panel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .bookings,
+  .cars,
+  .car-photos,
+  .users {
+    width: 90%;
+    background-color: #ecf0f3;
+    margin: 1.5rem 1rem;
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+
+    button {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      background-color: rgb(223, 223, 223);
+      transition: 0.5s ease;
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.1rem;
+      border: none;
+      border-radius: 2rem;
+      color: black;
+      margin: 1rem 1rem;
+      box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.9);
+        transition: 0.5s ease;
+        color: #fff;
+      }
+    }
+
+    label {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 2rem;
+      width: 100%;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      text-align: left;
+    }
+
+    input {
+      width: 26%;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 1.5rem;
+      color: #555;
+      padding: 1rem 0.5rem 1rem 0.5rem;
+      margin: 1rem 0rem;
+      border-radius: 2rem;
+      box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    }
+  }
+
+  .bookings {
+    .booking-title {
+      padding: 1rem 1rem;
+      font-size: 2rem;
+    }
+    .bookings-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1rem 2rem;
+
+      .booking-list {
+        background-color: rgb(231, 231, 231);
+        box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+        padding: 2rem 2rem;
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+        .single-booking {
+          text-decoration: none;
+          list-style: none;
+          padding: 0.1rem 0rem;
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+      }
+      .booking-change {
+        select {
+          width: 90%;
+          border: none;
+          outline: none;
+          background: none;
+          font-size: 1.5rem;
+          color: #555;
+          padding: 1rem 0.5rem 1rem 0.5rem;
+          margin: 2rem 0rem;
+          border-radius: 2rem;
+          box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+
+          option {
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+        }
+        input {
+          width: 35%;
+        }
+      }
+    }
+    .booking-message {
+      text-align: center;
+      font-size: 2rem;
+      color: red;
+    }
+  }
+  .cars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    // flex-wrap: wrap;
+
+    .cars-add {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      .cars-title {
+        padding: 1rem 1rem;
+        font-size: 2rem;
+        align-self: flex-start;
+      }
+      .cars-form {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // flex-wrap: wrap;
+        flex-direction: column;
+        background-color: rgb(231, 231, 231);
+        box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+        border-radius: 2rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+
+        input {
+          min-width: 60%;
+        }
+        label {
+          text-align: center;
+        }
+      }
+    }
+
+    .cars-search {
+      width: 100%;
+      .cars-search-title {
+        padding: 1rem 1rem;
+        font-size: 2rem;
+        align-self: flex-start;
+      }
+
+      .car-search-form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        // flex-direction: column;
+        label {
+          width: 5%;
+        }
+      }
+
+      .car-found {
+        .car-found-list {
+          background-color: rgb(231, 231, 231);
+          box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+          padding: 2rem 2rem;
+          border-radius: 2rem;
+          margin-bottom: 2rem;
+          .car-found-item {
+            text-decoration: none;
+            list-style: none;
+            padding: 0.1rem 0rem;
+            font-weight: 500;
+            font-size: 1.2rem;
+          }
+        }
+
+        .update-car {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          .update-car-form {
+            margin-top: 2rem;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(231, 231, 231);
+            box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+            border-radius: 2rem;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+
+            input {
+              min-width: 60%;
+            }
+            label {
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .no-data {
+        padding: 2rem 2rem;
+        font-size: 2rem;
+        color: red;
+        font-weight: 700;
+      }
+    }
+  }
+  .car-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .car-photo-list {
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      //   flex-wrap: wrap;
+      //   flex-direction: column;
+      width: 100%;
+
+      li {
+        list-style: none;
+        padding: 2rem 2rem;
+        margin: 2rem 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border-radius: 2rem;
+        background-color: rgb(231, 231, 231);
+        box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+
+        .photo-url {
+          font-size: 2rem;
+          padding: 1rem 1rem;
+        }
+        button {
+          margin-bottom: 2rem;
+        }
+
+        .single-photo {
+          border-radius: 2rem;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .users {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    .users-all {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      .users-title {
+        padding: 1rem 1rem;
+        font-size: 2rem;
+        align-self: flex-start;
+      }
+      button {
+        margin-bottom: 3rem;
+      }
+
+      .show-users {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .user {
+          padding: 2rem 2rem;
+          margin: 2rem 2rem;
+          border-radius: 2rem;
+          background-color: rgb(231, 231, 231);
+          box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+          display: flex;
+          flex-direction: column;
+
+          .user-item {
+            list-style: none;
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+          }
+          .user-profile {
+            margin-bottom: 1rem;
+            .user-profile-item {
+              list-style: none;
+              margin-top: 0.5rem;
+              font-size: 1.2rem;
+            }
+          }
+          button {
+            margin: 0.5rem 0rem;
+          }
+        }
+
+        .user-edit {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          .user-edit-form {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(231, 231, 231);
+            box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+            border-radius: 2rem;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+
+            .user-edit-title {
+              padding: 1rem 1rem;
+              font-size: 2rem;
+              align-self: flex-start;
+            }
+            .user-update,
+            .user-update-profile {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+
+              input {
+                min-width: 60%;
+              }
+              label {
+                text-align: center;
+                margin: 0;
+              }
+            }
+            .user-update-profile {
+              flex-direction: row;
+              flex-wrap: wrap;
+              button {
+                margin: 1rem;
+                padding: 1rem 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .users-by-ID {
+    width: 100%;
+
+    .users-title {
+      padding: 1rem 1rem;
+      font-size: 2rem;
+      align-self: flex-start;
+    }
+    .single-user {
+      padding: 2rem 2rem;
+      margin: 2rem 2rem;
+      border-radius: 2rem;
+      background-color: rgb(231, 231, 231);
+      box-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+
+      .single-user-item {
+        list-style: none;
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+      }
+      .single-user-profile {
+        margin-bottom: 1rem;
+        .single-user-profile-item {
+          list-style: none;
+          margin-top: 0.5rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .no-data {
+      padding: 2rem 2rem;
+      font-size: 2rem;
+      color: red;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 1024px) {
+  .panel-wrapper {
+    .users {
+      .users-by-ID {
+        .single-user {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .panel-wrapper {
+    .bookings {
+      width: 100%;
+      .booking-change {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        label {
+          text-align: center;
+        }
+        select {
+          option {
+            margin: 0;
+          }
+        }
+        input {
+          width: 100% !important;
+          margin: 0;
+        }
+      }
+    }
+    .cars {
+      .cars-add {
+        .cars-form {
+          padding-top: 1rem;
+          width: 100%;
+          input {
+            width: 90%;
+          }
+          label {
+            margin: 0;
+          }
+        }
+      }
+      .cars-search {
+        .car-search-form {
+          padding-top: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          label {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+          }
+          input {
+            width: 100%;
+          }
+        }
+      }
+      .car-found {
+        .update-car {
+          .update-car-form {
+            width: 100% !important;
+            input {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+    .car-photos {
+      width: 100%;
+      .car-photo-list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        li {
+          width: 100%;
+          padding: 1rem 1rem;
+          margin: 1rem 0rem;
+          .photo-url {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .users {
+      .user-edit {
+        width: 100%;
+        .user-edit-form {
+          width: 100% !important;
+          .user-update,
+          .user-update-profile {
+            input {
+              width: 90%;
+            }
+          }
+          .user-update-profile {
+            input {
+              width: 70%;
+            }
+          }
+        }
+      }
+      .users-by-ID {
+        .single-user {
+          width: 90%;
+        }
+      }
+    }
+  }
+}

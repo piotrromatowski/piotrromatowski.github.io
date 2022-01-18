@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Carousel from "react-elastic-carousel";
 // import OurCars, { changeCarList, listType } from "./OurCars";
 import ModalForm from "./ModalCalendarForm";
 import UserReservation from "./UserReservation";
+import { LoginContext } from "./LoginContext";
 
 // const singlecarResults = [
 //   {
@@ -359,6 +360,7 @@ import UserReservation from "./UserReservation";
 // ];
 
 function SingleCar({ listType, carResults, login }) {
+  const [access, setAccess] = useContext(LoginContext);
   const [buttonModal, setButtonModal] = useState(false);
   const [choosenCar, setChoosenCar] = useState("");
   const [bookingDate, setBookingDate] = useState({
@@ -526,7 +528,9 @@ function SingleCar({ listType, carResults, login }) {
                   data-value7={carResults.day_price}
                   data-value8={carResults.url.slice(47, 48)}
                 >
-                  rent car
+                  {login !== "" && access.access
+                    ? "rent a car"
+                    : "log in to rent"}
                   {/* <a href="/rent">rent car</a> */}
                 </button>
               </ul>
@@ -538,7 +542,7 @@ function SingleCar({ listType, carResults, login }) {
           );
       })}
 
-      {login !== "" ? (
+      {login !== "" && access.access ? (
         <ModalForm
           bookingDate={bookingDate}
           setBookingDate={setBookingDate}
@@ -547,21 +551,7 @@ function SingleCar({ listType, carResults, login }) {
           choosenCar={choosenCar}
         />
       ) : (
-        <span
-          style={{
-            fontSize: "35px",
-            fontWeight: "600",
-            color: "red",
-            position: "fixed",
-            top: "50%",
-            backgroundColor: "rgba(125,125,125,0.7)",
-            padding: "15px 20px",
-            borderRadius: "20px",
-            zIndex: "1",
-          }}
-        >
-          You must be logged in
-        </span>
+        ""
       )}
       <UserReservation
         reservation={reservation}

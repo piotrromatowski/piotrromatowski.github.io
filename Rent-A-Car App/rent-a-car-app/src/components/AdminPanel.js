@@ -378,6 +378,14 @@ function AdminPanel() {
     });
   };
 
+  const cancelChanges = (e) => {
+    setBookingUpdateForm(false);
+    setBookingUpdateDate({
+      booking_start: "",
+      booking_end: "",
+    });
+  };
+
   const carToChangeOnChange = (e) => {
     setCarToChange({ ...carToChange, [e.target.name]: e.target.value });
   };
@@ -703,332 +711,356 @@ function AdminPanel() {
 
   return (
     <>
-      <div className="bookings">
-        <p>Find booking by ID </p>
-        <form>
-          <label>Booking ID:</label>
-          <input
-            placeholder="ID"
-            value={bookingID.booking}
-            name="booking"
-            type="text"
-            onChange={onChangeBookingID}
-          ></input>
-          <button type="submit" onClick={getBookingById}>
-            Show bookings
-          </button>
-        </form>
+      {access.access ? (
+        <div className="panel-wrapper">
+          <div className="bookings">
+            <h2 className="booking-title">Find booking by ID </h2>
+            <form>
+              <label>Booking ID:</label>
+              <input
+                placeholder="ID"
+                value={bookingID.booking}
+                name="booking"
+                type="text"
+                onChange={onChangeBookingID}
+              ></input>
+              <button type="submit" onClick={getBookingById}>
+                Show bookings
+              </button>
+            </form>
 
-        {bookingsArray ? (
-          bookingsArray.data.car ? (
-            <div className="bookinfs-wrapper">
-              <ul className="booking-list">
-                <li className="single-booking">
-                  URL: {bookingsArray.data.url}
-                </li>
-                <li className="single-booking">
-                  USER ID: {bookingsArray.data.user}
-                </li>
-                <li className="single-booking">
-                  BOOKING START: {bookingsArray.data.booking_start}
-                </li>
-                <li className="single-booking">
-                  BOOKING END: {bookingsArray.data.booking_end}
-                </li>
-                <li className="single-booking">
-                  CREATED: {bookingsArray.data.created}
-                </li>
-                <li className="single-booking">
-                  UPDATED: {bookingsArray.data.updated}
-                </li>
-                <li className="single-booking">
-                  BOOKING DURATION: {bookingsArray.data.booking_duration}
-                </li>
-                <li className="single-booking">
-                  TOTAL PRICE: {bookingsArray.data.total_price}
-                </li>
-                <li className="single-booking">
-                  CAR BRAND: {bookingsArray.data.car.brand}
-                </li>
-                <li className="single-booking">
-                  CAR MODEL: {bookingsArray.data.car.model}
-                </li>
-                <li className="single-booking">
-                  ENGINE: {bookingsArray.data.car.engine}
-                </li>
-                <li className="single-booking">
-                  YEAR: {bookingsArray.data.car.year}
-                </li>
-                <li className="single-booking">
-                  LOCATION: {bookingsArray.data.car.location}
-                </li>
-                <li className="single-booking">
-                  CONDITION: {bookingsArray.data.car.condition}
-                </li>
-                <li className="single-booking">
-                  DAY PRICE: {bookingsArray.data.car.day_price}
-                </li>
-                <li className="single-booking">
-                  CAR URL: {bookingsArray.data.car.url}
-                </li>
-                <button
-                  className="single-booking-btn"
-                  onClick={deleteBookingOnClick}
-                >
-                  DELETE RESERVATION
-                </button>
-                <button
-                  className="single-booking-btn"
-                  onClick={openBookingUpdateFormOnClick}
-                >
-                  CHANGE RESERVATION
-                </button>
-              </ul>
-              {bookingUpdateForm ? (
-                allCarsList ? (
-                  <div>
-                    <label>CAR</label>
-                    <select
-                      name="carID"
-                      onChange={carToChangeOnChange}
-                      // value={carToChange}
+            {bookingsArray ? (
+              bookingsArray.data.car ? (
+                <div className="bookings-wrapper">
+                  <ul className="booking-list">
+                    <li className="single-booking">
+                      URL: {bookingsArray.data.url}
+                    </li>
+                    <li className="single-booking">
+                      USER ID: {bookingsArray.data.user}
+                    </li>
+                    <li className="single-booking">
+                      BOOKING START: {bookingsArray.data.booking_start}
+                    </li>
+                    <li className="single-booking">
+                      BOOKING END: {bookingsArray.data.booking_end}
+                    </li>
+                    <li className="single-booking">
+                      CREATED: {bookingsArray.data.created}
+                    </li>
+                    <li className="single-booking">
+                      UPDATED: {bookingsArray.data.updated}
+                    </li>
+                    <li className="single-booking">
+                      BOOKING DURATION: {bookingsArray.data.booking_duration}
+                    </li>
+                    <li className="single-booking">
+                      TOTAL PRICE: {bookingsArray.data.total_price}
+                    </li>
+                    <li className="single-booking">
+                      CAR BRAND: {bookingsArray.data.car.brand}
+                    </li>
+                    <li className="single-booking">
+                      CAR MODEL: {bookingsArray.data.car.model}
+                    </li>
+                    <li className="single-booking">
+                      ENGINE: {bookingsArray.data.car.engine}
+                    </li>
+                    <li className="single-booking">
+                      YEAR: {bookingsArray.data.car.year}
+                    </li>
+                    <li className="single-booking">
+                      LOCATION: {bookingsArray.data.car.location}
+                    </li>
+                    <li className="single-booking">
+                      CONDITION: {bookingsArray.data.car.condition}
+                    </li>
+                    <li className="single-booking">
+                      DAY PRICE: {bookingsArray.data.car.day_price}
+                    </li>
+                    <li className="single-booking">
+                      CAR URL: {bookingsArray.data.car.url}
+                    </li>
+                    <button
+                      className="single-booking-btn"
+                      onClick={deleteBookingOnClick}
                     >
-                      <option>---</option>
-                      {allCarsList.map((car) => {
-                        return (
-                          <option
-                            onClick={getOnClick}
-                            value={car.url.slice(47, 49).replace("/", "")}
-                          >
-                            {car.brand} {car.model} {car.engine} {car.year}
-                            ID: {car.url.slice(47, 49).replace("/", "")}
-                          </option>
-                        );
-                      })}
-                    </select>
-                    <label>BOOKING START</label>
-                    <input
-                      type="date"
-                      name="booking_start"
-                      value={bookingUpdateDate.booking_start}
-                      onChange={updatedBookingOnChange}
-                    ></input>
-                    <label>BOOKING END</label>
-                    <input
-                      type="date"
-                      name="booking_end"
-                      value={bookingUpdateDate.booking_end}
-                      onChange={updatedBookingOnChange}
-                    ></input>
-                    <button onClick={saveChangesToReservationOnClick}>
-                      Save and update reservation
+                      DELETE RESERVATION
                     </button>
-                    <button>Cancel</button>
+                    <button
+                      className="single-booking-btn"
+                      onClick={openBookingUpdateFormOnClick}
+                    >
+                      CHANGE RESERVATION
+                    </button>
+                  </ul>
+                  {bookingUpdateForm ? (
+                    allCarsList ? (
+                      <div className="booking-change">
+                        <label>CAR</label>
+                        <select
+                          name="carID"
+                          onChange={carToChangeOnChange}
+                          // value={carToChange}
+                        >
+                          <option>---</option>
+                          {allCarsList.map((car) => {
+                            return (
+                              <option
+                                onClick={getOnClick}
+                                value={car.url.slice(47, 49).replace("/", "")}
+                              >
+                                {car.brand} {car.model} {car.engine} {car.year}{" "}
+                                ID: {car.url.slice(47, 49).replace("/", "")}
+                              </option>
+                            );
+                          })}
+                        </select>
+                        <label>BOOKING START</label>
+                        <input
+                          type="date"
+                          name="booking_start"
+                          value={bookingUpdateDate.booking_start}
+                          onChange={updatedBookingOnChange}
+                        ></input>
+                        <label>BOOKING END</label>
+                        <input
+                          type="date"
+                          name="booking_end"
+                          value={bookingUpdateDate.booking_end}
+                          onChange={updatedBookingOnChange}
+                        ></input>
+                        <button onClick={saveChangesToReservationOnClick}>
+                          Save and update reservation
+                        </button>
+                        <button onClick={cancelChanges}>Cancel</button>
+                      </div>
+                    ) : (
+                      ""
+                    )
+                  ) : (
+                    ""
+                  )}
+                </div>
+              ) : (
+                <p className="booking-message">{error}</p>
+              )
+            ) : (
+              ""
+            )}
+          </div>
+          <div className="cars">
+            <div className="cars-add">
+              <h2 className="cars-title">Add new car</h2>
+              <form className="cars-form">
+                <label>Brand</label>
+                <input
+                  type="text"
+                  name="brand"
+                  className="add-car-input"
+                  placeholder="brand"
+                  value={newCar.brand}
+                  onChange={newCarOnChange}
+                />
+                <label>Model</label>
+                <input
+                  type="text"
+                  name="model"
+                  className="add-car-input"
+                  placeholder="model"
+                  value={newCar.model}
+                  onChange={newCarOnChange}
+                />
+                <label>Engine</label>
+                <input
+                  type="text"
+                  name="engine"
+                  className="add-car-input"
+                  placeholder="engine"
+                  value={newCar.engine}
+                  onChange={newCarOnChange}
+                />
+                <label>Year</label>
+                <input
+                  type="text"
+                  name="year"
+                  className="add-car-input"
+                  placeholder="year"
+                  value={newCar.year}
+                  onChange={newCarOnChange}
+                />
+                <label>Location</label>
+                <input
+                  type="text"
+                  name="location"
+                  className="add-car-input"
+                  placeholder="location"
+                  value={newCar.location}
+                  onChange={newCarOnChange}
+                />
+                <label>Condition</label>
+                <input
+                  type="text"
+                  name="condition"
+                  className="add-car-input"
+                  placeholder="new / used"
+                  value={newCar.condition}
+                  onChange={newCarOnChange}
+                />
+                <label>Day price</label>
+                <input
+                  type="text"
+                  name="day_price"
+                  className="add-car-input"
+                  placeholder="day price"
+                  value={newCar.day_price}
+                  onChange={newCarOnChange}
+                />
+                <button type="submit" onClick={addNewCar}>
+                  Add car
+                </button>
+              </form>
+            </div>
+            <div className="cars-search">
+              <h2 className="cars-search-title">Find car by ID</h2>
+              <form className="car-search-form">
+                <label>CAR ID</label>
+                <input
+                  type="number"
+                  name="id"
+                  className="search-car-input"
+                  placeholder="Car ID"
+                  value={carID.id}
+                  onChange={searchCarOnChange}
+                ></input>
+                <button type="submit" onClick={findCarByID}>
+                  Find Car
+                </button>
+              </form>
+              {carFound.data ? (
+                carFound.data.photos ? (
+                  <div className="car-found">
+                    <ul className="car-found-list">
+                      <li className="car-found-item">
+                        BRAND: {carFound.data.brand}
+                      </li>
+                      <li className="car-found-item">
+                        MODEL: {carFound.data.model}
+                      </li>
+                      <li className="car-found-item">
+                        ENGINE: {carFound.data.engine}
+                      </li>
+                      <li className="car-found-item">
+                        YEAR: {carFound.data.year}
+                      </li>
+                      <li className="car-found-item">
+                        CONDITION: {carFound.data.condition}
+                      </li>
+                      <li className="car-found-item">
+                        LOCATION: {carFound.data.location}
+                      </li>
+                      <li className="car-found-item">
+                        DAY PRICE: {carFound.data.day_price}
+                      </li>
+                      <li className="car-found-item">
+                        URL: {carFound.data.url}
+                      </li>
+                      <li className="car-found-item">
+                        NUMBER OF PHOTOS: {carFound.data.photos.length}
+                      </li>
+                    </ul>
+                    <button onClick={updateOnClick}>UPDATE THIS CAR</button>
+                    <button onClick={deleteCarOnClick}>DELETE THIS CAR</button>
+                    <button onClick={carPhotoPanelOnClick}>
+                      CAR PHOTO PANEL
+                    </button>
+                    {showUpdateForm ? (
+                      <div className="update-car">
+                        <form className="update-car-form">
+                          <label>BRAND</label>
+                          <input
+                            type="text"
+                            name="brand"
+                            className="change-car-input"
+                            placeholder="brand"
+                            value={updateCar.brand}
+                            onChange={updateCarOnChange}
+                          />
+                          <label>MODEL</label>
+                          <input
+                            type="text"
+                            name="model"
+                            className="change-car-input"
+                            placeholder="model"
+                            value={updateCar.model}
+                            onChange={updateCarOnChange}
+                          />
+                          <label>ENGINE</label>
+                          <input
+                            type="text"
+                            name="engine"
+                            className="change-car-input"
+                            placeholder="engine"
+                            value={updateCar.engine}
+                            onChange={updateCarOnChange}
+                          />
+                          <label>YEAR</label>
+                          <input
+                            type="text"
+                            name="year"
+                            className="change-car-input"
+                            placeholder="year"
+                            value={updateCar.year}
+                            onChange={updateCarOnChange}
+                          />
+                          <label>LOCATION</label>
+                          <input
+                            type="text"
+                            name="location"
+                            className="change-car-input"
+                            placeholder="location"
+                            value={updateCar.location}
+                            onChange={updateCarOnChange}
+                          />
+                          <label>CONDITION</label>
+                          <input
+                            type="text"
+                            name="condition"
+                            className="change-car-input"
+                            placeholder="new / used"
+                            value={updateCar.condition}
+                            onChange={updateCarOnChange}
+                          />
+                          <label>DAY PRICE</label>
+                          <input
+                            type="text"
+                            name="day_price"
+                            className="change-car-input"
+                            placeholder="day price"
+                            value={updateCar.day_price}
+                            onChange={updateCarOnChange}
+                          />
+                          <button onClick={saveChangesOnClick}>
+                            SAVE CHANGES
+                          </button>
+                          <button onClick={cancelUpdate}>CANCEL</button>
+                        </form>
+                      </div>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 ) : (
-                  ""
+                  <span className="no-data">No data!</span>
                 )
               ) : (
                 ""
               )}
             </div>
-          ) : (
-            <p className="booking-message">{error}</p>
-          )
-        ) : (
-          ""
-        )}
-      </div>
-      <div className="cars">
-        <div className="cars-add">
-          <p>Add new car</p>
-          <form>
-            <label>Brand</label>
-            <input
-              type="text"
-              name="brand"
-              className="add-car-input"
-              placeholder="brand"
-              value={newCar.brand}
-              onChange={newCarOnChange}
-            />
-            <label>Model</label>
-            <input
-              type="text"
-              name="model"
-              className="add-car-input"
-              placeholder="model"
-              value={newCar.model}
-              onChange={newCarOnChange}
-            />
-            <label>Engine</label>
-            <input
-              type="text"
-              name="engine"
-              className="add-car-input"
-              placeholder="engine"
-              value={newCar.engine}
-              onChange={newCarOnChange}
-            />
-            <label>Year</label>
-            <input
-              type="text"
-              name="year"
-              className="add-car-input"
-              placeholder="year"
-              value={newCar.year}
-              onChange={newCarOnChange}
-            />
-            <label>Location</label>
-            <input
-              type="text"
-              name="location"
-              className="add-car-input"
-              placeholder="location"
-              value={newCar.location}
-              onChange={newCarOnChange}
-            />
-            <label>Condition</label>
-            <input
-              type="text"
-              name="condition"
-              className="add-car-input"
-              placeholder="new / used"
-              value={newCar.condition}
-              onChange={newCarOnChange}
-            />
-            <label>Day price</label>
-            <input
-              type="text"
-              name="day_price"
-              className="add-car-input"
-              placeholder="day price"
-              value={newCar.day_price}
-              onChange={newCarOnChange}
-            />
-            <button type="submit" onClick={addNewCar}>
-              Add car
-            </button>
-          </form>
-        </div>
-        <div className="cars-search">
-          <p>Find car by ID</p>
-          <form>
-            <label>CAR ID</label>
-            <input
-              type="number"
-              name="id"
-              className="search-car-input"
-              placeholder="Car ID"
-              value={carID.id}
-              onChange={searchCarOnChange}
-            ></input>
-            <button type="submit" onClick={findCarByID}>
-              Find Car
-            </button>
-          </form>
-          {carFound.data ? (
-            carFound.data.photos ? (
-              <div>
-                <ul>
-                  <li>BRAND: {carFound.data.brand}</li>
-                  <li>MODEL: {carFound.data.model}</li>
-                  <li>ENGINE: {carFound.data.engine}</li>
-                  <li>YEAR: {carFound.data.year}</li>
-                  <li>CONDITION: {carFound.data.condition}</li>
-                  <li>LOCATION: {carFound.data.location}</li>
-                  <li>DAY PRICE: {carFound.data.day_price}</li>
-                  <li>URL: {carFound.data.url}</li>
-                  <li>NUMBER OF PHOTOS: {carFound.data.photos.length}</li>
-                </ul>
-                <button onClick={updateOnClick}>UPDATE THIS CAR</button>
-                <button onClick={deleteCarOnClick}>DELETE THIS CAR</button>
-                <button onClick={carPhotoPanelOnClick}>CAR PHOTO PANEL</button>
-                {showUpdateForm ? (
-                  <div>
-                    <form>
-                      <label>BRAND</label>
-                      <input
-                        type="text"
-                        name="brand"
-                        className="change-car-input"
-                        placeholder="brand"
-                        value={updateCar.brand}
-                        onChange={updateCarOnChange}
-                      />
-                      <label>MODEL</label>
-                      <input
-                        type="text"
-                        name="model"
-                        className="change-car-input"
-                        placeholder="model"
-                        value={updateCar.model}
-                        onChange={updateCarOnChange}
-                      />
-                      <label>ENGINE</label>
-                      <input
-                        type="text"
-                        name="engine"
-                        className="change-car-input"
-                        placeholder="engine"
-                        value={updateCar.engine}
-                        onChange={updateCarOnChange}
-                      />
-                      <label>YEAR</label>
-                      <input
-                        type="text"
-                        name="year"
-                        className="change-car-input"
-                        placeholder="year"
-                        value={updateCar.year}
-                        onChange={updateCarOnChange}
-                      />
-                      <label>LOCATION</label>
-                      <input
-                        type="text"
-                        name="location"
-                        className="change-car-input"
-                        placeholder="location"
-                        value={updateCar.location}
-                        onChange={updateCarOnChange}
-                      />
-                      <label>CONDITION</label>
-                      <input
-                        type="text"
-                        name="condition"
-                        className="change-car-input"
-                        placeholder="new / used"
-                        value={updateCar.condition}
-                        onChange={updateCarOnChange}
-                      />
-                      <label>DAY PRICE</label>
-                      <input
-                        type="text"
-                        name="day_price"
-                        className="change-car-input"
-                        placeholder="day price"
-                        value={updateCar.day_price}
-                        onChange={updateCarOnChange}
-                      />
-                      <button onClick={saveChangesOnClick}>SAVE CHANGES</button>
-                      <button onClick={cancelUpdate}>CANCEL</button>
-                    </form>
-                  </div>
-                ) : (
-                  ""
-                )}
-              </div>
-            ) : (
-              "No data"
-            )
-          ) : (
-            ""
-          )}
-        </div>
-        <div className="cars-update"></div>
-      </div>
-      <div className="car-photos">
-        {/* <button onClick={addPhotoOnClick}>ADD PHOTO</button>
+            <div className="cars-update"></div>
+          </div>
+          <div className="car-photos">
+            {/* <button onClick={addPhotoOnClick}>ADD PHOTO</button>
         {newPhotoPanel ? (
           <div>
             <form>
@@ -1053,294 +1085,324 @@ function AdminPanel() {
         ) : (
           ""
         )} */}
-        {photos && carPhotoPanel ? (
-          <div>
-            {photos.map((photo) => {
-              return (
-                <ul>
-                  <li>URL: {photo.url}</li>
-                  <button onClick={deletePhotoOnClick} value={photo.url}>
-                    DELETE PHOTO
-                  </button>
-                  {/* <button>EDIT PHOTO</button> */}
-                  <img alt="" src={photo.photo}></img>
-                </ul>
-              );
-            })}
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
-      <div className="users">
-        <div className="users-all">
-          <h2>All Users</h2>
-          <button onClick={showAllUsersOnClick}>
-            {!showAllUsers ? "Show all users" : "Hide users"}
-          </button>
-          <div className="show-users active">
-            {showAllUsers
-              ? users
-                ? users.results
-                  ? users.results.map((user) => {
-                      return (
-                        <ul className="user" key={user.url.slice(48, 51)}>
-                          <li className="user-item">URL: {user.url}</li>
-                          <li className="user-item">
-                            USERNAME: {user.username}
-                          </li>
-                          <li className="user-item">
-                            USER EMAIL: {user.email}
-                          </li>
-
-                          {user.profile ? (
-                            <ul className="user-profile">
-                              <li className="user-profile-item">
-                                FIRST NAME: {user.profile.first_name}
-                              </li>
-                              <li className="user-profile-item">
-                                LAST NAME: {user.profile.last_name}
-                              </li>
-                              <li className="user-profile-item">
-                                STREET: {user.profile.street}
-                              </li>
-                              <li className="user-profile-item">
-                                APT.NUMBER: {user.profile.apartment_number}
-                              </li>
-                              <li className="user-profile-item">
-                                CITY: {user.profile.city}
-                              </li>
-                              <li className="user-profile-item">
-                                COUNTRY: {user.profile.country}
-                              </li>
-                              <li className="user-profile-item">
-                                POSTAL CODE: {user.profile.postal_code}
-                              </li>
-                              <li className="user-profile-item">
-                                PHONE: {user.profile.phone_number}
-                              </li>
-                            </ul>
-                          ) : (
-                            ""
-                          )}
-                          <button onClick={editUserOnClick} value={user.url}>
-                            Edit
-                          </button>
-                          <button onClick={deleteUserOnClick} value={user.url}>
-                            Delete
-                          </button>
-                        </ul>
-                      );
-                    })
-                  : ""
-                : ""
-              : ""}
-            {userDeleted}
-            {openEditForm ? (
-              <div>
-                <form type="submit" onSubmit={saveChangesToUser}>
-                  <div>
-                    <p>User update</p>
-                    <label>USERNAME</label>
-                    <input
-                      name="username"
-                      className="username"
-                      type="text"
-                      placeholder="username"
-                      value={userUpdate.username}
-                      onChange={editUserOnChange}
-                    />
-                    <label>EMAIL</label>
-                    <input
-                      name="email"
-                      className="email"
-                      type="email"
-                      placeholder="email"
-                      value={userUpdate.email}
-                      onChange={editUserOnChange}
-                    />
-                    <label>PASSWORD</label>
-                    <input
-                      name="password"
-                      className="password"
-                      type="password"
-                      placeholder="password"
-                      value={userUpdate.password}
-                      onChange={editUserOnChange}
-                    />
-                    <label>CONFIRM PASSWORD</label>
-                    <input
-                      name="password2"
-                      className="password"
-                      type="password"
-                      placeholder="confirm password"
-                      value={userUpdate.password2}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">SAVE</button>
-                  </div>
-                  <div>
-                    <p>User profile update</p>
-                    <label>First name</label>
-                    <input
-                      name="first_name"
-                      className="first-name"
-                      type="text"
-                      placeholder="first name"
-                      value={userUpdate.profile.first_name}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">OK</button>
-                    <label>Last name</label>
-                    <input
-                      name="last_name"
-                      className="last-name"
-                      type="text"
-                      placeholder="last name"
-                      value={userUpdate.profile.last_name}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">OK</button>
-                    <label>Country</label>
-                    <input
-                      name="country"
-                      className="country"
-                      type="text"
-                      placeholder="country"
-                      value={userUpdate.profile.country}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">OK</button>
-                    <label>City</label>
-                    <input
-                      name="city"
-                      className="city"
-                      type="text"
-                      placeholder="city"
-                      value={userUpdate.profile.city}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">OK</button>
-                    <label>Postal code</label>
-                    <input
-                      name="postal_code"
-                      className="postal-code"
-                      type="text"
-                      placeholder="postal code"
-                      value={userUpdate.profile.postal_code}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">OK</button>
-                    <label>Street</label>
-                    <input
-                      name="street"
-                      className="street"
-                      type="text"
-                      placeholder="street"
-                      value={userUpdate.profile.street}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">OK</button>
-                    <label>Apt. number</label>
-                    <input
-                      name="apartment_number"
-                      className="apartment"
-                      type="text"
-                      placeholder="apt. number"
-                      value={userUpdate.profile.apartment_number}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">OK</button>
-                    <label>Phone</label>
-                    <input
-                      name="phone_number"
-                      className="phone"
-                      type="text"
-                      placeholder="phone"
-                      value={userUpdate.profile.phone_number}
-                      onChange={editUserOnChange}
-                    />
-                    <button type="submit">OK</button>
-                  </div>
-
-                  {/* <button type="submit">SAVE CHANGES</button> */}
-                </form>
-
-                <button onClick={cancelUserEdit}>CANCEL</button>
+            {photos && carPhotoPanel ? (
+              <div className="car-photos">
+                {photos.map((photo) => {
+                  return (
+                    <ul className="car-photo-list">
+                      <li>
+                        <h2 className="photo-url">URL: {photo.url}</h2>
+                        <button onClick={deletePhotoOnClick} value={photo.url}>
+                          DELETE PHOTO
+                        </button>
+                        {/* <button>EDIT PHOTO</button> */}
+                        <img
+                          className="single-photo"
+                          alt=""
+                          src={photo.photo}
+                        ></img>
+                      </li>
+                    </ul>
+                  );
+                })}
               </div>
             ) : (
               ""
             )}
           </div>
-        </div>
-        <div className="users-by-ID">
-          <h2>Users By ID</h2>
-          <form>
-            <label>User ID:</label>
-            <input
-              placeholder="User ID"
-              value={userID.user}
-              name="user"
-              type="text"
-              onChange={onChangeUserID}
-            ></input>
-            <button type="submit" onClick={getUserById}>
-              Show user
-            </button>
-          </form>
-          {singleUser ? (
-            singleUser.username ? (
-              <ul className="single-user">
-                <li className="single-user-item">
-                  USERNAME: {singleUser.username}
-                </li>
-                <li className="single-user-item">EMAIL: {singleUser.email}</li>
-                <li className="single-user-item">URL: {singleUser.url}</li>
-                {singleUser.profile ? (
-                  <ul className="single-user-profile">
-                    <li className="single-user-profile-item">
-                      FIRST NAME: {singleUser.profile.first_name}
-                    </li>
-                    <li className="single-user-profile-item">
-                      LAST NAME: {singleUser.profile.last_name}
-                    </li>
-                    <li className="single-user-profile-item">
-                      STREET: {singleUser.profile.street}
-                    </li>
-                    <li className="single-user-profile-item">
-                      APT.NUMBER: {singleUser.profile.apartment_number}
-                    </li>
-                    <li className="single-user-profile-item">
-                      CITY: {singleUser.profile.city}
-                    </li>
-                    <li className="single-user-profile-item">
-                      COUNTRY: {singleUser.profile.country}
-                    </li>
-                    <li className="single-user-profile-item">
-                      POSTAL CODE: {singleUser.profile.postal_code}
-                    </li>
-                    <li className="single-user-profile-item">
-                      PHONE: {singleUser.profile.phone_number}
-                    </li>
-                    <li className="single-user-profile-item">
-                      USER ID: {singleUser.url.slice(48, 51)}
-                    </li>
-                  </ul>
+          <div className="users">
+            <div className="users-all">
+              <h2 className="users-title">All Users</h2>
+              <button onClick={showAllUsersOnClick}>
+                {!showAllUsers ? "Show all users" : "Hide users"}
+              </button>
+              <div className="show-users">
+                {showAllUsers
+                  ? users
+                    ? users.results
+                      ? users.results.map((user) => {
+                          return (
+                            <ul className="user" key={user.url.slice(48, 51)}>
+                              <li className="user-item">URL: {user.url}</li>
+                              <li className="user-item">
+                                USERNAME: {user.username}
+                              </li>
+                              <li className="user-item">
+                                USER EMAIL: {user.email}
+                              </li>
+
+                              {user.profile ? (
+                                <ul className="user-profile">
+                                  <li className="user-profile-item">
+                                    FIRST NAME: {user.profile.first_name}
+                                  </li>
+                                  <li className="user-profile-item">
+                                    LAST NAME: {user.profile.last_name}
+                                  </li>
+                                  <li className="user-profile-item">
+                                    STREET: {user.profile.street}
+                                  </li>
+                                  <li className="user-profile-item">
+                                    APT.NUMBER: {user.profile.apartment_number}
+                                  </li>
+                                  <li className="user-profile-item">
+                                    CITY: {user.profile.city}
+                                  </li>
+                                  <li className="user-profile-item">
+                                    COUNTRY: {user.profile.country}
+                                  </li>
+                                  <li className="user-profile-item">
+                                    POSTAL CODE: {user.profile.postal_code}
+                                  </li>
+                                  <li className="user-profile-item">
+                                    PHONE: {user.profile.phone_number}
+                                  </li>
+                                </ul>
+                              ) : (
+                                ""
+                              )}
+                              <button
+                                onClick={editUserOnClick}
+                                value={user.url}
+                              >
+                                Edit
+                              </button>
+                              <button
+                                onClick={deleteUserOnClick}
+                                value={user.url}
+                              >
+                                Delete
+                              </button>
+                            </ul>
+                          );
+                        })
+                      : ""
+                    : ""
+                  : ""}
+                {userDeleted}
+                {openEditForm ? (
+                  <div className="user-edit">
+                    <form
+                      className="user-edit-form"
+                      type="submit"
+                      onSubmit={saveChangesToUser}
+                    >
+                      <div className="user-update">
+                        <h2 className="user-edit-title">User update</h2>
+                        <label>USERNAME</label>
+                        <input
+                          name="username"
+                          className="username"
+                          type="text"
+                          placeholder="username"
+                          value={userUpdate.username}
+                          onChange={editUserOnChange}
+                        />
+                        <label>EMAIL</label>
+                        <input
+                          name="email"
+                          className="email"
+                          type="email"
+                          placeholder="email"
+                          value={userUpdate.email}
+                          onChange={editUserOnChange}
+                        />
+                        <label>PASSWORD</label>
+                        <input
+                          name="password"
+                          className="password"
+                          type="password"
+                          placeholder="password"
+                          value={userUpdate.password}
+                          onChange={editUserOnChange}
+                        />
+                        <label>CONFIRM PASSWORD</label>
+                        <input
+                          name="password2"
+                          className="password"
+                          type="password"
+                          placeholder="confirm password"
+                          value={userUpdate.password2}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">SAVE</button>
+                      </div>
+                      <div className="user-update-profile">
+                        <h2 className="user-edit-title">User profile update</h2>
+                        <label>First name</label>
+                        <input
+                          name="first_name"
+                          className="first-name"
+                          type="text"
+                          placeholder="first name"
+                          value={userUpdate.profile.first_name}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">OK</button>
+                        <label>Last name</label>
+                        <input
+                          name="last_name"
+                          className="last-name"
+                          type="text"
+                          placeholder="last name"
+                          value={userUpdate.profile.last_name}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">OK</button>
+                        <label>Country</label>
+                        <input
+                          name="country"
+                          className="country"
+                          type="text"
+                          placeholder="country"
+                          value={userUpdate.profile.country}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">OK</button>
+                        <label>City</label>
+                        <input
+                          name="city"
+                          className="city"
+                          type="text"
+                          placeholder="city"
+                          value={userUpdate.profile.city}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">OK</button>
+                        <label>Postal code</label>
+                        <input
+                          name="postal_code"
+                          className="postal-code"
+                          type="text"
+                          placeholder="postal code"
+                          value={userUpdate.profile.postal_code}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">OK</button>
+                        <label>Street</label>
+                        <input
+                          name="street"
+                          className="street"
+                          type="text"
+                          placeholder="street"
+                          value={userUpdate.profile.street}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">OK</button>
+                        <label>Apt. number</label>
+                        <input
+                          name="apartment_number"
+                          className="apartment"
+                          type="text"
+                          placeholder="apt. number"
+                          value={userUpdate.profile.apartment_number}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">OK</button>
+                        <label>Phone</label>
+                        <input
+                          name="phone_number"
+                          className="phone"
+                          type="text"
+                          placeholder="phone"
+                          value={userUpdate.profile.phone_number}
+                          onChange={editUserOnChange}
+                        />
+                        <button type="submit">OK</button>
+                      </div>
+
+                      {/* <button type="submit">SAVE CHANGES</button> */}
+                    </form>
+
+                    <button onClick={cancelUserEdit}>CANCEL</button>
+                  </div>
                 ) : (
                   ""
                 )}
-                <button>Edit</button>
-                <button>Delete</button>
-              </ul>
-            ) : (
-              ""
-            )
-          ) : (
-            ""
-          )}
-          {singleUser ? !singleUser.username ? <span>No data</span> : "" : ""}
+              </div>
+            </div>
+            <div className="users-by-ID">
+              <h2 className="users-title">Users By ID</h2>
+              <form className="users-by-ID-form">
+                <label>User ID:</label>
+                <input
+                  placeholder="User ID"
+                  value={userID.user}
+                  name="user"
+                  type="text"
+                  onChange={onChangeUserID}
+                ></input>
+                <button type="submit" onClick={getUserById}>
+                  Show user
+                </button>
+              </form>
+              {singleUser ? (
+                singleUser.username ? (
+                  <ul className="single-user">
+                    <li className="single-user-item">
+                      USERNAME: {singleUser.username}
+                    </li>
+                    <li className="single-user-item">
+                      EMAIL: {singleUser.email}
+                    </li>
+                    <li className="single-user-item">URL: {singleUser.url}</li>
+                    {singleUser.profile ? (
+                      <ul className="single-user-profile">
+                        <li className="single-user-profile-item">
+                          FIRST NAME: {singleUser.profile.first_name}
+                        </li>
+                        <li className="single-user-profile-item">
+                          LAST NAME: {singleUser.profile.last_name}
+                        </li>
+                        <li className="single-user-profile-item">
+                          STREET: {singleUser.profile.street}
+                        </li>
+                        <li className="single-user-profile-item">
+                          APT.NUMBER: {singleUser.profile.apartment_number}
+                        </li>
+                        <li className="single-user-profile-item">
+                          CITY: {singleUser.profile.city}
+                        </li>
+                        <li className="single-user-profile-item">
+                          COUNTRY: {singleUser.profile.country}
+                        </li>
+                        <li className="single-user-profile-item">
+                          POSTAL CODE: {singleUser.profile.postal_code}
+                        </li>
+                        <li className="single-user-profile-item">
+                          PHONE: {singleUser.profile.phone_number}
+                        </li>
+                        <li className="single-user-profile-item">
+                          USER ID: {singleUser.url.slice(48, 51)}
+                        </li>
+                      </ul>
+                    ) : (
+                      ""
+                    )}
+                    <button onClick={editUserOnClick}>Edit</button>
+                    <button onClick={deleteUserOnClick}>Delete</button>
+                  </ul>
+                ) : (
+                  ""
+                )
+              ) : (
+                ""
+              )}
+              {singleUser ? (
+                !singleUser.username ? (
+                  <span className="no-data">No data!</span>
+                ) : (
+                  ""
+                )
+              ) : (
+                ""
+              )}
+            </div>
+          </div>
         </div>
-      </div>
+      ) : (
+        ""
+      )}
     </>
   );
 }

@@ -110,61 +110,66 @@ function UserReservation({ bookingDate, login, reservedCar, reservation }) {
       }
     });
   }
+  console.log(login);
 
   return (
     <>
-      <div className="reservation-summary active">
-        <h1 className="user-login">Hello {login} !</h1>
-        <h2>Your reservation</h2>
-        <ul className="single-reservation">
-          <li className="single-reservation-content">
-            Reservation date start:
-            {`${new Date(bookingDate.booking_start).toLocaleDateString()}`}
-          </li>
-          <li className="single-reservation-content">
-            Reservation date end:
-            {`${new Date(bookingDate.booking_end).toLocaleDateString()}`}
-          </li>
-          <li className="single-reservation-content">
-            Car: {reservedCar.brand}
-          </li>
-          <li className="single-reservation-content">
-            Model: {reservedCar.model}
-          </li>
-          <li className="single-reservation-content">
-            Engine: {reservedCar.engine}
-          </li>
-          <li className="single-reservation-content">
-            Year: {reservedCar.year}
-          </li>
-          <li className="single-reservation-content">
-            Car location: {reservedCar.location}
-          </li>
-          <li className="single-reservation-content">
-            Condition: {reservedCar.condition}
-          </li>
-          <li className="single-reservation-content">
-            Day price: {reservedCar.day_price}
-          </li>
-        </ul>
-        <p className="price-summary">
-          Summary price for Your car rent:{" "}
-          {Math.floor(
-            ((bookingDate.booking_end - bookingDate.booking_start) /
-              (1000 * 60 * 60 * 24)) *
-              reservedCar.day_price
-          )}{" "}
-          $
-        </p>
-        <button onClick={sendReservation} className="confirm">
-          Confirm this reservation?
-        </button>
-        {reservationSuccess ? (
-          <span>Booking sucess, check Your e-mail</span>
-        ) : (
-          ""
-        )}
-      </div>
+      {access.access && login !== "" ? (
+        <div className="reservation-summary">
+          <h1 className="user-login">Hello {login} !</h1>
+          <h2 className="title">Your reservation</h2>
+          <ul className="single-reservation">
+            <li className="single-reservation-content">
+              Reservation date start:
+              {`${new Date(bookingDate.booking_start).toLocaleDateString()}`}
+            </li>
+            <li className="single-reservation-content">
+              Reservation date end:
+              {`${new Date(bookingDate.booking_end).toLocaleDateString()}`}
+            </li>
+            <li className="single-reservation-content">
+              Car: {reservedCar.brand}
+            </li>
+            <li className="single-reservation-content">
+              Model: {reservedCar.model}
+            </li>
+            <li className="single-reservation-content">
+              Engine: {reservedCar.engine}
+            </li>
+            <li className="single-reservation-content">
+              Year: {reservedCar.year}
+            </li>
+            <li className="single-reservation-content">
+              Car location: {reservedCar.location}
+            </li>
+            <li className="single-reservation-content">
+              Condition: {reservedCar.condition}
+            </li>
+            <li className="single-reservation-content">
+              Day price: {reservedCar.day_price}
+            </li>
+          </ul>
+          <p className="price-summary">
+            Summary price for Your car rent:{" "}
+            {Math.floor(
+              ((bookingDate.booking_end - bookingDate.booking_start) /
+                (1000 * 60 * 60 * 24)) *
+                reservedCar.day_price
+            )}{" "}
+            $
+          </p>
+          <button onClick={sendReservation} className="confirm">
+            Confirm this reservation?
+          </button>
+          {reservationSuccess ? (
+            <span>Booking sucess, check Your e-mail</span>
+          ) : (
+            ""
+          )}
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 }

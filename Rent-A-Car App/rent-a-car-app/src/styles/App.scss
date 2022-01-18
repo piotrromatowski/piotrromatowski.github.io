@@ -11,7 +11,13 @@
 @import "./footer";
 @import "./modalform";
 @import "./blog";
+@import "./userReservation";
+@import "./userLogin";
+@import "./userResetPassword";
+@import "./userRegister";
 @import "./userAccount";
+@import "./userLogout";
+@import "./adminPanel";
 
 * {
   box-sizing: border-box;

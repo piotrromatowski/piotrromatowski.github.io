@@ -33,7 +33,17 @@ function UserLogout({ setIsLoggedIn, ...isLoggedIn }) {
       });
   };
 
-  return <button onClick={logout}>Logout</button>;
+  return (
+    <>
+      {!access.access ? (
+        ""
+      ) : (
+        <button className="logout-btn" onClick={logout}>
+          Logout
+        </button>
+      )}
+    </>
+  );
 }
 
 export default UserLogout;

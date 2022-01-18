@@ -44,24 +44,34 @@ function UserResetPasswordEmailRequest(params) {
 
   return (
     <>
-      <h2>Forgot Your password? Reset by email</h2>
-      <form type="submit" className="reset-form" onSubmit={resetRequest}>
-        <label>Email</label>
-        <input
-          name="email"
-          className="email"
-          type="email"
-          placeholder="email"
-          value={passwordReset.email}
-          onChange={onChangePasswordReset}
-        ></input>
-        <button type="submit">Reset password</button>
-        {requestSend ? (
-          <span style={{ color: "red" }}>Request send, check Your email.</span>
-        ) : (
-          ""
-        )}
-      </form>
+      {access ? (
+        ""
+      ) : (
+        <div className="reset-wrapper">
+          <h2 className="reset-title">Forgot Your password? Reset by email</h2>
+          <form type="submit" className="reset-form" onSubmit={resetRequest}>
+            {/* <label>Email</label> */}
+            <input
+              name="email"
+              className="email"
+              type="email"
+              placeholder="email"
+              value={passwordReset.email}
+              onChange={onChangePasswordReset}
+            ></input>
+            <button className="reset-btn" type="submit">
+              Reset password
+            </button>
+            {requestSend ? (
+              <span style={{ color: "red" }}>
+                Request send, check Your email.
+              </span>
+            ) : (
+              ""
+            )}
+          </form>
+        </div>
+      )}
     </>
   );
 }
