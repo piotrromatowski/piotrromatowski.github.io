@@ -2,11 +2,11 @@ import "./styles/App.scss";
 import React, { useState } from "react";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import { ScrollToTop } from "react-router-scroll-to-top";
+import { LoginProvider } from "./components/LoginContext";
 import Nav from "./components/MainAndNav";
 import Blog from "./components/Blog";
 import UserAccount from "./components/UserAccount";
 import ModalForm from "./components/ModalCalendarForm";
-import { LoginProvider } from "./components/LoginContext";
 
 function App() {
   const [isClientLoggedIn, setIsClientLoggedIn] = useState({
@@ -27,7 +27,7 @@ function App() {
                 <Nav isClientLoggedIn={isClientLoggedIn} />
               </Route>
               <Route component={Blog} path="/blog" />
-              <Route path="/">
+              <Route path="/account">
                 <UserAccount
                   setIsClientLoggedIn={setIsClientLoggedIn}
                   isClientLoggedIn={isClientLoggedIn}

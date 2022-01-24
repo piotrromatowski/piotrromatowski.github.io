@@ -1,5 +1,4 @@
-import React, { useState, useContext, useMemo } from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { useState, useContext, useEffect } from "react";
 import { LoginContext } from "./LoginContext";
 
 function AdminPanel() {
@@ -479,7 +478,7 @@ function AdminPanel() {
           },
           body: JSON.stringify(newCar),
         })
-          .then((response) => console.log(response.json()))
+          .then((response) => console.log(response.json(), response.status))
           .then((newCar) => {
             console.log("Success", newCar);
           })
@@ -662,41 +661,58 @@ function AdminPanel() {
     photos = carFound.data.photos;
   }
 
-  // const addPhotoOnClick = (e) => {
-  //   setNewPhotoPanel(!newPhotoPanel);
-  // };
+  const addPhotoOnClick = (e) => {
+    setNewPhotoPanel(!newPhotoPanel);
+  };
 
-  // const addPhotoOnChange = (e) => {
-  //   setAddNewPhoto({
-  //     ...setAddNewPhoto,
-  //     [e.target.name]: e.target.value,
-  //   });
-  //   console.log(addNewPhoto);
-  // };
+  // ADD PHOTO
 
-  // const saveNewPhoto = (e) => {
-  //   e.preventDefault();
-  //   if (access !== "") {
-  //     fetch("https://car-rental-rest-api.herokuapp.com/car-photos/", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         accept: "application/json",
-  //         authorization: `Bearer ${access.access}`,
-  //         "X-CSRFToken": `${access.access}`,
-  //       },
-  //       body: JSON.stringify({ car: carFound.data.url }),
-  //       body: JSON.stringify(addNewPhoto),
-  //     })
-  //       .then((response) => {
-  //         console.log(response.json(), response.status);
-  //       })
+  const addPhotoOnChange = (e) => {
+    setAddNewPhoto({
+      ...setAddNewPhoto,
+      [e.target.name]: e.target.value,
+    });
+    console.log(addNewPhoto);
+  };
 
-  //       .catch((error) => {
-  //         console.error("Error");
-  //       });
-  //   }
-  // };
+  const saveNewPhoto = (e) => {
+    console.log(carFound.data.url);
+    console.log(addNewPhoto);
+
+    console.log(
+      JSON.stringify({
+        url: addNewPhoto.url,
+        car: carFound.data.url,
+        photo: addNewPhoto.photo,
+      })
+    );
+    e.preventDefault();
+    if (access !== "") {
+      fetch("https://car-rental-rest-api.herokuapp.com/car-photos/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          accept: "application/json",
+          authorization: `Bearer ${access.access}`,
+          "X-CSRFToken": `${access.access}`,
+        },
+        body: JSON.stringify({
+          url: addNewPhoto.url,
+          car: carFound.data.url,
+          addNewPhoto,
+        }),
+      })
+        .then((response) => {
+          console.log(response.json(), response.status);
+        })
+
+        .catch((error) => {
+          console.error("Error");
+        });
+    }
+  };
+
+  //DELETE PHOTO
 
   const deletePhotoOnClick = (e) => {
     e.preventDefault();
@@ -707,6 +723,20 @@ function AdminPanel() {
     const url = `https://car-rental-rest-api.herokuapp.com/car-photos/${deletedPhotoID}/`;
     console.log(deletedPhotoID);
     console.log(url);
+
+    if (access !== "") {
+      fetch(url, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          accept: "application/json",
+          authorization: `Bearer ${access.access}`,
+          "X-CSRFToken": `${access.access}`,
+        },
+      }).then((response) => {
+        console.log(response.status);
+      });
+    }
   };
 
   return (
@@ -1059,57 +1089,67 @@ function AdminPanel() {
             </div>
             <div className="cars-update"></div>
           </div>
-          <div className="car-photos">
-            {/* <button onClick={addPhotoOnClick}>ADD PHOTO</button>
-        {newPhotoPanel ? (
-          <div>
-            <form>
-              <label>URL</label>
-              <input
-                type="text"
-                name="url"
-                placeholder="url"
-                value={addNewPhoto.url}
-                onChange={addPhotoOnChange}
-              />
-              <label>PHOTO</label>
-              <input
-                type="file"
-                name="photo"
-                value={addNewPhoto.photo}
-                onChange={addPhotoOnChange}
-              />
-              <button onClick={saveNewPhoto}>SAVE</button>
-            </form>
-          </div>
-        ) : (
-          ""
-        )} */}
-            {photos && carPhotoPanel ? (
-              <div className="car-photos">
-                {photos.map((photo) => {
-                  return (
-                    <ul className="car-photo-list">
-                      <li>
-                        <h2 className="photo-url">URL: {photo.url}</h2>
-                        <button onClick={deletePhotoOnClick} value={photo.url}>
-                          DELETE PHOTO
-                        </button>
-                        {/* <button>EDIT PHOTO</button> */}
-                        <img
-                          className="single-photo"
-                          alt=""
-                          src={photo.photo}
-                        ></img>
-                      </li>
-                    </ul>
-                  );
-                })}
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
+          {carPhotoPanel ? (
+            <div className="car-photos">
+              {/* ADD PHOTO */}
+              <button onClick={addPhotoOnClick}>ADD PHOTO</button>
+              {newPhotoPanel ? (
+                <div className="car-photos-add">
+                  <form className="car-photos-add-form">
+                    <label>URL</label>
+                    <input
+                      type="text"
+                      name="url"
+                      placeholder="url"
+                      value={addNewPhoto.url}
+                      onChange={addPhotoOnChange}
+                    />
+                    <label>PHOTO</label>
+                    <input
+                      type="text"
+                      name="photo"
+                      placeholder="photo url"
+                      value={addNewPhoto.photo}
+                      onChange={addPhotoOnChange}
+                    />
+                    <button onClick={saveNewPhoto}>SAVE</button>
+                  </form>
+                </div>
+              ) : (
+                ""
+              )}
+              {photos && carPhotoPanel ? (
+                <div className="car-photos">
+                  {photos.map((photo) => {
+                    return (
+                      <ul className="car-photo-list">
+                        <li>
+                          <h2 className="photo-url">URL: {photo.url}</h2>
+                          <button
+                            onClick={deletePhotoOnClick}
+                            value={photo.url}
+                          >
+                            DELETE PHOTO
+                          </button>
+                          {/* <button>EDIT PHOTO</button> */}
+                          <img
+                            className="single-photo"
+                            alt=""
+                            src={photo.photo}
+                          ></img>
+                        </li>
+                      </ul>
+                    );
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          ) : (
+            ""
+          )}
+
           <div className="users">
             <div className="users-all">
               <h2 className="users-title">All Users</h2>

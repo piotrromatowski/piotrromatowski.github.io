@@ -59,7 +59,7 @@ function UserAccount({ setIsClientLoggedIn, ...isClientLoggedIn }) {
         setIsClientLoggedIn={setIsClientLoggedIn}
       />
       <UserRegister />
-      <AdminPanel></AdminPanel>
+      <AdminPanel />
       <div className="bookings">
         {showAllBookings
           ? userBookings && userBookings.results

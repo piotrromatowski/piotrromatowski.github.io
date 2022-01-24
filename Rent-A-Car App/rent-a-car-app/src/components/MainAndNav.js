@@ -80,7 +80,7 @@ function Nav(isClientLoggedIn) {
           <li className="contact">
             <a href="/#contact">Contact Us</a>
           </li>
-          <li className="search">
+          <li className="account">
             <Link to="/account">{login !== "" ? login : `Log In`}</Link>
           </li>
         </ul>

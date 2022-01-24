@@ -509,6 +509,29 @@
     }
     .car-photos {
       width: 100%;
+
+      .car-photos-add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        .car-photos-add-form {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          input,
+          label {
+            width: 100%;
+          }
+          label {
+            text-align: center;
+          }
+        }
+      }
       .car-photo-list {
         width: 100%;
         padding: 0;
